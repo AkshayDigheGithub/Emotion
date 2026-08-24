@@ -84,6 +84,36 @@ open the page. That's the intended tradeoff (no backend, no auth).
 Any static host works — GitHub Pages, Netlify, Vercel. No build step, no
 dependencies. Push this repo and point the host at the root.
 
+## Unlock counter
+
+The landing page shows an honest running total: "N pieces unlocked so far."
+It's real, not decorative — no number moves unless someone actually loads
+an emotion page.
+
+How it works: each emotion page fires a silent `fetch()` to
+[Abacus](https://abacus.jasoncameron.dev) (a free, keyless public counter
+API) on load, incrementing that emotion's key under the `moodshop-digheakshaf`
+namespace. `index.html` reads all 8 keys on load, sums them, and shows the
+total — or "No one has unlocked a piece yet — be the first." at zero. If the
+fetch fails for any reason, the stat line just stays hidden rather than
+showing a stale or wrong number.
+
+Known limitations, worth knowing before you rely on this:
+
+- **It's a third-party free service**, not Vercel infrastructure — no SLA,
+  could go down or get rate-limited, and the count isn't yours to export or
+  guarantee. Fine for a soft "some real people did this" signal, not fine as
+  a business metric.
+- **It counts page loads, not verified purchases.** Since the emotion pages
+  are only reachable via the BMC redirect (see below), a load is *almost*
+  always a real unlock — but anyone who gets hold of a direct URL and
+  revisits it, or a bot that crawls a leaked link, would also increment it.
+- **To make this durable**, swap the Abacus calls for a first-party
+  serverless function backed by Vercel KV, Vercel Postgres, or Upstash
+  Redis under your own account — I don't have the access to provision
+  storage resources for you, so that step is a manual one-time setup in the
+  Vercel dashboard if you want it later.
+
 ## Content
 
 The actual writing lives in each emotion page — that's the product. Feel

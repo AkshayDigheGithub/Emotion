@@ -165,6 +165,15 @@
     line-height:1.7;
   }
   footer a{color:var(--sub);}
+  .stat{
+    margin:1.2rem 0 0 0;
+    font-size:0.85rem;
+    letter-spacing:0.03em;
+    color:var(--sub);
+    opacity:0;
+    transition:opacity 0.6s ease;
+  }
+  .stat.visible{opacity:1;}
 </style>
 </head>
 <body>
@@ -172,6 +181,7 @@
 <header>
   <h1>Moodshop</h1>
   <p>Eight short pieces of writing. Each one built to make you feel exactly one thing. Pay once, feel it once — no account, no download, no follow-up.</p>
+  <p class="stat" id="unlock-count" aria-live="polite"></p>
 </header>
 
 <main class="grid">
@@ -246,6 +256,30 @@
   <p>No accounts. No emails. No files to download. Pay through Buy Me a Coffee and you're taken straight to the piece.</p>
   <p><a href="https://www.buymeacoffee.com/digheakshaf" rel="nofollow">Support Moodshop on Buy Me a Coffee</a></p>
 </footer>
+
+<script>
+(function(){
+  var NAMESPACE = 'moodshop-digheakshaf';
+  var EMOTIONS = ['calm','nostalgia','happiness','hope','rage','hurt','sorrow','grief'];
+  var el = document.getElementById('unlock-count');
+  if(!el) return;
+
+  Promise.all(EMOTIONS.map(function(e){
+    return fetch('https://abacus.jasoncameron.dev/get/' + NAMESPACE + '/' + e)
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .catch(function(){ return null; });
+  })).then(function(results){
+    if(results.some(function(r){ return r === null; })){
+      return;
+    }
+    var total = results.reduce(function(sum, r){ return sum + (r.value || 0); }, 0);
+    el.textContent = total > 0
+      ? total.toLocaleString() + (total === 1 ? ' piece unlocked so far' : ' pieces unlocked so far')
+      : 'No one has unlocked a piece yet — be the first.';
+    el.classList.add('visible');
+  });
+})();
+</script>
 
 </body>
 </html>
