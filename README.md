@@ -25,27 +25,36 @@ The pricing table in the original spec also mentioned "Longing" at $3, but the
 site structure only calls for these 8 pages. Add a `longing.html` the same way
 as the others (copy `rage.html`'s structure, swap palette/copy) if you want a 9th.
 
-## Before this goes live
+## Live deployment
 
-1. **Replace the placeholder domain.** Every `https://moodshop.example` in
-   `index.html`, `robots.txt`, and `sitemap.xml` needs to become your real
-   domain once you have one. Find-and-replace `moodshop.example` across the repo.
+Deployed on Vercel: **https://moodshop-delta.vercel.app**
 
-2. **Create 8 BMC Extras**, one per emotion, priced per the table above.
+`index.html`, `robots.txt`, and `sitemap.xml` all point at this domain now
+(canonical, Open Graph, JSON-LD). If you later attach a custom domain in
+Vercel, find-and-replace `moodshop-delta.vercel.app` across the repo with
+your new domain and redeploy.
 
-3. **Set each Extra's post-payment redirect URL** to that emotion's page,
-   e.g. the Calm listing redirects to `https://yourdomain.com/calm.html`.
-   This is the entire delivery mechanism — get it right per listing.
+## Before this goes fully live
 
-4. **Replace the BMC links in `index.html`.** Right now every card points to
-   `https://www.buymeacoffee.com/yourusername/e/<emotion>` — swap
-   `yourusername` and the slug for your real BMC username and each Extra's
-   actual slug. Also update the "Support Moodshop" link in the footer.
+1. **Create 8 BMC Extras** at [buymeacoffee.com/digheakshaf](https://buymeacoffee.com/digheakshaf),
+   one per emotion, priced per the table above.
 
-5. **Optional: add `og-image.png`.** `index.html` references
-   `/og-image.png` for social share previews (1200×630 works well). Drop one
-   in the repo root, or remove the two `og:image` / `twitter:image` tags if
-   you don't want one yet.
+2. **Set each Extra's post-payment redirect URL** to that emotion's page,
+   e.g. the Calm listing redirects to `https://moodshop-delta.vercel.app/calm.html`
+   (or your custom domain once you have one). This is the entire delivery
+   mechanism — get it right per listing.
+
+3. **Fix the BMC slugs in `index.html`.** Every card currently points to
+   `https://www.buymeacoffee.com/digheakshaf/e/<emotion>` (e.g. `.../e/calm`).
+   BMC auto-generates its own slug per Extra when you create it — once each
+   listing exists, swap that last path segment for the real slug BMC gives you.
+   The username (`digheakshaf`) is already correct.
+
+4. **Optional: add social share art.** The Open Graph/Twitter tags currently
+   omit an image since none exists yet. To add one, drop `og-image.png`
+   (1200×630 works well) in the repo root and add back
+   `<meta property="og:image">` / `<meta name="twitter:image">` pointing at
+   `/og-image.png`, then redeploy.
 
 ## Why the emotion pages aren't linked anywhere
 
