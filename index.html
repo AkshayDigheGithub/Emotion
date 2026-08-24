@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moodshop — Short pieces written to make you feel something</title>
+<meta name="description" content="Moodshop sells short, immersive pieces of writing — each one built to make you feel one specific emotion. No accounts, no downloads, no email. Pay once, feel it once.">
+<link rel="canonical" href="https://moodshop.example/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1b1b24">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Moodshop — Short pieces written to make you feel something">
+<meta property="og:description" content="Eight short pieces of writing, each built to make you feel one specific emotion. Pay once, feel it once. No accounts, no ads, no downloads.">
+<meta property="og:url" content="https://moodshop.example/">
+<meta property="og:site_name" content="Moodshop">
+<meta property="og:image" content="https://moodshop.example/og-image.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Moodshop — Short pieces written to make you feel something">
+<meta name="twitter:description" content="Eight short pieces of writing, each built to make you feel one specific emotion. Pay once, feel it once.">
+<meta name="twitter:image" content="https://moodshop.example/og-image.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AD%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Moodshop",
+  "url": "https://moodshop.example/",
+  "description": "Short, immersive pieces of writing, each built to make you feel one specific emotion."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Calm","description":"A short piece written to make you feel calm.","offers":{"@type":"Offer","price":"1.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
+    {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Nostalgia","description":"A short piece written to make you feel nostalgia.","offers":{"@type":"Offer","price":"1.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
+    {"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Happiness","description":"A short piece written to make you feel happiness.","offers":{"@type":"Offer","price":"2.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
+    {"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Hope","description":"A short piece written to make you feel hope.","offers":{"@type":"Offer","price":"2.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
+    {"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Rage","description":"A short piece written to make you feel rage.","offers":{"@type":"Offer","price":"3.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
+    {"@type":"ListItem","position":6,"item":{"@type":"Product","name":"Hurt","description":"A short piece written to make you feel hurt, honestly.","offers":{"@type":"Offer","price":"4.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
+    {"@type":"ListItem","position":7,"item":{"@type":"Product","name":"Sorrow","description":"A short piece written to sit with sorrow.","offers":{"@type":"Offer","price":"5.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
+    {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"Grief","description":"A letter written to sit with grief.","offers":{"@type":"Offer","price":"5.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --page-bg1:#14141c;
+    --page-bg2:#1f1f2c;
+    --ink:#f2f0ec;
+    --sub:#a6a3b8;
+    --card-border:rgba(255,255,255,0.08);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    min-height:100vh;
+    background:linear-gradient(160deg,var(--page-bg1) 0%,var(--page-bg2) 100%);
+    color:var(--ink);
+    font-family:'Nunito Sans',sans-serif;
+    padding:8vh 6vw 10vh;
+  }
+  header{
+    max-width:760px;
+    margin:0 auto 6vh;
+    text-align:center;
+  }
+  h1{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:clamp(2.4rem,6vw,3.6rem);
+    margin:0 0 0.8rem 0;
+    letter-spacing:0.01em;
+  }
+  header p{
+    color:var(--sub);
+    font-size:clamp(1rem,2vw,1.15rem);
+    line-height:1.6;
+    max-width:520px;
+    margin:0 auto;
+  }
+  .grid{
+    max-width:1000px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1.5rem;
+  }
+  .card{
+    position:relative;
+    border-radius:16px;
+    padding:1.8rem 1.6rem;
+    border:1px solid var(--card-border);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:220px;
+    text-decoration:none;
+    color:var(--ink);
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.35);
+  }
+  .card .name{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:1.7rem;
+    margin:0 0 0.4rem 0;
+    position:relative;
+    z-index:1;
+  }
+  .card .teaser{
+    font-size:0.92rem;
+    line-height:1.5;
+    opacity:0.92;
+    margin:0;
+    position:relative;
+    z-index:1;
+  }
+  .card .price{
+    margin-top:1.4rem;
+    font-weight:700;
+    font-size:0.95rem;
+    letter-spacing:0.02em;
+    position:relative;
+    z-index:1;
+  }
+  .card .price span{
+    display:inline-block;
+    padding:0.4rem 0.9rem;
+    border-radius:999px;
+    background:rgba(0,0,0,0.28);
+    backdrop-filter:blur(2px);
+  }
+  .card.calm{background:linear-gradient(140deg,#bfe3da,#5f9a8c);}
+  .card.nostalgia{background:linear-gradient(140deg,#e0bd8f,#a4653b);}
+  .card.happiness{background:linear-gradient(140deg,#ffd889,#e08a2b); color:#3a2600;}
+  .card.hope{background:linear-gradient(140deg,#4a4a7a,#f6c98a);}
+  .card.rage{background:linear-gradient(140deg,#5c0f0f,#1a0505);}
+  .card.hurt{background:linear-gradient(140deg,#6b1a24,#2a0a0d);}
+  .card.sorrow{background:linear-gradient(140deg,#33547e,#0e1a2b);}
+  .card.grief{background:linear-gradient(140deg,#40374f,#100e14);}
+  .card.happiness .price span{background:rgba(0,0,0,0.15); color:#3a2600;}
+
+  footer{
+    max-width:600px;
+    margin:8vh auto 0;
+    text-align:center;
+    color:var(--sub);
+    font-size:0.85rem;
+    line-height:1.7;
+  }
+  footer a{color:var(--sub);}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Moodshop</h1>
+  <p>Eight short pieces of writing. Each one built to make you feel exactly one thing. Pay once, feel it once — no account, no download, no follow-up.</p>
+</header>
+
+<main class="grid">
+
+  <a class="card calm" href="https://www.buymeacoffee.com/yourusername/e/calm" rel="nofollow">
+    <div>
+      <p class="name">Calm</p>
+      <p class="teaser">For when your mind won't stop moving.</p>
+    </div>
+    <p class="price"><span>Unlock — $1</span></p>
+  </a>
+
+  <a class="card nostalgia" href="https://www.buymeacoffee.com/yourusername/e/nostalgia" rel="nofollow">
+    <div>
+      <p class="name">Nostalgia</p>
+      <p class="teaser">A quiet trip back to somewhere warm.</p>
+    </div>
+    <p class="price"><span>Unlock — $1</span></p>
+  </a>
+
+  <a class="card happiness" href="https://www.buymeacoffee.com/yourusername/e/happiness" rel="nofollow">
+    <div>
+      <p class="name">Happiness</p>
+      <p class="teaser">Permission to feel good, no reason required.</p>
+    </div>
+    <p class="price"><span>Unlock — $2</span></p>
+  </a>
+
+  <a class="card hope" href="https://www.buymeacoffee.com/yourusername/e/hope" rel="nofollow">
+    <div>
+      <p class="name">Hope</p>
+      <p class="teaser">For the dark that hasn't broken yet.</p>
+    </div>
+    <p class="price"><span>Unlock — $2</span></p>
+  </a>
+
+  <a class="card rage" href="https://www.buymeacoffee.com/yourusername/e/rage" rel="nofollow">
+    <div>
+      <p class="name">Rage</p>
+      <p class="teaser">For when calm isn't the point.</p>
+    </div>
+    <p class="price"><span>Unlock — $3</span></p>
+  </a>
+
+  <a class="card hurt" href="https://www.buymeacoffee.com/yourusername/e/hurt" rel="nofollow">
+    <div>
+      <p class="name">Hurt</p>
+      <p class="teaser">For what they did, and what it revealed.</p>
+    </div>
+    <p class="price"><span>Unlock — $4</span></p>
+  </a>
+
+  <a class="card sorrow" href="https://www.buymeacoffee.com/yourusername/e/sorrow" rel="nofollow">
+    <div>
+      <p class="name">Sorrow</p>
+      <p class="teaser">Sit with it. No one's rushing you.</p>
+    </div>
+    <p class="price"><span>Unlock — $5</span></p>
+  </a>
+
+  <a class="card grief" href="https://www.buymeacoffee.com/yourusername/e/grief" rel="nofollow">
+    <div>
+      <p class="name">Grief</p>
+      <p class="teaser">A letter for what you're still carrying.</p>
+    </div>
+    <p class="price"><span>Unlock — $5</span></p>
+  </a>
+
+</main>
+
+<footer>
+  <p>No accounts. No emails. No files to download. Pay through Buy Me a Coffee and you're taken straight to the piece.</p>
+  <p><a href="https://www.buymeacoffee.com/yourusername" rel="nofollow">Support Moodshop on Buy Me a Coffee</a></p>
+</footer>
+
+</body>
+</html>

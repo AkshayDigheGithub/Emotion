@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /happiness.html
+Disallow: /sorrow.html
+Disallow: /hurt.html
+Disallow: /calm.html
+Disallow: /nostalgia.html
+Disallow: /rage.html
+Disallow: /hope.html
+Disallow: /grief.html
+
+Sitemap: https://moodshop.example/sitemap.xml
