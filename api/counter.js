@@ -31,6 +31,10 @@ module.exports = async (req, res) => {
       const values = await Promise.all(EMOTIONS.map(async (e) => {
         const r = await fetch(`https://abacus.jasoncameron.dev/get/${NAMESPACE}/${e}`);
         const text = await r.text();
+        if (r.status === 404) {
+          // Abacus creates a key lazily on first hit — no hits yet just means 0.
+          return 0;
+        }
         if (!r.ok) {
           console.error('total upstream status', e, r.status, 'body', text);
           throw new Error(`bad response for ${e}: ${r.status} ${text}`);
