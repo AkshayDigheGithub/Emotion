@@ -46,6 +46,29 @@
     margin:0 0 1.4rem 0;
   }
   p:last-of-type{margin-bottom:0;}
+  .share{margin-top:2.4rem; text-align:left;}
+  .share-btn{
+    font-family:'Nunito Sans',sans-serif;
+    font-size:0.8rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    background:none;
+    border:1px solid currentColor;
+    border-radius:999px;
+    padding:0.55rem 1.3rem;
+    color:var(--ink);
+    opacity:0.65;
+    cursor:pointer;
+    transition:opacity 0.2s ease;
+  }
+  .share-btn:hover{opacity:1;}
+  .share-status{
+    margin-top:0.6rem;
+    font-size:0.78rem;
+    color:var(--ink);
+    opacity:0.7;
+    min-height:1.1em;
+  }
 </style>
 </head>
 <body>
@@ -65,9 +88,124 @@
 <p>You are allowed to be that still. You are allowed to just exist for a few breaths, without producing, without fixing, without becoming anything other than what you already are, sitting here, reading this.</p>
 
 <p>Slow down even more. There's no version of this moment that's late.</p>
+
+<div class="share">
+  <button id="share-btn" class="share-btn" type="button">Share this feeling</button>
+  <p id="share-status" class="share-status" aria-live="polite"></p>
+</div>
 </main>
 <script>
 fetch('https://abacus.jasoncameron.dev/hit/moodshop-digheakshaf/calm').catch(function(){});
+</script>
+<script>
+(function(){
+  var QUOTE = "Nothing is asking anything of you right now.";
+  var EMOTION = "Calm";
+  var COLORS = ["#e6f5f1","#bfe3da","#8fc7ba"];
+  var INK = "#1f3d38";
+  var STORE_URL = "https://moodshop-delta.vercel.app/";
+
+  var btn = document.getElementById('share-btn');
+  var status = document.getElementById('share-status');
+  if(!btn) return;
+
+  function wrapText(ctx, text, maxWidth){
+    var words = text.split(' ');
+    var lines = [];
+    var line = '';
+    for(var i=0;i<words.length;i++){
+      var test = line ? line + ' ' + words[i] : words[i];
+      if(ctx.measureText(test).width > maxWidth && line){
+        lines.push(line);
+        line = words[i];
+      } else {
+        line = test;
+      }
+    }
+    if(line) lines.push(line);
+    return lines;
+  }
+
+  function buildCard(){
+    return document.fonts.ready.then(function(){
+      var size = 1080;
+      var canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      var ctx = canvas.getContext('2d');
+
+      var grad = ctx.createLinearGradient(0,0,size,size);
+      grad.addColorStop(0, COLORS[0]);
+      grad.addColorStop(0.5, COLORS[1]);
+      grad.addColorStop(1, COLORS[2]);
+      ctx.fillStyle = grad;
+      ctx.fillRect(0,0,size,size);
+
+      ctx.fillStyle = INK;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.font = "500 64px 'Cormorant Garamond', serif";
+      var lines = wrapText(ctx, QUOTE, size - 200);
+      var lineHeight = 78;
+      var startY = size/2 - ((lines.length-1) * lineHeight)/2;
+      lines.forEach(function(l, i){
+        ctx.fillText(l, size/2, startY + i*lineHeight);
+      });
+
+      ctx.font = "600 30px 'Nunito Sans', sans-serif";
+      ctx.globalAlpha = 0.85;
+      ctx.fillText(EMOTION.toUpperCase() + '  ·  MOODSHOP', size/2, size - 90);
+      ctx.globalAlpha = 1;
+
+      return new Promise(function(resolve){
+        canvas.toBlob(function(blob){ resolve(blob); }, 'image/png');
+      });
+    });
+  }
+
+  btn.addEventListener('click', function(){
+    status.textContent = 'Preparing…';
+    buildCard().then(function(blob){
+      var caption = '"' + QUOTE + '" — a feeling from Moodshop. ' + STORE_URL;
+      var file = new File([blob], 'moodshop-' + EMOTION.toLowerCase() + '.png', {type:'image/png'});
+
+      if(navigator.canShare && navigator.canShare({files:[file]})){
+        navigator.share({ files:[file], title:'Moodshop — ' + EMOTION, text: caption })
+          .then(function(){ status.textContent = ''; })
+          .catch(function(){ status.textContent = ''; });
+        return;
+      }
+
+      if(navigator.share){
+        navigator.share({ title:'Moodshop — ' + EMOTION, text: caption, url: STORE_URL })
+          .then(function(){ status.textContent = ''; })
+          .catch(function(){ status.textContent = ''; });
+        return;
+      }
+
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'moodshop-' + EMOTION.toLowerCase() + '.png';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 4000);
+
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(caption).then(function(){
+          status.textContent = 'Image saved + caption copied — paste it anywhere.';
+        }).catch(function(){
+          status.textContent = 'Image saved. Caption: ' + caption;
+        });
+      } else {
+        status.textContent = 'Image saved. Caption: ' + caption;
+      }
+    }).catch(function(){
+      status.textContent = 'Could not create the share card — try again.';
+    });
+  });
+})();
 </script>
 </body>
 </html>

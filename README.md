@@ -34,25 +34,32 @@ Deployed on Vercel: **https://moodshop-delta.vercel.app**
 Vercel, find-and-replace `moodshop-delta.vercel.app` across the repo with
 your new domain and redeploy.
 
+## BMC Extras (live)
+
+All 8 Extras are created and wired into `index.html`:
+
+| Emotion | Extra URL |
+|---|---|
+| Calm | https://buymeacoffee.com/digheakshaf/e/569310 |
+| Nostalgia | https://buymeacoffee.com/digheakshaf/e/569313 |
+| Happiness | https://buymeacoffee.com/digheakshaf/e/569314 |
+| Hope | https://buymeacoffee.com/digheakshaf/e/569315 |
+| Rage | https://buymeacoffee.com/digheakshaf/e/569316 |
+| Hurt | https://buymeacoffee.com/digheakshaf/e/569317 |
+| Sorrow | https://buymeacoffee.com/digheakshaf/e/569318 |
+| Grief | https://buymeacoffee.com/digheakshaf/e/569319 |
+
+Each Extra's **Success page** must be set to "Redirect to a URL after
+purchase" pointing at that emotion's page (e.g. Calm →
+`https://moodshop-delta.vercel.app/calm.html`) — "Confirmation message"
+(BMC's default) does not deliver anything, it just shows a thank-you
+message on BMC's own site.
+
 ## Before this goes fully live
 
-1. **Create 8 BMC Extras** at [buymeacoffee.com/digheakshaf](https://buymeacoffee.com/digheakshaf),
-   one per emotion, priced per the table above.
-
-2. **Set each Extra's post-payment redirect URL** to that emotion's page,
-   e.g. the Calm listing redirects to `https://moodshop-delta.vercel.app/calm.html`
-   (or your custom domain once you have one). This is the entire delivery
-   mechanism — get it right per listing.
-
-3. **Fix the BMC slugs in `index.html`.** Every card currently points to
-   `https://www.buymeacoffee.com/digheakshaf/e/<emotion>` (e.g. `.../e/calm`).
-   BMC auto-generates its own slug per Extra when you create it — once each
-   listing exists, swap that last path segment for the real slug BMC gives you.
-   The username (`digheakshaf`) is already correct.
-
-4. **Optional: add social share art.** The Open Graph/Twitter tags currently
-   omit an image since none exists yet. To add one, drop `og-image.png`
-   (1200×630 works well) in the repo root and add back
+1. **Optional: add social share art.** The Open Graph/Twitter tags on
+   `index.html` currently omit an image since none exists yet. To add one,
+   drop `og-image.png` (1200×630 works well) in the repo root and add back
    `<meta property="og:image">` / `<meta name="twitter:image">` pointing at
    `/og-image.png`, then redeploy.
 
@@ -113,6 +120,24 @@ Known limitations, worth knowing before you rely on this:
   Redis under your own account — I don't have the access to provision
   storage resources for you, so that step is a manual one-time setup in the
   Vercel dashboard if you want it later.
+
+## Share feature
+
+Each emotion page has a quiet "Share this feeling" button at the bottom
+(below the piece, doesn't clutter the reading experience). Clicking it:
+
+1. Draws a 1080×1080 quote card client-side (`<canvas>`) using that page's
+   own gradient colors and a short pull-quote from the piece.
+2. Tries the native share sheet (`navigator.share` with the image file) —
+   works on most mobile browsers.
+3. Falls back to downloading the PNG + copying a caption to the clipboard
+   on desktop/unsupported browsers.
+
+Deliberately **does not** share the emotion page's own URL — only a caption
++ link back to the landing page (`moodshop-delta.vercel.app`). Sharing the
+direct page link would let anyone who receives it read the full piece for
+free, defeating the point of the paywall. The quote card gives people
+something to post without giving away the product itself.
 
 ## Content
 
