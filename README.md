@@ -106,8 +106,10 @@ open the page. That's the intended tradeoff (no backend, no auth).
 
 ## Deploying
 
-Any static host works — GitHub Pages, Netlify, Vercel. No build step, no
-dependencies. Push this repo and point the host at the root.
+Deployed on Vercel specifically because it now needs one small serverless
+function (see below) — a pure static host (GitHub Pages, Netlify's static
+tier) would no longer be enough. Any host with lightweight function support
+would still work.
 
 ## Unlock counter
 
@@ -115,13 +117,21 @@ The landing page shows an honest running total: "N pieces unlocked so far."
 It's real, not decorative — no number moves unless someone actually loads
 an emotion page.
 
-How it works: each emotion page fires a silent `fetch()` to
-[Abacus](https://abacus.jasoncameron.dev) (a free, keyless public counter
-API) on load, incrementing that emotion's key under the `moodshop-digheakshaf`
-namespace. `index.html` reads all 8 keys on load, sums them, and shows the
-total — or "No one has unlocked a piece yet — be the first." at zero. If the
-fetch fails for any reason, the stat line just stays hidden rather than
-showing a stale or wrong number.
+How it works: each emotion page fires a silent `fetch()` to `/api/counter`
+(a Vercel serverless function, `api/counter.js`) on load, which server-side
+proxies to [Abacus](https://abacus.jasoncameron.dev) (a free, keyless public
+counter API) and increments that emotion's key under the
+`moodshop-digheakshaf` namespace. `index.html` calls the same function
+(`?action=total`) to sum all 8 keys and show the total — or "No one has
+unlocked a piece yet — be the first." at zero. If anything fails, the stat
+line just stays hidden rather than showing a stale or wrong number.
+
+This goes through a same-origin API route rather than calling Abacus
+directly from the browser **specifically to avoid ad blockers.** A direct
+client-side `fetch()` to a third-party "hit counter" domain is exactly the
+kind of cross-site request tools like uBlock Origin and Brave Shields block
+by default — which was silently hiding the counter for real visitors. The
+proxy makes it a same-origin call, which those tools don't touch.
 
 Known limitations, worth knowing before you rely on this:
 

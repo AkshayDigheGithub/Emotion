@@ -259,25 +259,20 @@
 
 <script>
 (function(){
-  var NAMESPACE = 'moodshop-digheakshaf';
-  var EMOTIONS = ['calm','nostalgia','happiness','hope','rage','hurt','sorrow','grief'];
   var el = document.getElementById('unlock-count');
   if(!el) return;
 
-  Promise.all(EMOTIONS.map(function(e){
-    return fetch('https://abacus.jasoncameron.dev/get/' + NAMESPACE + '/' + e)
-      .then(function(r){ return r.ok ? r.json() : null; })
-      .catch(function(){ return null; });
-  })).then(function(results){
-    if(results.some(function(r){ return r === null; })){
-      return;
-    }
-    var total = results.reduce(function(sum, r){ return sum + (r.value || 0); }, 0);
-    el.textContent = total > 0
-      ? total.toLocaleString() + (total === 1 ? ' piece unlocked so far' : ' pieces unlocked so far')
-      : 'No one has unlocked a piece yet — be the first.';
-    el.classList.add('visible');
-  });
+  fetch('/api/counter?action=total')
+    .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
+    .then(function(data){
+      if(!data.ok) return;
+      var total = data.total;
+      el.textContent = total > 0
+        ? total.toLocaleString() + (total === 1 ? ' piece unlocked so far' : ' pieces unlocked so far')
+        : 'No one has unlocked a piece yet — be the first.';
+      el.classList.add('visible');
+    })
+    .catch(function(){});
 })();
 </script>
 
