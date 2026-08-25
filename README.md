@@ -19,6 +19,7 @@ hope.html        $2
 grief.html       $5
 robots.txt       blocks crawlers from the emotion pages, allows the landing page
 sitemap.xml      lists only index.html, on purpose
+api/counter.js   Vercel serverless function — see "Unlock counter" below
 ```
 
 The pricing table in the original spec also mentioned "Longing" at $3, but the
@@ -28,6 +29,19 @@ as the others (copy `rage.html`'s structure, swap palette/copy) if you want a 9t
 ## Live deployment
 
 Deployed on Vercel, live at **https://moodshop.lol**
+
+### Vercel Web Analytics
+
+Every page loads `<script defer src="/_vercel/insights/script.js"></script>`
+— the standard way to add Vercel Web Analytics to a plain static site with
+no build step (no `@vercel/analytics` npm package needed, since there's no
+bundler here).
+
+Confirmed working: the Analytics API returns real (currently 0/0, since
+there's no traffic yet) data for this project rather than an "enabled"
+error, so tracking is live on the Vercel side — no dashboard toggle needed.
+Once real visitors show up, numbers appear in Project → Analytics in the
+Vercel dashboard within a few minutes.
 
 `index.html`, `robots.txt`, `sitemap.xml`, and every emotion page's share
 script all point at this domain now (canonical, Open Graph, JSON-LD, the

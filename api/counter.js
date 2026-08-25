@@ -12,10 +12,16 @@ module.exports = async (req, res) => {
     }
     try {
       const r = await fetch(`https://abacus.jasoncameron.dev/hit/${NAMESPACE}/${emotion}`);
-      const data = await r.json();
-      res.status(200).json(data);
+      const text = await r.text();
+      console.error('hit upstream status', r.status, 'body', text);
+      if (!r.ok) {
+        res.status(502).json({ error: 'upstream error', upstreamStatus: r.status, upstreamBody: text });
+        return;
+      }
+      res.status(200).json(JSON.parse(text));
     } catch (err) {
-      res.status(502).json({ error: 'upstream error' });
+      console.error('hit exception', err && err.message, err && err.stack);
+      res.status(502).json({ error: 'upstream error', message: err && err.message });
     }
     return;
   }
@@ -24,14 +30,19 @@ module.exports = async (req, res) => {
     try {
       const values = await Promise.all(EMOTIONS.map(async (e) => {
         const r = await fetch(`https://abacus.jasoncameron.dev/get/${NAMESPACE}/${e}`);
-        if (!r.ok) throw new Error('bad response');
-        const data = await r.json();
+        const text = await r.text();
+        if (!r.ok) {
+          console.error('total upstream status', e, r.status, 'body', text);
+          throw new Error(`bad response for ${e}: ${r.status} ${text}`);
+        }
+        const data = JSON.parse(text);
         return data.value || 0;
       }));
       const total = values.reduce((a, b) => a + b, 0);
       res.status(200).json({ ok: true, total });
     } catch (err) {
-      res.status(502).json({ ok: false });
+      console.error('total exception', err && err.message, err && err.stack);
+      res.status(502).json({ ok: false, message: err && err.message });
     }
     return;
   }
