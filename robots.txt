@@ -9,4 +9,4 @@ Disallow: /rage.html
 Disallow: /hope.html
 Disallow: /grief.html
 
-Sitemap: https://moodshop-delta.vercel.app/sitemap.xml
+Sitemap: https://moodshop.lol/sitemap.xml

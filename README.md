@@ -27,12 +27,29 @@ as the others (copy `rage.html`'s structure, swap palette/copy) if you want a 9t
 
 ## Live deployment
 
-Deployed on Vercel: **https://moodshop-delta.vercel.app**
+Deployed on Vercel, live at **https://moodshop.lol**
 
-`index.html`, `robots.txt`, and `sitemap.xml` all point at this domain now
-(canonical, Open Graph, JSON-LD). If you later attach a custom domain in
-Vercel, find-and-replace `moodshop-delta.vercel.app` across the repo with
-your new domain and redeploy.
+`index.html`, `robots.txt`, `sitemap.xml`, and every emotion page's share
+script all point at this domain now (canonical, Open Graph, JSON-LD, the
+share caption link).
+
+### Deployment protection — read this before setting BMC redirects
+
+The Vercel project has **SSO/deployment protection enabled on its
+`*.vercel.app` URLs** (`moodshop-delta.vercel.app`,
+`moodshop-akshay-d111.vercel.app`) — visiting those shows a Vercel login
+wall to anyone who isn't logged into this Vercel account. **Custom domains
+are exempt from this**, so `moodshop.lol` / `www.moodshop.lol` are the only
+publicly reachable URLs.
+
+This matters a lot for the BMC redirects below: if any Extra's "redirect to
+a URL" field points at a `.vercel.app` URL instead of `moodshop.lol`,
+paying customers get sent to a login page instead of their piece.
+**Double-check every one of the 8 Extras uses `moodshop.lol`, not
+`vercel.app`, in its redirect URL** — earlier setup guidance (including
+from me, before the custom domain was connected) suggested `.vercel.app`
+URLs, so this is worth verifying even if it "worked" during testing while
+logged into Vercel yourself.
 
 ## BMC Extras (live)
 
@@ -50,10 +67,11 @@ All 8 Extras are created and wired into `index.html`:
 | Grief | https://buymeacoffee.com/digheakshaf/e/569319 |
 
 Each Extra's **Success page** must be set to "Redirect to a URL after
-purchase" pointing at that emotion's page (e.g. Calm →
-`https://moodshop-delta.vercel.app/calm.html`) — "Confirmation message"
-(BMC's default) does not deliver anything, it just shows a thank-you
-message on BMC's own site.
+purchase" pointing at that emotion's page on the live domain (e.g. Calm →
+`https://moodshop.lol/calm.html`) — "Confirmation message" (BMC's default)
+does not deliver anything, it just shows a thank-you message on BMC's own
+site. See "Deployment protection" above — use `moodshop.lol`, not a
+`vercel.app` URL.
 
 ## Before this goes fully live
 
@@ -134,7 +152,7 @@ Each emotion page has a quiet "Share this feeling" button at the bottom
    on desktop/unsupported browsers.
 
 Deliberately **does not** share the emotion page's own URL — only a caption
-+ link back to the landing page (`moodshop-delta.vercel.app`). Sharing the
++ link back to the landing page (`moodshop.lol`). Sharing the
 direct page link would let anyone who receives it read the full piece for
 free, defeating the point of the paywall. The quote card gives people
 something to post without giving away the product itself.
