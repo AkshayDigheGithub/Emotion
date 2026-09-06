@@ -8,7 +8,8 @@ no database, no email.
 ## Structure
 
 ```
-index.html       landing page — grid of emotion cards, linked, indexable
+index.html       landing page — hero, free preview picker, shelf, plans, FAQ
+bundle.html      "Whole Shelf" delivery page — links to all 8, unlisted
 happiness.html   $2  (linked nowhere except the BMC redirect for this listing)
 sorrow.html      $5
 hurt.html        $4
@@ -17,7 +18,7 @@ nostalgia.html   $1
 rage.html        $3
 hope.html        $2
 grief.html       $5
-robots.txt       blocks crawlers from the emotion pages, allows the landing page
+robots.txt       blocks crawlers from the emotion + bundle pages, allows the landing page
 sitemap.xml      lists only index.html, on purpose
 api/counter.js   Vercel serverless function — see "Unlock counter" below
 ```
@@ -25,6 +26,77 @@ api/counter.js   Vercel serverless function — see "Unlock counter" below
 The pricing table in the original spec also mentioned "Longing" at $3, but the
 site structure only calls for these 8 pages. Add a `longing.html` the same way
 as the others (copy `rage.html`'s structure, swap palette/copy) if you want a 9th.
+
+## The landing page
+
+`index.html` is the whole sales pitch. Top to bottom:
+
+1. **Hero** — one promise ("Feel _______ in two minutes"), a rotating feeling
+   word, four objection-killing chips (~2 min, nothing to install, no signup,
+   from $1), and the honest unlock counter as social proof.
+2. **Free preview picker** — the conversion engine. Eight mood chips plus a
+   "Surprise me". Picking one themes the whole page in that emotion's palette
+   and shows the *real* opening of that piece — 45-odd words lifted verbatim
+   from the page you're selling — then fades the next line out under a mask
+   and offers "Unlock the rest — $N". Nobody has to buy blind any more.
+3. **How it works** — three steps, because "pay a stranger and get redirected
+   somewhere" needs explaining before it feels safe.
+4. **The shelf** — the eight cards, each now carrying its own opening line as
+   a pull-quote and two actions: `Unlock` (straight to BMC) and `Preview`
+   (scrolls back up and loads that piece into the picker).
+5. **Plans** — see below.
+6. **FAQ** — six questions, also emitted as `FAQPage` JSON-LD.
+
+Everything is still one static file with no build step and no dependencies.
+Motion is gated behind `prefers-reduced-motion`, and the scroll-reveal
+animation is gated behind a `.js` class on `<html>` plus a 2.5s timer
+fallback, so a JS failure can never leave the page blank.
+
+### Keeping the previews honest
+
+The excerpts in the picker are copy-pasted from the emotion pages, and the
+word counts next to them are real. If you rewrite a piece, update its
+`excerpt`/`tail`/`words` in the `PIECES` array in `index.html` or the preview
+stops matching what buyers get.
+
+## Plans
+
+Three tiers on the landing page:
+
+| Plan | Price | What it is | Status |
+|---|---|---|---|
+| One feeling | $1–$5 | Any single piece — the 8 existing BMC Extras | **Live** |
+| The Whole Shelf | $9 | All eight in one payment (vs $23 separately) | **Needs one BMC step — see below** |
+| Tip jar | Any | The plain BMC profile, no delivery promised | **Live** |
+
+### Finishing The Whole Shelf (one manual step, ~2 minutes)
+
+`bundle.html` is built and ready — it's the unlisted page that links to all
+eight pieces, styled like the rest of the shop, `noindex` + disallowed in
+`robots.txt` the same way the emotion pages are. What it doesn't have yet is
+a product to sell it, because BMC Extras can only be created from your own
+BMC account:
+
+1. On Buy Me a Coffee, create a new Extra called **The Whole Shelf**, priced
+   **$9**.
+2. Set its success page to **Redirect to a URL** →
+   `https://moodshop.lol/bundle.html` (not a `.vercel.app` URL — see
+   "Deployment protection" below).
+3. In `index.html`, find the `TODO(owner)` comment in the featured plan card
+   and swap that `href` for the new Extra's `/e/<id>` URL.
+
+Until step 3 is done the bundle button goes to the plain BMC profile page,
+which takes the money but does **not** auto-deliver `bundle.html` — you'd
+have to send the link by hand. So either finish the three steps or drop the
+featured plan card.
+
+## Cross-sell on the emotion pages
+
+Each emotion page now ends with a quiet line under the share button —
+"You've got Grief. Seven other feelings are on the shelf, from $1 — or take
+all eight for $9." — linking back to `#plans` and `#shelf`. It sits below the
+piece and after the share button on purpose: the product gets read first, the
+shop gets mentioned second.
 
 ## Live deployment
 

@@ -8,5 +8,6 @@ Disallow: /nostalgia.html
 Disallow: /rage.html
 Disallow: /hope.html
 Disallow: /grief.html
+Disallow: /bundle.html
 
 Sitemap: https://moodshop.lol/sitemap.xml

@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Moodshop — Short pieces written to make you feel something</title>
-<meta name="description" content="Moodshop sells short, immersive pieces of writing — each one built to make you feel one specific emotion. No accounts, no downloads, no email. Pay once, feel it once.">
+<meta name="description" content="Eight short pieces of writing, each built to put one specific feeling in you. Read the opening of any of them free. Unlock one from $1, or take the whole shelf for $9. No account, no download, no email.">
 <link rel="canonical" href="https://moodshop.lol/">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#1b1b24">
+<meta name="theme-color" content="#0e0e15">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Moodshop — Short pieces written to make you feel something">
-<meta property="og:description" content="Eight short pieces of writing, each built to make you feel one specific emotion. Pay once, feel it once. No accounts, no ads, no downloads.">
+<meta property="og:description" content="Eight short pieces of writing, each built to make you feel one specific emotion. Read the opening free. Pay once, feel it once.">
 <meta property="og:url" content="https://moodshop.lol/">
 <meta property="og:site_name" content="Moodshop">
 <meta property="og:locale" content="en_US">
@@ -23,7 +23,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Moodshop — Short pieces written to make you feel something">
-<meta name="twitter:description" content="Eight short pieces of writing, each built to make you feel one specific emotion. Pay once, feel it once.">
+<meta name="twitter:description" content="Eight short pieces of writing, each built to make you feel one specific emotion. Read the opening free.">
 <meta name="twitter:image" content="https://moodshop.lol/og-image.jpg">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AD%3C/text%3E%3C/svg%3E">
@@ -53,215 +53,633 @@
     {"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Rage","description":"A short piece written to make you feel rage.","offers":{"@type":"Offer","price":"3.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
     {"@type":"ListItem","position":6,"item":{"@type":"Product","name":"Hurt","description":"A short piece written to make you feel hurt, honestly.","offers":{"@type":"Offer","price":"4.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
     {"@type":"ListItem","position":7,"item":{"@type":"Product","name":"Sorrow","description":"A short piece written to sit with sorrow.","offers":{"@type":"Offer","price":"5.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-    {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"Grief","description":"A letter written to sit with grief.","offers":{"@type":"Offer","price":"5.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}}
+    {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"Grief","description":"A letter written to sit with grief.","offers":{"@type":"Offer","price":"5.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
+    {"@type":"ListItem","position":9,"item":{"@type":"Product","name":"The Whole Shelf","description":"All eight Moodshop pieces in one payment.","offers":{"@type":"Offer","price":"9.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What exactly do I get?","acceptedAnswer":{"@type":"Answer","text":"One web page containing one short piece of writing — around 200 words, designed and coloured for that one feeling. It opens in your browser the moment you pay. There's no file, no app and no account."}},
+    {"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. Payment happens on Buy Me a Coffee and their redirect takes you straight to the piece. Moodshop never asks for an email address or stores anything about you."}},
+    {"@type":"Question","name":"Can I read something before I pay?","acceptedAnswer":{"@type":"Answer","text":"Yes. The opening of every one of the eight pieces is free to read on the landing page — that's the real first lines, not a summary."}},
+    {"@type":"Question","name":"How long does a piece take to read?","acceptedAnswer":{"@type":"Answer","text":"About two minutes if you read it slowly, which is how they're meant to be read."}},
+    {"@type":"Question","name":"Can I come back to it later?","acceptedAnswer":{"@type":"Answer","text":"Yes — the link stays live. Bookmark it after you pay and you can reopen the piece whenever you want."}},
+    {"@type":"Question","name":"What is The Whole Shelf?","acceptedAnswer":{"@type":"Answer","text":"All eight pieces for $9 in a single payment, instead of $23 bought one at a time."}}
   ]
 }
 </script>
 
 <style>
   :root{
-    --page-bg1:#14141c;
-    --page-bg2:#1f1f2c;
-    --ink:#f2f0ec;
+    --bg:#0e0e15;
+    --bg-2:#15151f;
+    --ink:#f4f2ee;
     --sub:#a6a3b8;
-    --card-border:rgba(255,255,255,0.08);
+    --faint:rgba(255,255,255,0.06);
+    --line:rgba(255,255,255,0.09);
+    --accent:#bfe3da;
+    --accent-2:#5f9a8c;
+    --radius:18px;
+    --max:1060px;
   }
   *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   html,body{margin:0;padding:0;}
   body{
     min-height:100vh;
-    background:linear-gradient(160deg,var(--page-bg1) 0%,var(--page-bg2) 100%);
+    background:var(--bg);
     color:var(--ink);
     font-family:'Nunito Sans',sans-serif;
-    padding:8vh 6vw 10vh;
+    line-height:1.6;
+    overflow-x:hidden;
   }
-  header{
-    max-width:760px;
-    margin:0 auto 6vh;
-    text-align:center;
+
+  /* ---------- ambient background ---------- */
+  .aura{position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none;}
+  .aura::before,.aura::after{
+    content:'';
+    position:absolute;
+    width:70vmax; height:70vmax;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:0.22;
+    transition:background 1.2s ease, opacity 1.2s ease;
+  }
+  .aura::before{background:var(--accent); top:-28vmax; left:-18vmax; animation:drift1 26s ease-in-out infinite alternate;}
+  .aura::after{background:var(--accent-2); bottom:-30vmax; right:-20vmax; animation:drift2 32s ease-in-out infinite alternate;}
+  @keyframes drift1{to{transform:translate3d(9vw,7vh,0) scale(1.12);}}
+  @keyframes drift2{to{transform:translate3d(-8vw,-6vh,0) scale(1.08);}}
+
+  .wrap{max-width:var(--max); margin:0 auto; padding-left:6vw; padding-right:6vw;}
+  section{padding:clamp(3.5rem,9vw,6rem) 0;}
+
+  .eyebrow{
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--sub);
+    margin:0 0 0.9rem 0;
+    font-weight:700;
+  }
+  h2{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:clamp(1.9rem,4.4vw,2.7rem);
+    line-height:1.15;
+    margin:0 0 0.7rem 0;
+    letter-spacing:0.01em;
+  }
+  .lede{color:var(--sub); max-width:56ch; margin:0 0 2.4rem 0; font-size:1.02rem;}
+
+  /* ---------- hero ---------- */
+  .hero{padding-top:clamp(2.5rem,7vw,4.5rem); text-align:center;}
+  .wordmark{
+    display:inline-flex; align-items:center; gap:0.5rem;
+    font-size:0.78rem; letter-spacing:0.28em; text-transform:uppercase;
+    color:var(--sub); font-weight:700; margin:0 0 1.6rem 0;
+  }
+  .wordmark .dot{
+    width:9px; height:9px; border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 14px var(--accent);
+    transition:background 0.8s ease, box-shadow 0.8s ease;
   }
   h1{
     font-family:'Cormorant Garamond',serif;
     font-weight:600;
-    font-size:clamp(2.4rem,6vw,3.6rem);
-    margin:0 0 0.8rem 0;
-    letter-spacing:0.01em;
+    font-size:clamp(2.5rem,7.4vw,4.6rem);
+    line-height:1.05;
+    letter-spacing:0.005em;
+    margin:0 auto 1.3rem;
+    max-width:16ch;
   }
-  header p{
+  .rotator{
+    color:var(--accent);
+    display:inline-block;
+    transition:color 0.6s ease, opacity 0.35s ease, transform 0.35s ease;
+  }
+  .rotator.swap{opacity:0; transform:translateY(-0.18em);}
+  .hero p.sell{
     color:var(--sub);
-    font-size:clamp(1rem,2vw,1.15rem);
-    line-height:1.6;
-    max-width:520px;
-    margin:0 auto;
+    font-size:clamp(1rem,2.2vw,1.16rem);
+    max-width:50ch;
+    margin:0 auto 2rem;
   }
-  .grid{
-    max-width:1000px;
-    margin:0 auto;
+  .chips{
+    display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center;
+    margin:0 0 2.2rem 0; padding:0; list-style:none;
+  }
+  .chips li{
+    font-size:0.78rem; letter-spacing:0.04em;
+    color:var(--sub);
+    border:1px solid var(--line);
+    background:var(--faint);
+    border-radius:999px;
+    padding:0.4rem 0.9rem;
+  }
+  .cta-row{display:flex; flex-wrap:wrap; gap:0.8rem; justify-content:center;}
+  .btn{
+    display:inline-block;
+    font-family:'Nunito Sans',sans-serif;
+    font-size:0.92rem;
+    font-weight:700;
+    letter-spacing:0.02em;
+    border-radius:999px;
+    padding:0.85rem 1.7rem;
+    text-decoration:none;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:transform 0.18s ease, box-shadow 0.18s ease, background 0.3s ease, opacity 0.2s ease;
+  }
+  .btn-primary{
+    background:var(--ink);
+    color:#12121a;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+  }
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 16px 36px rgba(0,0,0,0.45);}
+  .btn-ghost{
+    background:transparent;
+    color:var(--ink);
+    border-color:var(--line);
+  }
+  .btn-ghost:hover{background:var(--faint); transform:translateY(-2px);}
+  .proof{
+    margin:2.4rem 0 0 0;
+    font-size:0.84rem;
+    letter-spacing:0.04em;
+    color:var(--sub);
+    opacity:0;
+    transition:opacity 0.7s ease;
+  }
+  .proof.visible{opacity:1;}
+  .proof .pulse{
+    display:inline-block; width:7px; height:7px; border-radius:50%;
+    background:#6ee7a8; margin-right:0.5rem; vertical-align:middle;
+    box-shadow:0 0 10px rgba(110,231,168,0.8);
+  }
+
+  /* ---------- taste / picker ---------- */
+  .picker-head{text-align:center;}
+  .picker-head .lede{margin-left:auto; margin-right:auto;}
+  .moods{
+    display:flex; flex-wrap:wrap; gap:0.6rem; justify-content:center;
+    margin:0 0 2rem 0; padding:0; list-style:none;
+  }
+  .mood{
+    font-family:'Nunito Sans',sans-serif;
+    font-size:0.88rem;
+    font-weight:600;
+    letter-spacing:0.03em;
+    color:var(--ink);
+    background:var(--faint);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:0.55rem 1.15rem;
+    cursor:pointer;
+    transition:transform 0.18s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  }
+  .mood:hover{transform:translateY(-2px); border-color:rgba(255,255,255,0.28);}
+  .mood[aria-pressed="true"]{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#14141c;
+  }
+  .mood.dice{opacity:0.75;}
+
+  .reader{
+    position:relative;
+    border-radius:24px;
+    border:1px solid var(--line);
+    padding:clamp(1.8rem,4.5vw,3rem);
+    overflow:hidden;
+    transition:background 0.7s ease, color 0.7s ease;
+    min-height:340px;
+    box-shadow:0 26px 60px rgba(0,0,0,0.45);
+  }
+  .reader .kicker{
+    font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase;
+    font-weight:700; opacity:0.6; margin:0 0 1rem 0;
+  }
+  .reader h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:clamp(1.5rem,3.6vw,2.2rem);
+    line-height:1.2;
+    margin:0 0 1.2rem 0;
+  }
+  .reader .excerpt{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.1rem,2.2vw,1.35rem);
+    line-height:1.95;
+    margin:0;
+    max-width:60ch;
+  }
+  .fade-out{
+    position:relative;
+    margin-top:0.2rem;
+    height:4.2rem;
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.1rem,2.2vw,1.35rem);
+    line-height:1.95;
+    opacity:0.5;
+    overflow:hidden;
+    max-width:60ch;
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,0.85),transparent 85%);
+    mask-image:linear-gradient(180deg,rgba(0,0,0,0.85),transparent 85%);
+    user-select:none;
+  }
+  .reader-foot{
+    display:flex; flex-wrap:wrap; align-items:center; gap:0.9rem 1.4rem;
+    margin-top:1.6rem;
+  }
+  .reader-meta{font-size:0.82rem; opacity:0.7; letter-spacing:0.03em;}
+  .btn-unlock{
+    background:rgba(0,0,0,0.32);
+    color:inherit;
+    border:1px solid currentColor;
+    backdrop-filter:blur(3px);
+  }
+  .btn-unlock:hover{transform:translateY(-2px); background:rgba(0,0,0,0.45);}
+  .reader.light .btn-unlock{background:rgba(255,255,255,0.42);}
+  .reader.light .btn-unlock:hover{background:rgba(255,255,255,0.62);}
+
+  /* ---------- how it works ---------- */
+  .steps{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:1.5rem;
+    gap:1.4rem;
+    padding:0; margin:0; list-style:none;
+    counter-reset:step;
+  }
+  .steps li{
+    border:1px solid var(--line);
+    background:var(--faint);
+    border-radius:var(--radius);
+    padding:1.6rem 1.5rem;
+  }
+  .steps li::before{
+    counter-increment:step;
+    content:counter(step);
+    display:flex; align-items:center; justify-content:center;
+    width:32px; height:32px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    font-size:0.85rem; font-weight:700;
+    color:var(--accent);
+    margin-bottom:1rem;
+    transition:color 0.8s ease;
+  }
+  .steps h3{font-size:1.02rem; margin:0 0 0.4rem 0; font-weight:700;}
+  .steps p{margin:0; color:var(--sub); font-size:0.92rem;}
+
+  /* ---------- shelf ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:1.4rem;
   }
   .card{
     position:relative;
-    border-radius:16px;
-    padding:1.8rem 1.6rem;
-    border:1px solid var(--card-border);
+    border-radius:var(--radius);
+    padding:1.7rem 1.5rem 1.4rem;
+    border:1px solid var(--card-border,rgba(255,255,255,0.08));
     overflow:hidden;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    min-height:220px;
-    text-decoration:none;
-    color:var(--ink);
-    transition:transform 0.25s ease, box-shadow 0.25s ease;
+    min-height:280px;
+    transition:transform 0.28s ease, box-shadow 0.28s ease;
   }
-  .card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(0,0,0,0.35);
-  }
+  .card:hover{transform:translateY(-5px); box-shadow:0 18px 44px rgba(0,0,0,0.42);}
   .card .name{
     font-family:'Cormorant Garamond',serif;
     font-weight:600;
-    font-size:1.7rem;
-    margin:0 0 0.4rem 0;
-    position:relative;
-    z-index:1;
+    font-size:1.75rem;
+    margin:0 0 0.35rem 0;
   }
-  .card .teaser{
-    font-size:0.92rem;
-    line-height:1.5;
-    opacity:0.92;
+  .card .teaser{font-size:0.92rem; line-height:1.5; opacity:0.95; margin:0 0 0.9rem 0;}
+  .card .whisper{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:1rem;
+    line-height:1.6;
+    opacity:0.72;
     margin:0;
-    position:relative;
-    z-index:1;
+    border-left:2px solid currentColor;
+    padding-left:0.8rem;
   }
-  .card .price{
-    margin-top:1.4rem;
-    font-weight:700;
-    font-size:0.95rem;
-    letter-spacing:0.02em;
-    position:relative;
-    z-index:1;
-  }
-  .card .price span{
-    display:inline-block;
-    padding:0.4rem 0.9rem;
-    border-radius:999px;
-    background:rgba(0,0,0,0.28);
+  .card-actions{display:flex; align-items:center; gap:0.7rem; margin-top:1.3rem; flex-wrap:wrap;}
+  .card .buy{
+    font-size:0.85rem; font-weight:700; letter-spacing:0.02em;
+    padding:0.5rem 1.1rem; border-radius:999px;
+    background:rgba(0,0,0,0.3);
+    color:inherit; text-decoration:none;
+    border:1px solid transparent;
+    transition:background 0.2s ease, transform 0.2s ease;
     backdrop-filter:blur(2px);
   }
-  .card.calm{background:linear-gradient(140deg,#bfe3da,#5f9a8c);}
-  .card.nostalgia{background:linear-gradient(140deg,#e0bd8f,#a4653b);}
-  .card.happiness{background:linear-gradient(140deg,#ffd889,#e08a2b); color:#3a2600;}
-  .card.hope{background:linear-gradient(140deg,#4a4a7a,#f6c98a);}
-  .card.rage{background:linear-gradient(140deg,#5c0f0f,#1a0505);}
-  .card.hurt{background:linear-gradient(140deg,#6b1a24,#2a0a0d);}
-  .card.sorrow{background:linear-gradient(140deg,#33547e,#0e1a2b);}
-  .card.grief{background:linear-gradient(140deg,#40374f,#100e14);}
-  .card.happiness .price span{background:rgba(0,0,0,0.15); color:#3a2600;}
+  .card .buy:hover{background:rgba(0,0,0,0.48); transform:translateY(-1px);}
+  .card .peek{
+    font-family:'Nunito Sans',sans-serif;
+    font-size:0.8rem; font-weight:600; letter-spacing:0.04em;
+    background:none; border:1px solid currentColor;
+    border-radius:999px; padding:0.45rem 1rem;
+    color:inherit; opacity:0.7; cursor:pointer;
+    transition:opacity 0.2s ease;
+  }
+  .card .peek:hover{opacity:1;}
+  .card.on-light .buy{background:rgba(255,255,255,0.4); }
+  .card.on-light .buy:hover{background:rgba(255,255,255,0.62);}
 
+  .card.calm{background:linear-gradient(140deg,#bfe3da,#5f9a8c); color:#14312b;}
+  .card.nostalgia{background:linear-gradient(140deg,#e0bd8f,#a4653b); color:#2e1c0f;}
+  .card.happiness{background:linear-gradient(140deg,#ffd889,#e08a2b); color:#3a2600;}
+  .card.hope{
+    background:radial-gradient(120% 95% at 88% 118%,#f6c98a 0%,rgba(246,201,138,0) 58%),
+               linear-gradient(140deg,#565694,#211f3d);
+    color:#f4ecdf;
+  }
+  .card.rage{background:linear-gradient(140deg,#5c0f0f,#1a0505); color:#f6e3e3;}
+  .card.hurt{background:linear-gradient(140deg,#6b1a24,#2a0a0d); color:#f4e0e2;}
+  .card.sorrow{background:linear-gradient(140deg,#33547e,#0e1a2b); color:#e8eef7;}
+  .card.grief{background:linear-gradient(140deg,#40374f,#100e14); color:#eae5f0;}
+
+  /* ---------- plans ---------- */
+  .plans{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1.4rem;
+    align-items:stretch;
+  }
+  .plan{
+    position:relative;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.015));
+    border-radius:var(--radius);
+    padding:1.9rem 1.7rem;
+    display:flex; flex-direction:column;
+  }
+  .plan.featured{
+    border-color:var(--accent);
+    box-shadow:0 0 0 1px var(--accent) inset, 0 20px 50px rgba(0,0,0,0.4);
+    transition:border-color 0.8s ease, box-shadow 0.8s ease;
+  }
+  .plan .badge{
+    position:absolute; top:-0.72rem; left:1.6rem;
+    font-size:0.66rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
+    background:var(--accent); color:#14141c;
+    padding:0.3rem 0.7rem; border-radius:999px;
+    transition:background 0.8s ease;
+  }
+  .plan h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.5rem; font-weight:600;
+    margin:0 0 0.2rem 0;
+  }
+  .plan .who{color:var(--sub); font-size:0.86rem; margin:0 0 1.2rem 0;}
+  .price{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.6rem; font-weight:600; line-height:1;
+    margin:0 0 0.2rem 0;
+  }
+  .price small{font-family:'Nunito Sans',sans-serif; font-size:0.82rem; font-weight:400; color:var(--sub); letter-spacing:0.03em;}
+  .strike{color:var(--sub); font-size:0.84rem; margin:0 0 1.3rem 0;}
+  .strike s{opacity:0.7;}
+  .plan ul{list-style:none; padding:0; margin:0 0 1.7rem 0; font-size:0.92rem; color:var(--sub);}
+  .plan ul li{padding:0.34rem 0 0.34rem 1.5rem; position:relative;}
+  .plan ul li::before{
+    content:'';
+    position:absolute; left:0; top:0.95rem;
+    width:14px; height:2px; border-radius:2px;
+    background:var(--accent);
+    transition:background 0.8s ease;
+  }
+  .plan .btn{margin-top:auto; text-align:center;}
+  .plan-note{color:var(--sub); font-size:0.82rem; margin:1.6rem 0 0 0; text-align:center;}
+
+  /* ---------- faq ---------- */
+  .faq{max-width:760px;}
+  details{
+    border-bottom:1px solid var(--line);
+    padding:1.15rem 0;
+  }
+  summary{
+    cursor:pointer;
+    list-style:none;
+    font-weight:600;
+    font-size:1rem;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:'+';
+    color:var(--accent);
+    font-size:1.3rem;
+    line-height:1;
+    transition:transform 0.25s ease, color 0.8s ease;
+  }
+  details[open] summary::after{transform:rotate(45deg);}
+  details p{color:var(--sub); margin:0.8rem 0 0 0; font-size:0.94rem; max-width:62ch;}
+
+  /* ---------- footer ---------- */
   footer{
-    max-width:600px;
-    margin:8vh auto 0;
+    border-top:1px solid var(--line);
+    padding:3rem 0 4rem;
     text-align:center;
     color:var(--sub);
     font-size:0.85rem;
-    line-height:1.7;
+    line-height:1.8;
   }
-  footer a{color:var(--sub);}
-  .stat{
-    margin:1.2rem 0 0 0;
-    font-size:0.85rem;
-    letter-spacing:0.03em;
-    color:var(--sub);
-    opacity:0;
-    transition:opacity 0.6s ease;
+  footer a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line);}
+  footer a:hover{border-color:currentColor;}
+  footer .ph{margin-top:1.4rem;}
+
+  /* ---------- motion ---------- */
+  .js .reveal{opacity:0; transform:translateY(16px); transition:opacity 0.7s ease, transform 0.7s ease;}
+  .js .reveal.in{opacity:1; transform:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation:none !important; transition-duration:0.001ms !important;}
+    .js .reveal{opacity:1; transform:none;}
   }
-  .stat.visible{opacity:1;}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer data-website-id="dfid_6nLSJ7Yb6pX8SrM441xsu" data-domain="moodshop.lol" src="https://datafa.st/js/script.js"></script>
 </head>
 <body>
 
-<header>
-  <h1>Moodshop</h1>
-  <p>Eight short pieces of writing. Each one built to make you feel exactly one thing. Pay once, feel it once — no account, no download, no follow-up.</p>
-  <p class="stat" id="unlock-count" aria-live="polite"></p>
+<script>document.documentElement.className += ' js';</script>
+
+<div class="aura" aria-hidden="true"></div>
+
+<header class="hero wrap">
+  <p class="wordmark"><span class="dot"></span> Moodshop</p>
+  <h1>Feel <span class="rotator" id="rotator">calm</span> in two minutes.</h1>
+  <p class="sell">Eight short pieces of writing. Each one does exactly one job — puts a single feeling in you and then gets out of the way. No account, no download, no follow-up email.</p>
+  <ul class="chips">
+    <li>Reads in ~2 minutes</li>
+    <li>Nothing to install</li>
+    <li>No signup, ever</li>
+    <li>From $1</li>
+  </ul>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="#taste">Read an opening — free</a>
+    <a class="btn btn-ghost" href="#plans">See the plans</a>
+  </div>
+  <p class="proof" id="unlock-count" aria-live="polite"></p>
 </header>
 
-<main class="grid">
+<!-- ================= free taste ================= -->
+<section id="taste" class="wrap">
+  <div class="picker-head reveal">
+    <p class="eyebrow">Free, right now</p>
+    <h2>How do you want to feel?</h2>
+    <p class="lede">Pick one and you'll get the real opening of that piece — the actual first lines, not a summary. If it lands, the rest is one tap away.</p>
+  </div>
 
-  <a class="card calm" href="https://www.buymeacoffee.com/digheakshaf/e/569310" rel="nofollow">
-    <div>
-      <p class="name">Calm</p>
-      <p class="teaser">For when your mind won't stop moving.</p>
+  <ul class="moods reveal" id="moods"></ul>
+
+  <article class="reader reveal" id="reader" aria-live="polite">
+    <p class="kicker" id="reader-kicker">Calm · free opening</p>
+    <h3 id="reader-title"></h3>
+    <p class="excerpt" id="reader-excerpt"></p>
+    <div class="fade-out" id="reader-fade" aria-hidden="true"></div>
+    <div class="reader-foot">
+      <a class="btn btn-unlock" id="reader-buy" href="#" rel="nofollow">Unlock the rest — $1</a>
+      <span class="reader-meta" id="reader-meta"></span>
     </div>
-    <p class="price"><span>Unlock — $1</span></p>
-  </a>
+  </article>
+</section>
 
-  <a class="card nostalgia" href="https://www.buymeacoffee.com/digheakshaf/e/569313" rel="nofollow">
-    <div>
-      <p class="name">Nostalgia</p>
-      <p class="teaser">A quiet trip back to somewhere warm.</p>
+<!-- ================= how it works ================= -->
+<section class="wrap">
+  <div class="reveal">
+    <p class="eyebrow">How it works</p>
+    <h2>Three taps, no account.</h2>
+  </div>
+  <ol class="steps reveal">
+    <li>
+      <h3>Pick a feeling</h3>
+      <p>Choose the one you're actually in — or the one you want to be in. Read its opening free first.</p>
+    </li>
+    <li>
+      <h3>Pay on Buy Me a Coffee</h3>
+      <p>One tap, card or Apple Pay, a few seconds. Nothing to create, nothing to remember.</p>
+    </li>
+    <li>
+      <h3>The piece opens instantly</h3>
+      <p>Their redirect drops you straight onto your page. Bookmark it — the link stays live for you.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ================= the shelf ================= -->
+<section id="shelf" class="wrap">
+  <div class="reveal">
+    <p class="eyebrow">The shelf</p>
+    <h2>Eight feelings, priced by weight.</h2>
+    <p class="lede">The lighter ones cost a dollar. The ones that took the most to write cost five. Every card here has a free opening — tap <em>Preview</em> to read it.</p>
+  </div>
+  <div class="grid" id="shelf-grid"></div>
+</section>
+
+<!-- ================= plans ================= -->
+<section id="plans" class="wrap">
+  <div class="reveal">
+    <p class="eyebrow">Plans</p>
+    <h2>Pay once. That's the whole model.</h2>
+    <p class="lede">No subscription, no credits, no upsell in your inbox next week — there is no inbox. Pick the shape that fits.</p>
+  </div>
+
+  <div class="plans reveal">
+    <div class="plan">
+      <h3>One feeling</h3>
+      <p class="who">For when you know exactly what you need.</p>
+      <p class="price">$1–$5</p>
+      <p class="strike">Priced per piece</p>
+      <ul>
+        <li>Any single piece, instantly</li>
+        <li>Free opening before you pay</li>
+        <li>Yours to reopen any time</li>
+      </ul>
+      <a class="btn btn-ghost" href="#shelf">Choose a feeling</a>
     </div>
-    <p class="price"><span>Unlock — $1</span></p>
-  </a>
 
-  <a class="card happiness" href="https://www.buymeacoffee.com/digheakshaf/e/569314" rel="nofollow">
-    <div>
-      <p class="name">Happiness</p>
-      <p class="teaser">Permission to feel good, no reason required.</p>
+    <div class="plan featured">
+      <span class="badge">Best value</span>
+      <h3>The Whole Shelf</h3>
+      <p class="who">For the whole spectrum — and the days you can't name it.</p>
+      <p class="price">$9 <small>once</small></p>
+      <p class="strike"><s>$23</s> if bought one at a time — save $14</p>
+      <ul>
+        <li>All eight pieces, one payment</li>
+        <li>One link that opens every one</li>
+        <li>New pieces added to the shelf, free</li>
+      </ul>
+      <!-- TODO(owner): once the "Whole Shelf" Extra exists on Buy Me a Coffee,
+           swap this href for its /e/<id> URL and set its success page to
+           redirect to https://moodshop.lol/bundle.html for instant delivery. -->
+      <a class="btn btn-primary" href="https://www.buymeacoffee.com/digheakshaf" rel="nofollow">Take the whole shelf — $9</a>
     </div>
-    <p class="price"><span>Unlock — $2</span></p>
-  </a>
 
-  <a class="card hope" href="https://www.buymeacoffee.com/digheakshaf/e/569315" rel="nofollow">
-    <div>
-      <p class="name">Hope</p>
-      <p class="teaser">For the dark that hasn't broken yet.</p>
+    <div class="plan">
+      <h3>Tip jar</h3>
+      <p class="who">For people who already read one and want to say so.</p>
+      <p class="price">Any <small>amount</small></p>
+      <p class="strike">No delivery, no obligation</p>
+      <ul>
+        <li>Keeps the shop running</li>
+        <li>Funds the next piece</li>
+        <li>Leave a note — I read them</li>
+      </ul>
+      <a class="btn btn-ghost" href="https://www.buymeacoffee.com/digheakshaf" rel="nofollow">Buy me a coffee</a>
     </div>
-    <p class="price"><span>Unlock — $2</span></p>
-  </a>
+  </div>
+  <p class="plan-note">Every payment runs through Buy Me a Coffee. Moodshop never sees your card and never asks for your email.</p>
+</section>
 
-  <a class="card rage" href="https://www.buymeacoffee.com/digheakshaf/e/569316" rel="nofollow">
-    <div>
-      <p class="name">Rage</p>
-      <p class="teaser">For when calm isn't the point.</p>
-    </div>
-    <p class="price"><span>Unlock — $3</span></p>
-  </a>
+<!-- ================= faq ================= -->
+<section class="wrap">
+  <div class="faq reveal">
+    <p class="eyebrow">Questions</p>
+    <h2>The honest answers.</h2>
 
-  <a class="card hurt" href="https://www.buymeacoffee.com/digheakshaf/e/569317" rel="nofollow">
-    <div>
-      <p class="name">Hurt</p>
-      <p class="teaser">For what they did, and what it revealed.</p>
-    </div>
-    <p class="price"><span>Unlock — $4</span></p>
-  </a>
+    <details>
+      <summary>What exactly am I paying for?</summary>
+      <p>One web page with one short piece of writing on it — around 200 words, set in its own colour and typography for that one feeling. It opens in your browser the second you pay. There's no file, no app, no account.</p>
+    </details>
+    <details>
+      <summary>Two hundred words? That's short.</summary>
+      <p>On purpose. These are meant to be read slowly, once, and felt — not skimmed and filed away. A piece that takes two minutes and actually moves you beats one that takes twenty and doesn't.</p>
+    </details>
+    <details>
+      <summary>Can I read something before I pay?</summary>
+      <p>Yes — every one of the eight. The openings above are the real first lines of each piece, not a teaser written to sell it.</p>
+    </details>
+    <details>
+      <summary>Do I need an account?</summary>
+      <p>No. Payment happens on Buy Me a Coffee and their redirect takes you straight to the piece. Moodshop stores nothing about you and can't email you even if it wanted to.</p>
+    </details>
+    <details>
+      <summary>Can I come back to it later?</summary>
+      <p>Yes. The link stays live — bookmark it after you pay and reopen it whenever the feeling comes back around.</p>
+    </details>
+    <details>
+      <summary>What if it doesn't do anything for me?</summary>
+      <p>Then it cost you a dollar or two and you should tell me so. Message me through Buy Me a Coffee — refunds on a $2 piece of writing aren't worth anyone's afternoon, so I'd rather just send you a different one.</p>
+    </details>
+  </div>
+</section>
 
-  <a class="card sorrow" href="https://www.buymeacoffee.com/digheakshaf/e/569318" rel="nofollow">
-    <div>
-      <p class="name">Sorrow</p>
-      <p class="teaser">Sit with it. No one's rushing you.</p>
-    </div>
-    <p class="price"><span>Unlock — $5</span></p>
-  </a>
-
-  <a class="card grief" href="https://www.buymeacoffee.com/digheakshaf/e/569319" rel="nofollow">
-    <div>
-      <p class="name">Grief</p>
-      <p class="teaser">A letter for what you're still carrying.</p>
-    </div>
-    <p class="price"><span>Unlock — $5</span></p>
-  </a>
-
-</main>
-
-<footer>
+<footer class="wrap">
   <p>No accounts. No emails. No files to download. Pay through Buy Me a Coffee and you're taken straight to the piece.</p>
   <p><a href="https://www.buymeacoffee.com/digheakshaf" rel="nofollow">Support Moodshop on Buy Me a Coffee</a></p>
-  <p>
+  <p class="ph">
     <a href="https://www.producthunt.com/products/moodshop?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-moodshop" target="_blank" rel="noopener noreferrer">
       <img alt="Moodshop - Eight short pieces of writing | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1231497&theme=light&t=1787719957267">
     </a>
@@ -270,20 +688,250 @@
 
 <script>
 (function(){
-  var el = document.getElementById('unlock-count');
-  if(!el) return;
+  "use strict";
 
-  fetch('/api/counter?action=total')
-    .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
-    .then(function(data){
-      if(!data.ok) return;
-      var total = data.total;
-      el.textContent = total > 0
-        ? total.toLocaleString() + (total === 1 ? ' piece unlocked so far' : ' pieces unlocked so far')
-        : 'No one has unlocked a piece yet — be the first.';
-      el.classList.add('visible');
-    })
-    .catch(function(){});
+  var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var PIECES = [
+    {
+      key:"calm", accent:"#8fd3c3", accent2:"#5f9a8c", name:"Calm", price:1, words:184,
+      url:"https://www.buymeacoffee.com/digheakshaf/e/569310",
+      teaser:"For when your mind won't stop moving.",
+      title:"Nothing is asking anything of you right now",
+      excerpt:"Let your eyes rest on this, not read it exactly, just move across it slowly. Breathe in for four. Hold for four. Out for six. You don't need to count out loud — just let the rhythm happen underneath everything else you're thinking about.",
+      tail:"Your shoulders have been climbing toward your ears for longer than you realized. Let them drop.",
+      colors:["#e6f5f1","#bfe3da","#8fc7ba"], ink:"#1f3d38", light:true
+    },
+    {
+      key:"nostalgia", accent:"#e6c396", accent2:"#c98f6a", name:"Nostalgia", price:1, words:198,
+      url:"https://www.buymeacoffee.com/digheakshaf/e/569313",
+      teaser:"A quiet trip back to somewhere warm.",
+      title:"You remember, don't you",
+      excerpt:"The particular gold of late afternoon light through a car window on a drive home from somewhere ordinary. The specific quiet of a house on a Sunday morning before anyone else was awake. A voice calling your name from another room, the exact pitch of it, gone now, but not really —",
+      tail:"still filed somewhere in you, ready to surface. There's a version of you that existed in that light.",
+      colors:["#f4e6cf","#e0bd8f","#c98f6a"], ink:"#3d2718", light:true
+    },
+    {
+      key:"happiness", accent:"#ffd889", accent2:"#e08a2b", name:"Happiness", price:2, words:205,
+      url:"https://www.buymeacoffee.com/digheakshaf/e/569314",
+      teaser:"Permission to feel good, no reason required.",
+      title:"The lightness you forgot you had",
+      excerpt:"Notice this: right now, nothing is required of you. Not one thing. Let your shoulders find out how far down they can actually go. You are allowed to feel good for no reason — you don't need a permission slip, an achievement, a reason the size of your worry.",
+      tail:"Happiness doesn't have to be earned back like a debt. Sometimes it just arrives.",
+      colors:["#fff4d6","#ffd889","#ffb454"], ink:"#4a3200", light:true
+    },
+    {
+      key:"hope", accent:"#f6c98a", accent2:"#7a7ac0", name:"Hope", price:2, words:207,
+      url:"https://www.buymeacoffee.com/digheakshaf/e/569315",
+      teaser:"For the dark that hasn't broken yet.",
+      title:"It's still dark, and the sky is already changing",
+      excerpt:"You can't see it yet, not really — the light hasn't reached the part of the sky you're looking at. But somewhere past the horizon, it's already begun. That's how mornings work. The change starts before there's any proof of it.",
+      tail:"You've been asking things to be different for a while now, and nothing you can point to has shifted.",
+      colors:["#1b2440","#3d3d6d","#5b5590"], ink:"#fdf6ea", light:false
+    },
+    {
+      key:"rage", accent:"#ff6a58", accent2:"#8a0f0f", name:"Rage", price:3, words:219,
+      url:"https://www.buymeacoffee.com/digheakshaf/e/569316",
+      teaser:"For when calm isn't the point.",
+      title:"Good. Let it be loud.",
+      excerpt:"You've been so reasonable for so long. Explaining calmly. Giving the benefit of the doubt one more time than it was owed. Swallowing the sharp thing you wanted to say because it wasn't “the right moment.” There's never a right moment for people like that.",
+      tail:"You are not too much for being furious about this. You are correctly sized.",
+      colors:["#0a0505","#3a0a0a","#8a0f0f"], ink:"#f5e6e6", light:false
+    },
+    {
+      key:"hurt", accent:"#e0a4ab", accent2:"#6b1a24", name:"Hurt", price:4, words:216,
+      url:"https://www.buymeacoffee.com/digheakshaf/e/569317",
+      teaser:"For what they did, and what it revealed.",
+      title:"You have every right to feel this",
+      excerpt:"Someone you trusted did something that trust wasn't built for. Maybe they said it plainly. Maybe they just showed you, through what they chose over you, exactly how much room you took up in their decisions. Not much, it turns out. Not enough.",
+      tail:"That's the part that stings worst — not the moment itself, but what it revealed.",
+      colors:["#1a0b0d","#3d1218","#6b1a24"], ink:"#f2dfe0", light:false
+    },
+    {
+      key:"sorrow", accent:"#9cbde8", accent2:"#33547e", name:"Sorrow", price:5, words:193,
+      url:"https://www.buymeacoffee.com/digheakshaf/e/569318",
+      teaser:"Sit with it. No one's rushing you.",
+      title:"Dear you,",
+      excerpt:"I'm not going to tell you it gets better. Not yet. Right now I just want to sit here with you, in the part where it's heavy, and not rush you toward the door marked “fine.”",
+      tail:"Some things don't resolve. They just get carried differently over time.",
+      colors:["#0e1a2b","#1c3350","#33547e"], ink:"#e6ecf5", light:false
+    },
+    {
+      key:"grief", accent:"#bcabd2", accent2:"#40374f", name:"Grief", price:5, words:217,
+      url:"https://www.buymeacoffee.com/digheakshaf/e/569319",
+      teaser:"A letter for what you're still carrying.",
+      title:"To the shape they left behind,",
+      excerpt:"I know you still set the table for one more sometimes, out of habit, before you remember. I know their voice still catches you off guard in ordinary places — a stranger's laugh, a song on the radio, a coat like the one they used to wear.",
+      tail:"That's not you being unable to move on. That's just what love does when it loses its address.",
+      colors:["#100e14","#251f30","#40374f"], ink:"#e8e3ef", light:false
+    }
+  ];
+
+  /* ---------- shelf ---------- */
+  var grid = document.getElementById('shelf-grid');
+  if(grid){
+    PIECES.forEach(function(p){
+      var card = document.createElement('article');
+      card.className = 'card ' + p.key + (p.light ? ' on-light' : '');
+      var head = document.createElement('div');
+
+      var name = document.createElement('p');
+      name.className = 'name';
+      name.textContent = p.name;
+
+      var teaser = document.createElement('p');
+      teaser.className = 'teaser';
+      teaser.textContent = p.teaser;
+
+      var whisper = document.createElement('p');
+      whisper.className = 'whisper';
+      whisper.textContent = '“' + p.title + '”';
+
+      head.appendChild(name);
+      head.appendChild(teaser);
+      head.appendChild(whisper);
+
+      var actions = document.createElement('div');
+      actions.className = 'card-actions';
+
+      var buy = document.createElement('a');
+      buy.className = 'buy';
+      buy.href = p.url;
+      buy.rel = 'nofollow';
+      buy.textContent = 'Unlock — $' + p.price;
+
+      var peek = document.createElement('button');
+      peek.className = 'peek';
+      peek.type = 'button';
+      peek.textContent = 'Preview';
+      peek.addEventListener('click', function(){
+        select(p.key);
+        document.getElementById('taste').scrollIntoView({behavior: REDUCED ? 'auto' : 'smooth', block:'start'});
+      });
+
+      actions.appendChild(buy);
+      actions.appendChild(peek);
+      card.appendChild(head);
+      card.appendChild(actions);
+      grid.appendChild(card);
+    });
+  }
+
+  /* ---------- mood picker ---------- */
+  var moods    = document.getElementById('moods');
+  var reader   = document.getElementById('reader');
+  var rKicker  = document.getElementById('reader-kicker');
+  var rTitle   = document.getElementById('reader-title');
+  var rText    = document.getElementById('reader-excerpt');
+  var rFade    = document.getElementById('reader-fade');
+  var rBuy     = document.getElementById('reader-buy');
+  var rMeta    = document.getElementById('reader-meta');
+  var rotator  = document.getElementById('rotator');
+  var buttons  = {};
+
+  function select(key){
+    var p = null, i;
+    for(i=0;i<PIECES.length;i++){ if(PIECES[i].key === key){ p = PIECES[i]; break; } }
+    if(!p || !reader) return;
+
+    Object.keys(buttons).forEach(function(k){
+      buttons[k].setAttribute('aria-pressed', k === key ? 'true' : 'false');
+    });
+
+    document.documentElement.style.setProperty('--accent', p.accent);
+    document.documentElement.style.setProperty('--accent-2', p.accent2);
+
+    reader.style.background = 'linear-gradient(160deg,' + p.colors[0] + ' 0%,' + p.colors[1] + ' 58%,' + p.colors[2] + ' 100%)';
+    reader.style.color = p.ink;
+    reader.classList.toggle('light', !!p.light);
+
+    rKicker.textContent = p.name + ' · free opening';
+    rTitle.textContent  = p.title;
+    rText.textContent   = p.excerpt;
+    rFade.textContent   = p.tail;
+    rBuy.href           = p.url;
+    rBuy.textContent    = 'Unlock the rest — $' + p.price;
+    rMeta.textContent   = p.words + ' words in full · about 2 minutes · opens instantly';
+  }
+
+  if(moods){
+    PIECES.forEach(function(p){
+      var li = document.createElement('li');
+      var b  = document.createElement('button');
+      b.className = 'mood';
+      b.type = 'button';
+      b.textContent = p.name;
+      b.setAttribute('aria-pressed','false');
+      b.addEventListener('click', function(){ select(p.key); });
+      buttons[p.key] = b;
+      li.appendChild(b);
+      moods.appendChild(li);
+    });
+
+    var liDice = document.createElement('li');
+    var dice = document.createElement('button');
+    dice.className = 'mood dice';
+    dice.type = 'button';
+    dice.textContent = '✨ Surprise me';
+    dice.addEventListener('click', function(){
+      select(PIECES[Math.floor(Math.random() * PIECES.length)].key);
+    });
+    liDice.appendChild(dice);
+    moods.appendChild(liDice);
+  }
+
+  select(PIECES[Math.floor(Math.random() * PIECES.length)].key);
+
+  /* ---------- headline rotator ---------- */
+  if(rotator && !REDUCED){
+    var words = ['calm','held','furious','hopeful','less alone','lighter','understood'];
+    var idx = 0;
+    setInterval(function(){
+      rotator.classList.add('swap');
+      setTimeout(function(){
+        idx = (idx + 1) % words.length;
+        rotator.textContent = words[idx];
+        rotator.classList.remove('swap');
+      }, 360);
+    }, 2600);
+  }
+
+  /* ---------- scroll reveal ---------- */
+  var revealables = document.querySelectorAll('.reveal');
+  if(REDUCED || !('IntersectionObserver' in window)){
+    Array.prototype.forEach.call(revealables, function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    Array.prototype.forEach.call(revealables, function(el){ io.observe(el); });
+    // Safety net: nothing on this page may stay invisible because an observer
+    // never fired (bfcache restores, zero-height layouts, odd viewports).
+    setTimeout(function(){
+      Array.prototype.forEach.call(revealables, function(el){ el.classList.add('in'); });
+    }, 2500);
+  }
+
+  /* ---------- honest unlock counter ---------- */
+  var counter = document.getElementById('unlock-count');
+  if(counter){
+    fetch('/api/counter?action=total')
+      .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
+      .then(function(data){
+        if(!data.ok) return;
+        var total = data.total;
+        counter.innerHTML = '<span class="pulse"></span>' + (total > 0
+          ? total.toLocaleString() + (total === 1 ? ' piece unlocked so far' : ' pieces unlocked so far')
+          : 'No one has unlocked a piece yet — be the first.');
+        counter.classList.add('visible');
+      })
+      .catch(function(){});
+  }
 })();
 </script>
 
