@@ -248,6 +248,22 @@ function (see below) — a pure static host (GitHub Pages, Netlify's static
 tier) would no longer be enough. Any host with lightweight function support
 would still work.
 
+The Vercel project is **connected to this GitHub repo**, so every push to the
+production branch deploys itself. Nothing to run by hand.
+
+- **Production branch: `claude/moodshop-static-site-cue6zs`.** This repo has
+  no `main` — that branch is the default, and it is what Vercel builds and
+  aliases to `moodshop.lol`. Merge feature branches into it to ship.
+- Pushes to any other branch produce a preview deployment on a `.vercel.app`
+  URL, which is behind the SSO wall described above.
+
+Worth knowing, because it cost an afternoon once: the project spent its early
+life **unlinked**, deployed by direct file upload from a laptop. If a push
+ever stops showing up on the live site, check Settings → Git first — an
+unlinked project accepts pushes silently and deploys none of them, and a
+project linked to the *wrong* repo will happily publish that repo's site to
+`moodshop.lol`.
+
 ## Unlock counter
 
 The landing page shows an honest running total: "N pieces unlocked so far."
