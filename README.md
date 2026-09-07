@@ -10,6 +10,7 @@ no database, no email.
 ```
 index.html       landing page — hero, free preview picker, shelf, plans, FAQ
 bundle.html      "Whole Shelf" delivery page — links to all 8, unlisted
+gift.js          gifting: composes and reads gift links (no backend)
 happiness.html   $2  (linked nowhere except the BMC redirect for this listing)
 sorrow.html      $5
 hurt.html        $4
@@ -97,6 +98,53 @@ Each emotion page now ends with a quiet line under the share button —
 all eight for $9." — linking back to `#plans` and `#shelf`. It sits below the
 piece and after the share button on purpose: the product gets read first, the
 shop gets mentioned second.
+
+## Gifting (no backend, no database)
+
+Every emotion page has a **Send this to someone** button under the piece. The
+buyer types a recipient name, a short note and their own name; `gift.js`
+encodes that into the link's `#fragment` and hands it back:
+
+```
+https://moodshop.lol/hope.html#g=eyJ0IjoiU2FtIiwiZiI6...
+```
+
+They send that link themselves, in whatever app they already talk to that
+person in. The recipient opens it, sees the note in a card above the piece,
+and the footer line switches from "You've got Hope" to "Someone paid to send
+you this."
+
+Why a fragment and not a query string or a database:
+
+- **A fragment is never transmitted to the server.** It doesn't reach Vercel,
+  doesn't appear in any access log, and isn't stored anywhere — the note
+  exists only in the two people's browsers. That's a stronger version of the
+  promise the rest of the site already makes.
+- **No backend to run, nothing to expire.** The link keeps working as long as
+  the page exists.
+
+Trade-offs worth knowing:
+
+- The recipient reads that piece for free. That *is* the gift — and they land
+  on a real piece with a link back to the shop, which is the best advertising
+  the site has.
+- **You can't tell whether a gift was opened.** No database, no analytics on
+  the note. If you ever want redemption stats, that's the thing you'd need a
+  backend for.
+- Notes are capped at 240 characters and names at 40, which keeps links around
+  160–450 characters — short enough for any messenger.
+- Everything is rendered with `textContent`, so a note can't inject markup,
+  and a malformed payload is ignored rather than breaking the page.
+
+Gifting is currently **free with any purchase** rather than its own product.
+That's deliberate: it costs nothing to run, raises the value of every piece
+sold, and puts your writing in front of people who didn't know the shop
+existed. If you'd rather sell it, make a "Gift a feeling" BMC Extra the same
+way as the bundle and point it at the piece.
+
+The emotion pages also carry Open Graph tags now, so a gift link shows a
+card ("Someone sent you a feeling") instead of a bare URL when it's pasted
+into a messenger. They stay `noindex`.
 
 ## Live deployment
 
