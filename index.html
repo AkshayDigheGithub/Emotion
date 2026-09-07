@@ -185,6 +185,60 @@
   }
   .lede{color:var(--sub); max-width:56ch; margin:0 0 2.4rem 0; font-size:1.02rem;}
 
+  /* ---------- overture: the page gives before it asks ---------- */
+  .overture{
+    min-height:92vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:8vh 6vw 6vh;
+    max-width:720px;
+    margin:0 auto;
+    position:relative;
+  }
+  .overture .hour{
+    font-family:'Nunito Sans',sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--sub);
+    margin:0 0 2rem 0;
+    min-height:1em;
+  }
+  .overture p.line{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.25rem,2.9vw,1.6rem);
+    line-height:1.95;
+    margin:0 0 1.5rem 0;
+    color:var(--ink);
+  }
+  .overture p.line:last-of-type{margin-bottom:0;}
+  .overture .gift-close{
+    margin-top:3rem;
+    padding-top:1.6rem;
+    border-top:1px solid var(--line);
+    font-family:'Nunito Sans',sans-serif;
+    font-size:0.92rem;
+    color:var(--sub);
+    line-height:1.7;
+  }
+  .scroll-cue{
+    display:block;
+    margin-top:2.2rem;
+    font-family:'Nunito Sans',sans-serif;
+    font-size:0.76rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--sub);
+    text-decoration:none;
+    opacity:0.75;
+    transition:opacity 0.2s ease;
+  }
+  .scroll-cue:hover{opacity:1;}
+  .scroll-cue span{display:block; font-size:1.1rem; margin-top:0.3rem; letter-spacing:0;}
+
   /* ---------- hero ---------- */
   .hero{padding-top:clamp(2.5rem,7vw,4.5rem); text-align:center;}
   .wordmark{
@@ -603,6 +657,29 @@
 
 <div class="aura" aria-hidden="true"></div>
 
+<section class="overture" id="overture">
+  <p class="hour" id="hour"></p>
+
+  <p class="line">You didn't come here for nothing.</p>
+
+  <p class="line">Maybe a link. Maybe a search at an hour you wouldn't admit to. Either way, something moved you enough to open a page about feelings &mdash; and most people scroll straight past those.</p>
+
+  <p class="line">So before this turns into a shop, take the thing you came for.</p>
+
+  <p class="line">Whatever today has been, you carried it. Nobody watched you do that. There was no moment where someone stopped and said: <em>that was heavy, and you did it anyway.</em> So let this be that moment. It's small, and it's from a stranger, but it counts.</p>
+
+  <p class="line">You're allowed to put it down for a minute. Not solve it. Not be positive about it. Just set it on the floor beside you and sit here, where nothing is being asked of you.</p>
+
+  <p class="line">The rest of this page is a shop, and it can wait.</p>
+
+  <p class="line">Stay a second longer first.</p>
+
+  <div class="gift-close">
+    That was free, and there's no catch attached to it &mdash; no email, nothing to close, nothing that follows you.
+    <a class="scroll-cue" href="#taste">If you want another, there are eleven more <span>&darr;</span></a>
+  </div>
+</section>
+
 <header class="hero wrap">
   <p class="wordmark"><span class="dot"></span> Moodshop</p>
   <h1>Feel <span class="rotator" id="rotator">calm</span> in two minutes.</h1>
@@ -994,6 +1071,18 @@
 
   select(PIECES[Math.floor(Math.random() * PIECES.length)].key);
 
+
+  /* ---------- the hour they arrived at ---------- */
+  var hourEl = document.getElementById('hour');
+  if(hourEl){
+    var h = new Date().getHours();
+    hourEl.textContent =
+      h < 5  ? "It's late. You're still awake." :
+      h < 12 ? "Good morning." :
+      h < 17 ? "Somewhere in the afternoon." :
+      h < 22 ? "The evening, then." :
+               "It's late. You're still awake.";
+  }
   /* ---------- headline rotator ---------- */
   if(rotator && !REDUCED){
     var words = ['calm','held','furious','hopeful','less alone','lighter','understood'];

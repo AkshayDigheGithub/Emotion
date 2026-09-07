@@ -218,6 +218,27 @@ grep -rl 'https://www\.moodshop\.lol' --include='*.html' --include='*.js' \
 
 The rule is only that the repo and Vercel must agree.
 
+## The overture
+
+The landing page opens with a complete short piece — no price, no buttons, no
+nav — and only becomes a shop below it. That inversion is deliberate.
+
+Every previous version of the page *described* feelings and then asked for
+money: a headline, four chips, two buttons. A page selling emotional writing
+cannot argue anyone into feeling something; the only persuasion available to
+it is to do the thing first, for free, with nothing attached. So the visitor
+now gets something before they are asked for anything, and the piece ends by
+saying so plainly — "that was free, and there's no catch attached to it."
+
+The text is written for this slot and published nowhere else, so it adds
+words to the one indexable page without duplicating `/free/`. A short
+time-of-day line above it ("It's late. You're still awake." / "Good
+morning.") is set client-side from the visitor's own clock, so the page
+meets them at the hour they actually arrived.
+
+Everything else — hero, picker, shelf, plans, FAQ, author note — is
+unchanged and sits below.
+
 ## Live deployment
 
 Deployed on Vercel, live at **https://moodshop.lol**
