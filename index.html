@@ -539,6 +539,29 @@
   details[open] summary::after{transform:rotate(45deg);}
   details p{color:var(--sub); margin:0.8rem 0 0 0; font-size:0.94rem; max-width:62ch;}
 
+  /* ---------- signed note ---------- */
+  .note{
+    max-width:620px;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:clamp(1.7rem,4vw,2.3rem);
+    background:linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.012));
+  }
+  .note p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.08rem,2.1vw,1.22rem);
+    line-height:1.9;
+    margin:0 0 1.1rem 0;
+  }
+  .note p:last-of-type{margin-bottom:0;}
+  .note .sig{
+    font-family:'Nunito Sans',sans-serif;
+    font-size:0.85rem;
+    letter-spacing:0.04em;
+    color:var(--sub);
+    margin-top:1.6rem;
+  }
+
   /* ---------- footer ---------- */
   footer{
     border-top:1px solid var(--line);
@@ -739,6 +762,19 @@
       <summary>What if it doesn't do anything for me?</summary>
       <p>Then it cost you a dollar or two and you should tell me so. Message me through Buy Me a Coffee — refunds on a $2 piece of writing aren't worth anyone's afternoon, so I'd rather just send you a different one.</p>
     </details>
+  </div>
+</section>
+
+<!-- ================= who's behind this ================= -->
+<section class="wrap">
+  <div class="reveal">
+    <p class="eyebrow">Who's behind this</p>
+    <div class="note">
+      <p>Moodshop is one person, not a company.</p>
+      <p>I chose these eight feelings, and I wrote them with AI in the loop &mdash; I'm telling you because you'd guess anyway, and I'd rather you hear it from me. What I did was decide what stays: nothing is on this shelf that I wouldn't send to a friend having a bad night.</p>
+      <p>A dollar or two, on purpose. No account, no email list, nothing follows you after you close the tab.</p>
+      <p class="sig">&mdash; Akshay</p>
+    </div>
   </div>
 </section>
 

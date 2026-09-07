@@ -154,6 +154,25 @@ The emotion pages also carry Open Graph tags now, so a gift link shows a
 card ("Someone sent you a feeling") instead of a bare URL when it's pasted
 into a messenger. They stay `noindex`.
 
+## The author note
+
+A short signed note sits between the FAQ and the footer, answering the
+question every reader now asks by default: did a person make this, or did a
+model?
+
+It says, in Akshay's voice, that Moodshop is one person; that the pieces were
+written with AI in the loop; and that what he did was choose the eight
+feelings and decide what stays. That disclosure is deliberate. The pieces
+were drafted by an AI assistant (see the first commit, `ab72e1b`), so a note
+claiming they were hand-written would be false in exactly the way a suspicious
+reader suspects — and it would be doing that work on a page asking for money.
+Saying it plainly is both true and, in a market where everyone else stays
+quiet, the more persuasive move.
+
+Keep it accurate if the shop changes. If pieces get rewritten by hand later,
+the note should say so; if an email list ever appears, the last line stops
+being true.
+
 ## Live deployment
 
 Deployed on Vercel, live at **https://moodshop.lol**
