@@ -70,26 +70,34 @@ Three tiers on the landing page:
 | The Whole Shelf | $9 | All eight in one payment (vs $23 separately) | **Needs one BMC step — see below** |
 | Tip jar | Any | The plain BMC profile, no delivery promised | **Live** |
 
-### Finishing The Whole Shelf (one manual step, ~2 minutes)
+### The Whole Shelf is deliberately not buyable yet
 
-`bundle.html` is built and ready — it's the unlisted page that links to all
-eight pieces, styled like the rest of the shop, `noindex` + disallowed in
-`robots.txt` the same way the emotion pages are. What it doesn't have yet is
-a product to sell it, because BMC Extras can only be created from your own
-BMC account:
+The plan card is on the page, priced, with the $23-vs-$9 comparison — but its
+button goes to `#shelf`, not to a checkout. That's on purpose, and it should
+stay that way until the BMC Extra exists.
 
-1. On Buy Me a Coffee, create a new Extra called **The Whole Shelf**, priced
-   **$9**.
+**Why:** there is no "Whole Shelf" Extra on Buy Me a Coffee, so a real
+checkout would take $9 and deliver nothing automatically — you'd be emailing
+the link by hand. A shop that takes money and goes quiet is worse than a shop
+with one plan not open yet.
+
+**Why keep the card at all:** it's a price anchor. $9 for eight makes a $1
+piece read as trivial, which is exactly the decision we want a first-time
+visitor to make. The card's button funnels to the shelf — "Start with one —
+from $1" — so it sells singles instead of nothing.
+
+**To open it** (three steps, then it's a real product):
+
+1. Create a BMC Extra called **The Whole Shelf**, priced **$9**.
 2. Set its success page to **Redirect to a URL** →
-   `https://moodshop.lol/bundle.html` (not a `.vercel.app` URL — see
-   "Deployment protection" below).
-3. In `index.html`, find the `TODO(owner)` comment in the featured plan card
-   and swap that `href` for the new Extra's `/e/<id>` URL.
+   `https://moodshop.lol/bundle.html` — already built, live, and unlisted.
+3. In `index.html`, replace that card's `<a class="btn btn-ghost" href="#shelf">`
+   with `<a class="btn btn-primary" href="<the /e/ URL>" rel="nofollow">Take
+   the whole shelf — $9</a>`, swap the badge back to `Best value` (dropping
+   `badge-soon`), and move the `featured` class from "One feeling" onto it.
 
-Until step 3 is done the bundle button goes to the plain BMC profile page,
-which takes the money but does **not** auto-deliver `bundle.html` — you'd
-have to send the link by hand. So either finish the three steps or drop the
-featured plan card.
+Also restore the bundle to the `ItemList` JSON-LD when you do — it was removed
+so structured data doesn't advertise an offer nobody can accept.
 
 ## Cross-sell on the emotion pages
 

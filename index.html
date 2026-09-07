@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Moodshop — Short pieces written to make you feel something</title>
-<meta name="description" content="Eight short pieces of writing, each built to put one specific feeling in you. Read the opening of any of them free. Unlock one from $1, or take the whole shelf for $9. No account, no download, no email.">
+<meta name="description" content="Eight short pieces of writing, each built to put one specific feeling in you. Read the opening of any of them free. Unlock one from $1. No account, no download, no email.">
 <link rel="canonical" href="https://moodshop.lol/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0e0e15">
@@ -53,8 +53,7 @@
     {"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Rage","description":"A short piece written to make you feel rage.","offers":{"@type":"Offer","price":"3.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
     {"@type":"ListItem","position":6,"item":{"@type":"Product","name":"Hurt","description":"A short piece written to make you feel hurt, honestly.","offers":{"@type":"Offer","price":"4.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
     {"@type":"ListItem","position":7,"item":{"@type":"Product","name":"Sorrow","description":"A short piece written to sit with sorrow.","offers":{"@type":"Offer","price":"5.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-    {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"Grief","description":"A letter written to sit with grief.","offers":{"@type":"Offer","price":"5.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}},
-    {"@type":"ListItem","position":9,"item":{"@type":"Product","name":"The Whole Shelf","description":"All eight Moodshop pieces in one payment.","offers":{"@type":"Offer","price":"9.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}}
+    {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"Grief","description":"A letter written to sit with grief.","offers":{"@type":"Offer","price":"5.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}}
   ]
 }
 </script>
@@ -63,13 +62,62 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"What exactly do I get?","acceptedAnswer":{"@type":"Answer","text":"One web page containing one short piece of writing — around 200 words, designed and coloured for that one feeling. It opens in your browser the moment you pay. There's no file, no app and no account."}},
-    {"@type":"Question","name":"Can I send one to someone else?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every piece has a \"Send this to someone\" button that builds a private link carrying your own note. You send it yourself; nothing is stored anywhere."}},
-    {"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. Payment happens on Buy Me a Coffee and their redirect takes you straight to the piece. Moodshop never asks for an email address or stores anything about you."}},
-    {"@type":"Question","name":"Can I read something before I pay?","acceptedAnswer":{"@type":"Answer","text":"Yes. The opening of every one of the eight pieces is free to read on the landing page — that's the real first lines, not a summary."}},
-    {"@type":"Question","name":"How long does a piece take to read?","acceptedAnswer":{"@type":"Answer","text":"About two minutes if you read it slowly, which is how they're meant to be read."}},
-    {"@type":"Question","name":"Can I come back to it later?","acceptedAnswer":{"@type":"Answer","text":"Yes — the link stays live. Bookmark it after you pay and you can reopen the piece whenever you want."}},
-    {"@type":"Question","name":"What is The Whole Shelf?","acceptedAnswer":{"@type":"Answer","text":"All eight pieces for $9 in a single payment, instead of $23 bought one at a time."}}
+    {
+      "@type": "Question",
+      "name": "What exactly am I paying for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One web page with one short piece of writing on it — around 200 words, set in its own colour and typography for that one feeling. It opens in your browser the second you pay. There's no file, no app, no account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Two hundred words? That's short.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On purpose. These are meant to be read slowly, once, and felt — not skimmed and filed away. A piece that takes two minutes and actually moves you beats one that takes twenty and doesn't."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I read something before I pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — every one of the eight. The openings above are the real first lines of each piece, not a teaser written to sell it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I send one to someone else?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it's the best thing here. Every piece has a \"Send this to someone\" button that builds a private link carrying your own note to them — you send it yourself, in whatever app you already talk to them in. They open it and read your note above the piece. Nothing is stored anywhere; the note lives in the link."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Payment happens on Buy Me a Coffee and their redirect takes you straight to the piece. Moodshop stores nothing about you and can't email you even if it wanted to."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I come back to it later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The link stays live — bookmark it after you pay and reopen it whenever the feeling comes back around."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if it doesn't do anything for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Then it cost you a dollar or two and you should tell me so. Message me through Buy Me a Coffee — refunds on a $2 piece of writing aren't worth anyone's afternoon, so I'd rather just send you a different one."
+      }
+    }
   ]
 }
 </script>
@@ -429,6 +477,11 @@
     box-shadow:0 0 0 1px var(--accent) inset, 0 20px 50px rgba(0,0,0,0.4);
     transition:border-color 0.8s ease, box-shadow 0.8s ease;
   }
+  .plan .badge-soon{
+    background:transparent;
+    color:var(--sub);
+    border:1px solid var(--line);
+  }
   .plan .badge{
     position:absolute; top:-0.72rem; left:1.6rem;
     font-size:0.66rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
@@ -599,7 +652,8 @@
   </div>
 
   <div class="plans reveal">
-    <div class="plan">
+    <div class="plan featured">
+      <span class="badge">Start here</span>
       <h3>One feeling</h3>
       <p class="who">For when you know exactly what you need.</p>
       <p class="price">$1–$5</p>
@@ -610,11 +664,11 @@
         <li>Yours to reopen any time</li>
         <li>Giftable — send it on with a note</li>
       </ul>
-      <a class="btn btn-ghost" href="#shelf">Choose a feeling</a>
+      <a class="btn btn-primary" href="#shelf">Choose a feeling</a>
     </div>
 
-    <div class="plan featured">
-      <span class="badge">Best value</span>
+    <div class="plan">
+      <span class="badge badge-soon">Opening soon</span>
       <h3>The Whole Shelf</h3>
       <p class="who">For the whole spectrum — and the days you can't name it.</p>
       <p class="price">$9 <small>once</small></p>
@@ -625,10 +679,14 @@
         <li>New pieces added to the shelf, free</li>
         <li>Gift any of them, as often as you like</li>
       </ul>
-      <!-- TODO(owner): once the "Whole Shelf" Extra exists on Buy Me a Coffee,
-           swap this href for its /e/<id> URL and set its success page to
-           redirect to https://moodshop.lol/bundle.html for instant delivery. -->
-      <a class="btn btn-primary" href="https://www.buymeacoffee.com/digheakshaf" rel="nofollow">Take the whole shelf — $9</a>
+      <!-- Deliberately not buyable yet: there is no "Whole Shelf" Extra on Buy
+           Me a Coffee, so a checkout here would take $9 and deliver nothing.
+           The card stays as a price anchor — $9 for eight makes a $1 piece read
+           as trivial — and sends people to the shelf instead.
+           TO OPEN IT: create the $9 Extra, point its success page at
+           https://moodshop.lol/bundle.html (already built and live), then make
+           this an <a class="btn btn-primary" href="<extra /e/ URL>" rel="nofollow">. -->
+      <a class="btn btn-ghost" href="#shelf">Start with one — from $1</a>
     </div>
 
     <div class="plan">
