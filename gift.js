@@ -12,7 +12,7 @@
 
   var MAX_NAME = 40;
   var MAX_NOTE = 240;
-  var STORE_URL = "https://moodshop.lol/";
+  var STORE_URL = "https://www.moodshop.lol/";
 
   var emotion = (document.body && document.body.getAttribute("data-emotion")) || "this";
 

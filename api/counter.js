@@ -31,6 +31,10 @@ module.exports = async (req, res) => {
       const values = await Promise.all(EMOTIONS.map(async (e) => {
         const r = await fetch(`https://abacus.jasoncameron.dev/get/${NAMESPACE}/${e}`);
         const text = await r.text();
+        // 404 means the key was never created, i.e. nobody has opened that
+        // piece yet. That is a zero, not a failure — treating it as an error
+        // took the whole counter down until all eight had been unlocked.
+        if (r.status === 404) return 0;
         if (!r.ok) {
           console.error('total upstream status', e, r.status, 'body', text);
           throw new Error(`bad response for ${e}: ${r.status} ${text}`);

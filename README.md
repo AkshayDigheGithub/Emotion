@@ -173,6 +173,51 @@ Keep it accurate if the shop changes. If pieces get rewritten by hand later,
 the note should say so; if an email list ever appears, the last line stops
 being true.
 
+## Free pieces (the SEO asset)
+
+`free/` holds three short pieces that are **free and indexable**, plus a hub
+page at `/free/`. They exist because the shop could not rank: the product is
+deliberately `noindex`, which left exactly one indexable page with 831 words
+and nothing for Google to match a query against.
+
+| URL | The search it is written for |
+|---|---|
+| `/free/cant-sleep.html` | "something to read when you can't sleep", 3am racing thoughts |
+| `/free/waiting-for-news.html` | waiting on a result, a diagnosis, a decision |
+| `/free/the-strong-one.html` | "tired of being the strong one", everyone leans on me |
+
+Deliberately **different feelings from the paid eight**, so nothing on the
+shelf is cannibalised. Each is self-canonical, carries `Article` schema,
+ends with a link into `/#taste`, and is listed in `sitemap.xml`. The landing
+page links to `/free/` under the shelf, giving crawlers a path in.
+
+This took the site from 1 indexable page / 831 words to **5 pages / 1,914
+words** with real internal linking. It will not rank for anything
+competitive — it is aimed at long-tail phrasings where the intent match is
+exact and the competition is weak.
+
+Add more over time; that is the whole mechanism. One new free piece a week
+is worth more than any amount of meta-tag work.
+
+## Canonical domain
+
+`moodshop.lol` 308-redirects to `www.moodshop.lol`, so **every URL in this
+repo points at `www`** — canonical tags, `og:url`, sitemap, `robots.txt`,
+and the share captions in `gift.js` and the emotion pages. Previously they
+pointed at the bare apex, which meant the canonical named a URL that
+immediately redirected.
+
+If you would rather the bare domain be primary, flip it in Vercel
+(Project → Settings → Domains) and reverse this repo with:
+
+```
+grep -rl 'https://www\.moodshop\.lol' --include='*.html' --include='*.js' \
+  --include='*.txt' --include='*.xml' . \
+  | xargs sed -i 's#https://www\.moodshop\.lol#https://moodshop.lol#g'
+```
+
+The rule is only that the repo and Vercel must agree.
+
 ## Live deployment
 
 Deployed on Vercel, live at **https://moodshop.lol**
@@ -315,6 +360,11 @@ proxy makes it a same-origin call, which those tools don't touch.
 
 Known limitations, worth knowing before you rely on this:
 
+- **A missing key counts as zero.** Abacus does not create a key until a
+  page is first loaded, so before this was handled, one never-unlocked
+  emotion made `?action=total` return 502 and the landing page silently hid
+  the stat line — it had never rendered for a single visitor. A 404 from
+  upstream is now read as the zero it is; a real outage still fails loudly.
 - **It's a third-party free service**, not Vercel infrastructure — no SLA,
   could go down or get rate-limited, and the count isn't yours to export or
   guarantee. Fine for a soft "some real people did this" signal, not fine as

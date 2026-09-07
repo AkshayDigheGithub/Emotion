@@ -10,4 +10,4 @@ Disallow: /hope.html
 Disallow: /grief.html
 Disallow: /bundle.html
 
-Sitemap: https://moodshop.lol/sitemap.xml
+Sitemap: https://www.moodshop.lol/sitemap.xml
