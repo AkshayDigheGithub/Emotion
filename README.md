@@ -22,6 +22,8 @@ grief.html       $5
 robots.txt       blocks crawlers from the emotion + bundle pages, allows the landing page
 sitemap.xml      lists only index.html, on purpose
 api/counter.js   Vercel serverless function — see "Unlock counter" below
+img/<key>.jpg    product images for the JSON-LD, one per piece — see "SEO notes"
+tools/           regenerates img/ — not shipped to the browser
 ```
 
 The pricing table in the original spec also mentioned "Longing" at $3, but the
@@ -327,8 +329,49 @@ open the page. That's the intended tradeoff (no backend, no auth).
 ## SEO notes
 
 - `index.html` carries title/description, canonical, Open Graph, Twitter
-  Card, and JSON-LD (`WebSite` + `ItemList` of `Product`/`Offer`) so it can
-  show up well in search and when shared on social.
+  Card, and JSON-LD (`WebSite` + `ItemList` of `Product`/`Offer` + `FAQPage`)
+  so it can show up well in search and when shared on social.
+
+### The Product markup, and what Search Console wants from it
+
+Search Console first reported all eight shelf items as **invalid**: one
+critical issue each, because a `Product` with no `image` can't produce a rich
+result. The `ItemList` now gives every piece the full set:
+
+| Property | Value |
+|---|---|
+| `image` | `https://www.moodshop.lol/img/<key>.jpg` — 1200×1200, the piece's own gradient |
+| `url` | `https://www.moodshop.lol/#piece-<key>` — the shelf card, which the renderer gives that `id` |
+| `sku` | `moodshop-<key>` |
+| `brand` | Moodshop |
+| `offers.url` | the BMC Extra that actually sells it |
+| `offers` | `price`, `priceCurrency`, `availability`, `itemCondition`, `priceValidUntil`, `seller` |
+
+Two things to keep in mind when editing:
+
+- **The prices in the JSON-LD and in `PIECES` have to agree.** Structured data
+  that disagrees with the visible page is a manual-action risk, not just a
+  warning. Same for the word counts in each `description`.
+- **`priceValidUntil` is 2027-12-31.** Once it's in the past Google treats the
+  offer as expired and the item drops out of rich results. Push it forward.
+
+`review` and `aggregateRating` are still reported as missing. That's a
+non-critical warning and it stays: there are no real reviews, and inventing
+them is exactly the kind of thing that earns a structured-data penalty. If
+real ratings ever exist, add them then. `shippingDetails` and
+`hasMerchantReturnPolicy` are likewise absent — nothing ships, and there's no
+written refund policy to encode yet (the FAQ says a wrong piece gets swapped,
+not refunded). Encode it only once it's a real policy.
+
+Regenerate the images after a palette change:
+
+```
+pip install Pillow
+python3 tools/make-product-images.py
+```
+
+The palettes live in two places — `PIECES` in `index.html` and the table at
+the top of that script — so change both.
 - Emotion pages are intentionally `noindex` — they're the paid product, not
   content you want ranking or showing up in search results out of context.
 - Consider adding a few backlinks / a short blog post around "Moodshop"
