@@ -1,13 +1,18 @@
 User-agent: *
 Allow: /
-Disallow: /happiness.html
-Disallow: /sorrow.html
-Disallow: /hurt.html
+
+# The pages below are what a payment opens. Nothing links to them,
+# so Disallow keeps them out without risking a bare-URL listing.
+# /for/ and /help/payment/ ARE linked, so they rely on their own
+# noindex instead — a crawler has to be let in to read that.
 Disallow: /calm.html
 Disallow: /nostalgia.html
-Disallow: /rage.html
+Disallow: /happiness.html
 Disallow: /hope.html
+Disallow: /hurt.html
+Disallow: /sorrow.html
 Disallow: /grief.html
+Disallow: /rage.html
 Disallow: /bundle.html
 
 Sitemap: https://www.moodshop.lol/sitemap.xml

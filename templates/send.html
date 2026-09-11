@@ -1,0 +1,55 @@
+<main id="main">
+
+<header class="wrap narrow" style="padding-top:clamp(2.5rem,8vw,4rem);">
+  <p class="eyebrow">Send a feeling</p>
+  <h1>Sometimes words are easier to send than to say.</h1>
+  <p class="lede">Pick the feeling. Write one line. They open a page with your note on it, then the feeling underneath.</p>
+</header>
+
+<section class="wrap narrow" style="padding-top:0;">
+  <form class="finder" id="send-form" novalidate>
+    <label class="field" for="send-mood">
+      <span>Which feeling?</span>
+      <select id="send-mood" name="mood"></select>
+    </label>
+
+    <label class="field" for="send-to">
+      <span>Who is this for?</span>
+      <input id="send-to" name="to" type="text" maxlength="40" autocomplete="off" placeholder="Their name — optional">
+    </label>
+
+    <label class="field" for="send-note">
+      <span>Say something</span>
+      <textarea id="send-note" name="note" maxlength="240" placeholder="Thought of you."></textarea>
+    </label>
+
+    <label class="field" for="send-from">
+      <span>From</span>
+      <input id="send-from" name="from" type="text" maxlength="40" autocomplete="off" placeholder="Your name — optional">
+    </label>
+
+    <div class="cta-row">
+      <button class="btn btn-primary" type="submit">Make the link</button>
+    </div>
+    <p class="share-status" id="send-status" aria-live="polite"></p>
+
+    <div class="out" id="send-out" hidden>
+      <p style="margin:0 0 0.5rem 0;color:var(--ink);font-weight:700;">Their link</p>
+      <p id="send-link" style="margin:0;"></p>
+    </div>
+
+    <p class="hint">Nothing you type here is sent anywhere. Your note is encoded into the link itself — no server sees it, and there is no database here to keep it in.</p>
+  </form>
+</section>
+
+<section class="wrap narrow">
+  <h2>What they’ll see</h2>
+  <div class="serif-body" style="border:1px solid var(--line);border-radius:18px;padding:clamp(1.5rem,4vw,2.2rem);background:linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.012));">
+    <p style="margin:0 0 0.6rem 0;font-family:var(--sans);font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;color:var(--sub);">For you.</p>
+    <p style="margin:0;">“I didn’t always know how to say it. So I sent you this instead.”</p>
+    <p style="margin:1.2rem 0 0 0;font-family:var(--sans);font-size:0.85rem;color:var(--sub);">Open the feeling →</p>
+  </div>
+  <p class="hint">They get the free opening first, exactly like everyone else. If you’ve already paid for a piece yourself, the page you unlocked has its own <em>Send this to someone</em> button that carries the whole thing.</p>
+</section>
+
+</main>

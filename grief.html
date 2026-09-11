@@ -95,6 +95,7 @@
   .more a:hover{opacity:0.75;}
 </style>
 <script defer src="/gift.js"></script>
+<script defer src="/analytics.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer data-website-id="dfid_6nLSJ7Yb6pX8SrM441xsu" data-domain="moodshop.lol" src="https://datafa.st/js/script.js"></script>
 </head>
@@ -120,11 +121,17 @@
 </div>
 
 <div class="more">
-  <p>You&rsquo;ve got Grief. Seven other feelings are on the shelf, from $1. <a href="https://www.moodshop.lol/#shelf">See the shelf &rarr;</a></p>
+  <p>You&rsquo;ve got Grief. Seven other feelings are on the shelf, from $1. <a href="https://www.moodshop.lol/moods/">Find another feeling &rarr;</a></p>
 </div>
 </main>
 <script>
 fetch('/api/counter?action=hit&emotion=grief').catch(function(){});
+// Reached only by the Buy Me a Coffee redirect, so a load is a purchase —
+// unless the link carried a gift note, in which case the sender paid, not the reader.
+// Waits for DOMContentLoaded because analytics.js is deferred.
+document.addEventListener('DOMContentLoaded', function(){
+  if(!/[#&]g=/.test(location.hash) && window.msTrack) window.msTrack('purchase_completed', {mood:'grief'});
+});
 </script>
 <script>
 (function(){
