@@ -1,0 +1,271 @@
+{
+  "_comment": "All original Moodshop writing. No quotes from anyone else, no AI call at runtime, nothing generated on a server. The tools shuffle and compose these blocks client-side, which is why they work offline and instantly.",
+
+  "thoughts": {
+    "calm": [
+      "Nothing is asking anything of you for the length of this sentence.",
+      "Your shoulders have been climbing toward your ears since this morning. You're allowed to let them down.",
+      "The list is still there. It has been patient this long; it can be patient another minute.",
+      "You don't have to arrive anywhere. You're already here, which was the only requirement.",
+      "Still water isn't doing anything impressive. That's the point of it.",
+      "Slow is not the same as late.",
+      "You can put it down without putting it away."
+    ],
+    "peace": [
+      "It's quiet, and for once that isn't the sound of something about to go wrong.",
+      "You spent so long braced that unclenching feels like a skill you have to relearn.",
+      "Not everything unresolved is unfinished.",
+      "You're allowed to stop checking whether you're okay. You can just be okay.",
+      "This didn't get fixed. You got bigger around it. That counts.",
+      "There is nothing you need to do with a good hour except be in it.",
+      "Peace usually arrives without an announcement, which is why people miss it."
+    ],
+    "nostalgia": [
+      "You don't miss the place. You miss who you got to be there.",
+      "Some memories hurt because they were beautiful, and that's the whole reason.",
+      "There's a version of you still standing in that light, and you can't write to them.",
+      "The song didn't change. You did, and now it means something else.",
+      "You remember the exact pitch of a voice calling your name from another room.",
+      "Ordinary days become the ones you'd pay to return to. Nobody tells you which ones at the time.",
+      "It wasn't better. It was just yours."
+    ],
+    "love": [
+      "They keep turning up in your ordinary hours, uninvited, welcome.",
+      "You've drafted it a hundred times and sent none of them.",
+      "Love is mostly noticing. The grand parts are rare and the noticing is daily.",
+      "You want them to be okay even in the version of the story where they aren't yours.",
+      "Some people never leave your life. They just stop being in the room.",
+      "It's not that you can't stop thinking about them. It's that you've stopped wanting to.",
+      "Saying it out loud costs something. Not saying it costs more, later."
+    ],
+    "joy": [
+      "You are allowed to feel good for no reason. There's no permission slip.",
+      "Happiness doesn't have to be earned back like a debt.",
+      "You laughed today and didn't check first whether you were allowed.",
+      "Not everything good is the beginning of something you'll lose.",
+      "Let it be small. Small is what most of it is made of.",
+      "The lightness was always yours. You just put it somewhere and forgot.",
+      "You don't owe anyone an explanation for a good hour."
+    ],
+    "hope": [
+      "The change starts before there's any proof of it. That's how mornings work.",
+      "You can't see the light yet because it hasn't reached the part of the sky you're facing.",
+      "Nothing you can point to has shifted. That isn't the same as nothing shifting.",
+      "You've survived every day that you were sure you wouldn't. The record is perfect.",
+      "Not optimism. Just the refusal to call it final while it's still moving.",
+      "Something is going to happen that you haven't thought of yet.",
+      "It doesn't have to get better today. It only has to not be finished."
+    ],
+    "hurt": [
+      "It isn't the moment that keeps stinging. It's what the moment revealed.",
+      "You found out how much room you took up in their decisions. Not much, it turned out.",
+      "You're not too sensitive. You were paying attention.",
+      "The apology you're waiting for may not be coming, and you're allowed to stop waiting anyway.",
+      "Trust wasn't built for what they did with it.",
+      "You keep explaining it to them in your head because they never let you finish out loud.",
+      "You can forgive someone and still not want them back."
+    ],
+    "sorrow": [
+      "Nobody is going to rush you toward the door marked fine.",
+      "Some things don't resolve. They just get carried differently over time.",
+      "It's heavy today. That's information, not a failure.",
+      "You don't need a reason that's big enough. It's already heavy without one.",
+      "Not every hard day is the start of a hard year.",
+      "You carried it and nobody watched you do it. It still counts.",
+      "You're allowed to be in the part where it hurts, for as long as that part lasts."
+    ],
+    "grief": [
+      "The habits haven't caught up yet. That isn't a failure to move on.",
+      "That's just what love does when it loses its address.",
+      "You still set the table for one more sometimes, before you remember.",
+      "A stranger's laugh. A coat like theirs. It never gives warning.",
+      "They were here. Being gone doesn't erase having been here.",
+      "Nobody can tell you how long this should take, and anyone who tries is wrong.",
+      "You're allowed to laugh today. It isn't a betrayal of anything."
+    ],
+    "rage": [
+      "You've been so reasonable, for so long, to people who never returned the favour.",
+      "You are not too much for being furious about this. You are correctly sized.",
+      "There was never going to be a right moment. That's how they kept it.",
+      "Calm isn't always the goal. Sometimes it's just the thing that's expected of you.",
+      "You swallowed the sharp thing again. It's still in there.",
+      "Being angry about it is not the same as being ruled by it.",
+      "You're allowed to stop explaining yourself to someone who was never listening."
+    ],
+    "loneliness": [
+      "You can be in a room full of people and not be with any of them.",
+      "Nobody checks on the person everyone checks in with.",
+      "It isn't about how many people are nearby. It's about being seen by them.",
+      "You'd have to explain too much, so you say you're fine, so nobody learns otherwise.",
+      "Being alone and being lonely happen to use the same room.",
+      "Someone would come if you asked. The hard part has always been asking.",
+      "This isn't proof that you're unlovable. It's proof that it's late."
+    ],
+    "anxiety": [
+      "Your head has run the same three minutes forty times. It isn't solving them.",
+      "The loop is loud, and loud has convinced you it's useful.",
+      "You're rehearsing a conversation that may never happen, for an audience of one.",
+      "Most of what you're bracing for does not arrive.",
+      "You can't think your way out of a body that's still running.",
+      "It's worse at night because there's nothing else in the room. That's all that's changed.",
+      "You are not behind. You're just awake at the wrong hour for perspective."
+    ]
+  },
+
+  "messages": {
+    "_comment": "Composed, not generated: opening (by who it's for) + body (by what you want to say, in the tone you pick) + closing (by tone). 7x2 openings, 8x6 bodies, 6x2 closings compose 336 distinct messages, all hand-written.",
+    "recipients": [
+      {"id": "love",    "label": "Someone I love",              "openings": ["I've started this more times than I'll admit.", "There's something I keep not saying to you."]},
+      {"id": "miss",    "label": "Someone I miss",              "openings": ["You've been on my mind, which you probably already guessed.", "It's been a while, and you still come up."]},
+      {"id": "hurtme",  "label": "Someone who hurt me",         "openings": ["I've had this conversation with you in my head enough times to write it down.", "I'm not writing this to start anything."]},
+      {"id": "ihurt",   "label": "Someone I hurt",              "openings": ["I'm not going to explain it away.", "You don't owe me a reply to this."]},
+      {"id": "thank",   "label": "Someone I want to thank",     "openings": ["I don't think you know what you did.", "This is overdue and I'd rather send it late than not at all."]},
+      {"id": "goodbye", "label": "Someone I need to say goodbye to", "openings": ["I've been putting this off because writing it makes it real.", "This is the last thing I want to say, and I want to say it properly."]},
+      {"id": "self",    "label": "Myself",                      "openings": ["You've been carrying this for a while now.", "Nobody else is going to say this to you, so here it is."]}
+    ],
+    "intents": [
+      {"id": "miss",    "label": "I miss you"},
+      {"id": "sorry",   "label": "I'm sorry"},
+      {"id": "love",    "label": "I love you"},
+      {"id": "thanks",  "label": "Thank you"},
+      {"id": "forgive", "label": "I forgive you"},
+      {"id": "closure", "label": "I need closure"},
+      {"id": "think",   "label": "I still think about you"},
+      {"id": "bye",     "label": "Goodbye"}
+    ],
+    "tones": [
+      {"id": "simple",   "label": "Simple"},
+      {"id": "warm",     "label": "Warm"},
+      {"id": "emotional","label": "Emotional"},
+      {"id": "romantic", "label": "Romantic"},
+      {"id": "honest",   "label": "Honest"},
+      {"id": "closure",  "label": "Closure"}
+    ],
+    "bodies": {
+      "miss": {
+        "simple": "I miss you. That's the whole message.",
+        "warm": "I miss you — not dramatically, just steadily, the way you notice a room is colder than it used to be.",
+        "emotional": "I miss you in the ordinary parts of the day, which is the part nobody warns you about. Not the anniversaries. Tuesdays.",
+        "romantic": "I miss you the way you miss a season. Everything still works without it; it's just less warm.",
+        "honest": "I miss you, and I've been pretending that's a smaller thing than it is.",
+        "closure": "I miss you, and I've decided that missing you doesn't have to mean waiting for you."
+      },
+      "sorry": {
+        "simple": "I'm sorry. I'm not going to dress it up.",
+        "warm": "I'm sorry. I've thought about it properly, and you were right to feel the way you did.",
+        "emotional": "I'm sorry. I keep replaying the moment I could have chosen differently, and I keep watching myself not do it.",
+        "romantic": "I'm sorry. Of everything I've been careless with, you're the one I'd most like back.",
+        "honest": "I'm sorry. Not sorry-you-felt-that-way — sorry I did it, and sorry it took me this long to say so.",
+        "closure": "I'm sorry. I'm not asking you to do anything with that. I just needed it to have been said."
+      },
+      "love": {
+        "simple": "I love you. I should say it more often than I do.",
+        "warm": "I love you — the everyday kind, the kind that shows up in what I notice about you.",
+        "emotional": "I love you, and it startles me sometimes how much of my ordinary life has you in it.",
+        "romantic": "I love you. You turn up in my quietest hours and make them worth having.",
+        "honest": "I love you, and saying it out loud costs me something, which is probably how I know it's true.",
+        "closure": "I love you. I'm telling you because not telling you was becoming the heavier thing to carry."
+      },
+      "thanks": {
+        "simple": "Thank you. You probably don't know how much it mattered.",
+        "warm": "Thank you. You did something small and it held me up longer than you'd guess.",
+        "emotional": "Thank you. There was a stretch where I wasn't doing well, and you were kind without making a thing of it, and I've never forgotten.",
+        "romantic": "Thank you for the version of me I got to be around you. I liked him better.",
+        "honest": "Thank you. I'm bad at saying this, which is why it's arriving in writing and late.",
+        "closure": "Thank you. Whatever else this was, that part was real and I'm not taking it back."
+      },
+      "forgive": {
+        "simple": "I forgive you. I'd rather put it down than keep holding it.",
+        "warm": "I forgive you. It took a while, and I'd rather tell you than let you assume.",
+        "emotional": "I forgive you. Not because it didn't hurt — it did, more than I let on — but because carrying it has stopped doing anything for me.",
+        "romantic": "I forgive you. What we had deserves to be remembered as more than how it ended.",
+        "honest": "I forgive you, and I'm still allowed to not want things back the way they were.",
+        "closure": "I forgive you. That's the end of it for me, and I'm saying so out loud so it stays ended."
+      },
+      "closure": {
+        "simple": "I think I need to stop waiting for this to make sense.",
+        "warm": "I'd like to close this gently, if we can. No hard feelings, just an ending.",
+        "emotional": "I've been waiting for an explanation that I don't think is coming, and the waiting has cost me more than the answer would be worth.",
+        "romantic": "I'd rather remember this well than keep it open badly.",
+        "honest": "I need this to be finished. Not because I stopped caring — because leaving it open is doing me harm.",
+        "closure": "I'm closing this. Not angrily. I just don't want to keep living in a room with no door."
+      },
+      "think": {
+        "simple": "I still think about you. That's all.",
+        "warm": "I still think about you, and it's usually a good thought, in case you were wondering.",
+        "emotional": "I still think about you at the strangest times — a street, a song, a certain kind of afternoon light — and it never gives me any warning.",
+        "romantic": "You left my life and somehow never left my thoughts.",
+        "honest": "I still think about you. I'm not sure what you're supposed to do with that, and I wanted to say it anyway.",
+        "closure": "I still think about you, less often now, and more kindly. I think that's how this is supposed to go."
+      },
+      "bye": {
+        "simple": "Goodbye. I mean that gently.",
+        "warm": "Goodbye. I hope the next part is good to you.",
+        "emotional": "Goodbye. I keep looking for a bigger word and there isn't one — everything I'd add would just be me stalling.",
+        "romantic": "Goodbye. You were one of the good parts, and I'm not going to pretend otherwise to make this easier.",
+        "honest": "Goodbye. I'm not slamming anything shut. I'm just done standing in the doorway.",
+        "closure": "Goodbye. Genuinely, and for good, and without any of it having been wasted."
+      }
+    },
+    "closings": {
+      "simple":    ["That's it. That's the message.", "Nothing else to add."],
+      "warm":      ["I hope you're doing alright.", "Take care of yourself — I mean that plainly."],
+      "emotional": ["I don't need a reply. I needed it to exist somewhere outside my own head.", "You can do whatever you like with this. I just couldn't keep holding it."],
+      "romantic":  ["Whatever happens next, I'm glad it was you.", "I'd choose it again, knowing the ending."],
+      "honest":    ["I'm not expecting anything back from this.", "That's the true version, which is the only one worth sending."],
+      "closure":   ["I'm not looking for a response. This one is for me.", "That's the last of it, and it's a relief to have put it down."]
+    }
+  },
+
+  "sendFeelings": [
+    {"id": "love", "emoji": "❤️", "label": "Love", "feeling": "love", "lines": {
+      "short": "You're on my mind. That's all.",
+      "sweet": "You turn up in my ordinary hours and make them better.",
+      "emotional": "I don't always know how to say it out loud, so I'm sending it instead.",
+      "deep": "Some people never really leave your life. They just stop being in the room."}},
+    {"id": "miss", "emoji": "🕰️", "label": "I miss you", "feeling": "nostalgia", "lines": {
+      "short": "I miss you.",
+      "sweet": "It's been a while, and you still come up.",
+      "emotional": "I miss you on Tuesdays, which is the part nobody warns you about.",
+      "deep": "I don't miss the place. I miss who I got to be there, with you in it."}},
+    {"id": "thanks", "emoji": "🙏", "label": "Thank you", "feeling": "joy", "lines": {
+      "short": "Thank you. Properly.",
+      "sweet": "You did something small once and it held me up longer than you'd guess.",
+      "emotional": "There was a stretch where I wasn't doing well, and you were kind without making a thing of it.",
+      "deep": "Thank you for the version of me I got to be around you."}},
+    {"id": "sorry", "emoji": "💔", "label": "I'm sorry", "feeling": "hurt", "lines": {
+      "short": "I'm sorry. No excuses attached.",
+      "sweet": "I've thought about it properly, and you were right to feel how you felt.",
+      "emotional": "I keep replaying the moment I could have chosen differently, and watching myself not do it.",
+      "deep": "I'm not asking you to do anything with this. I just needed it to have been said."}},
+    {"id": "believe", "emoji": "🌱", "label": "I believe in you", "feeling": "hope", "lines": {
+      "short": "You've got this. I'm not just saying it.",
+      "sweet": "Whatever tomorrow is, I think you'll be alright in it.",
+      "emotional": "You've survived every day you were sure you wouldn't. The record is perfect.",
+      "deep": "The change starts before there's any proof of it. I can see it even if you can't yet."}},
+    {"id": "goodbye", "emoji": "👋", "label": "Goodbye", "feeling": "grief", "lines": {
+      "short": "Goodbye. I mean it gently.",
+      "sweet": "I hope the next part of it is good to you.",
+      "emotional": "I keep looking for a bigger word than goodbye and there isn't one.",
+      "deep": "You were here. Being gone doesn't erase having been here."}}
+  ],
+
+  "prompts2am": [
+    {"text": "Who do you miss tonight?", "feeling": "loneliness"},
+    {"text": "What would you say if there were no consequences?", "feeling": "hurt"},
+    {"text": "What are you pretending doesn't bother you?", "feeling": "rage"},
+    {"text": "What memory keeps coming back?", "feeling": "nostalgia"},
+    {"text": "What are you hoping tomorrow feels like?", "feeling": "hope"},
+    {"text": "What would you tell your younger self?", "feeling": "nostalgia"},
+    {"text": "What have you not said out loud to anyone?", "feeling": "loneliness"},
+    {"text": "Which conversation are you still having in your head?", "feeling": "anxiety"},
+    {"text": "What are you afraid is true?", "feeling": "anxiety"},
+    {"text": "Who would you call if it weren't this late?", "feeling": "loneliness"},
+    {"text": "What are you still angry about that you've called \"fine\"?", "feeling": "rage"},
+    {"text": "What did today actually cost you?", "feeling": "sorrow"},
+    {"text": "What would you like someone to notice about you?", "feeling": "hurt"},
+    {"text": "What are you carrying that isn't yours?", "feeling": "sorrow"},
+    {"text": "What would make tonight feel survivable?", "feeling": "calm"},
+    {"text": "Who are you still hoping will come back?", "feeling": "grief"}
+  ]
+}

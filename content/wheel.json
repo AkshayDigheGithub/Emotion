@@ -1,0 +1,194 @@
+{
+  "_comment": "Three taps: a broad category, a shape, then the precise phrase. Every leaf ends on a feeling slug from content/feelings.json, so the wheel and the quiz can never disagree about what a feeling is.",
+  "categories": [
+    {
+      "name": "Happy", "emoji": "☀️", "accent": "#ffd889",
+      "branches": [
+        {"name": "Light", "leaves": [
+          {"phrase": "Nothing is wrong and I keep waiting for it to be", "feeling": "peace"},
+          {"phrase": "I forgot I was allowed to feel this", "feeling": "joy"},
+          {"phrase": "Good for no particular reason", "feeling": "joy"}]},
+        {"name": "Grateful", "leaves": [
+          {"phrase": "Someone did something small and it landed", "feeling": "love"},
+          {"phrase": "I got lucky and I know it", "feeling": "joy"},
+          {"phrase": "I want to tell them before I forget", "feeling": "love"}]},
+        {"name": "Relieved", "leaves": [
+          {"phrase": "It's over and I'm still braced", "feeling": "peace"},
+          {"phrase": "The waiting finally ended", "feeling": "peace"},
+          {"phrase": "I can breathe out now", "feeling": "calm"}]},
+        {"name": "Warm", "leaves": [
+          {"phrase": "Remembering a good day on purpose", "feeling": "nostalgia"},
+          {"phrase": "Someone is on my mind and it's pleasant", "feeling": "love"},
+          {"phrase": "I felt held today", "feeling": "love"}]}
+      ]
+    },
+    {
+      "name": "Sad", "emoji": "🌧️", "accent": "#9cbde8",
+      "branches": [
+        {"name": "Heavy", "leaves": [
+          {"phrase": "Today weighs more than it should", "feeling": "sorrow"},
+          {"phrase": "I don't want to be talked out of it", "feeling": "sorrow"},
+          {"phrase": "Nothing happened and I still feel like this", "feeling": "sorrow"}]},
+        {"name": "Missing someone", "leaves": [
+          {"phrase": "They're gone and it still ambushes me", "feeling": "grief"},
+          {"phrase": "They're alive, just not mine anymore", "feeling": "nostalgia"},
+          {"phrase": "I miss who I was around them", "feeling": "nostalgia"}]},
+        {"name": "Empty", "leaves": [
+          {"phrase": "I'm in a room full of people", "feeling": "loneliness"},
+          {"phrase": "Nobody would notice if I went quiet", "feeling": "loneliness"},
+          {"phrase": "I can't feel much of anything", "feeling": "sorrow"}]},
+        {"name": "Let down", "leaves": [
+          {"phrase": "Someone chose something over me", "feeling": "hurt"},
+          {"phrase": "I expected better and said nothing", "feeling": "hurt"},
+          {"phrase": "It's not what they did, it's what it showed", "feeling": "hurt"}]}
+      ]
+    },
+    {
+      "name": "Angry", "emoji": "🔥", "accent": "#ff6a58",
+      "branches": [
+        {"name": "Furious", "leaves": [
+          {"phrase": "I've been reasonable for too long", "feeling": "rage"},
+          {"phrase": "I want to say the sharp thing", "feeling": "rage"},
+          {"phrase": "I'm sick of managing my own reaction", "feeling": "rage"}]},
+        {"name": "Bitter", "leaves": [
+          {"phrase": "They got away with it", "feeling": "hurt"},
+          {"phrase": "I gave more than I got back", "feeling": "hurt"},
+          {"phrase": "I'm still arguing with them in my head", "feeling": "anxiety"}]},
+        {"name": "Frustrated", "leaves": [
+          {"phrase": "Nothing I do is moving anything", "feeling": "rage"},
+          {"phrase": "I keep having the same conversation", "feeling": "anxiety"},
+          {"phrase": "I'm angry at myself, mostly", "feeling": "hurt"}]},
+        {"name": "Betrayed", "leaves": [
+          {"phrase": "Someone I trusted did this", "feeling": "hurt"},
+          {"phrase": "I didn't see it coming at all", "feeling": "hurt"},
+          {"phrase": "I don't know where to put this", "feeling": "rage"}]}
+      ]
+    },
+    {
+      "name": "Afraid", "emoji": "🌊", "accent": "#9fc4d6",
+      "branches": [
+        {"name": "Anxious", "leaves": [
+          {"phrase": "My head is running the same three minutes", "feeling": "anxiety"},
+          {"phrase": "I can't get my body to settle", "feeling": "anxiety"},
+          {"phrase": "It's late and it's worse at night", "feeling": "anxiety"}]},
+        {"name": "Overwhelmed", "leaves": [
+          {"phrase": "Everything is too loud", "feeling": "calm"},
+          {"phrase": "There's more than I can hold", "feeling": "calm"},
+          {"phrase": "I need one thing to stop asking", "feeling": "calm"}]},
+        {"name": "Waiting", "leaves": [
+          {"phrase": "I'm waiting on news I can't control", "feeling": "anxiety"},
+          {"phrase": "Tomorrow could go either way", "feeling": "hope"},
+          {"phrase": "I don't know what happens next", "feeling": "hope"}]},
+        {"name": "Exposed", "leaves": [
+          {"phrase": "I said too much and now I'm raw", "feeling": "hurt"},
+          {"phrase": "Someone saw a part I hide", "feeling": "hurt"},
+          {"phrase": "I feel like I'm too much", "feeling": "loneliness"}]}
+      ]
+    },
+    {
+      "name": "Surprised", "emoji": "✨", "accent": "#e6c396",
+      "branches": [
+        {"name": "Caught off guard", "leaves": [
+          {"phrase": "A song did it again", "feeling": "nostalgia"},
+          {"phrase": "I saw their name somewhere", "feeling": "nostalgia"},
+          {"phrase": "A smell put me somewhere else entirely", "feeling": "nostalgia"}]},
+        {"name": "Moved", "leaves": [
+          {"phrase": "Something small undid me", "feeling": "love"},
+          {"phrase": "Someone was kind and I wasn't ready", "feeling": "love"},
+          {"phrase": "I cried at something ridiculous", "feeling": "sorrow"}]},
+        {"name": "Shaken", "leaves": [
+          {"phrase": "That wasn't supposed to happen", "feeling": "anxiety"},
+          {"phrase": "I'm still catching up to it", "feeling": "anxiety"},
+          {"phrase": "It changed something and I don't know what yet", "feeling": "hope"}]},
+        {"name": "Unsettled", "leaves": [
+          {"phrase": "Something is off and I can't name it", "feeling": "anxiety"},
+          {"phrase": "I keep checking my phone", "feeling": "anxiety"},
+          {"phrase": "I don't feel like myself today", "feeling": "sorrow"}]}
+      ]
+    },
+    {
+      "name": "Ashamed", "emoji": "🪞", "accent": "#bcabd2",
+      "branches": [
+        {"name": "Regretful", "leaves": [
+          {"phrase": "I'd do it differently now", "feeling": "grief"},
+          {"phrase": "I didn't say it while I could", "feeling": "grief"},
+          {"phrase": "I wasted time I can't get back", "feeling": "nostalgia"}]},
+        {"name": "Guilty", "leaves": [
+          {"phrase": "I hurt someone who didn't deserve it", "feeling": "hurt"},
+          {"phrase": "I keep replaying what I said", "feeling": "anxiety"},
+          {"phrase": "I want to apologise and can't", "feeling": "hurt"}]},
+        {"name": "Fed up", "leaves": [
+          {"phrase": "I'm tired of my own patterns", "feeling": "rage"},
+          {"phrase": "I'm done pretending it's fine", "feeling": "rage"},
+          {"phrase": "I'm tired of being the strong one", "feeling": "loneliness"}]},
+        {"name": "Small", "leaves": [
+          {"phrase": "I took up less room than I should have", "feeling": "hurt"},
+          {"phrase": "I let it happen again", "feeling": "hurt"},
+          {"phrase": "I want to start over", "feeling": "hope"}]}
+      ]
+    },
+    {
+      "name": "Loving", "emoji": "❤️", "accent": "#f0b8bd",
+      "branches": [
+        {"name": "In it", "leaves": [
+          {"phrase": "They're in my ordinary hours", "feeling": "love"},
+          {"phrase": "I want to tell them and haven't", "feeling": "love"},
+          {"phrase": "I'd rather they were here", "feeling": "loneliness"}]},
+        {"name": "Longing", "leaves": [
+          {"phrase": "I think about them more than I admit", "feeling": "love"},
+          {"phrase": "It's been a while and it hasn't faded", "feeling": "nostalgia"},
+          {"phrase": "I don't know if they think about me", "feeling": "loneliness"}]},
+        {"name": "Tender", "leaves": [
+          {"phrase": "I want to look after someone", "feeling": "love"},
+          {"phrase": "Someone is going through it and I can't fix it", "feeling": "sorrow"},
+          {"phrase": "I want to say thank you properly", "feeling": "love"}]},
+        {"name": "Letting go", "leaves": [
+          {"phrase": "I'm choosing to stop waiting", "feeling": "hope"},
+          {"phrase": "I loved them and it still ended", "feeling": "grief"},
+          {"phrase": "I want closure more than contact", "feeling": "hurt"}]}
+      ]
+    },
+    {
+      "name": "Calm", "emoji": "🌿", "accent": "#8fd3c3",
+      "branches": [
+        {"name": "Still", "leaves": [
+          {"phrase": "I want everything to be quieter", "feeling": "calm"},
+          {"phrase": "I'd like to stop thinking for a minute", "feeling": "calm"},
+          {"phrase": "I want to be somewhere nothing is asked of me", "feeling": "calm"}]},
+        {"name": "Settled", "leaves": [
+          {"phrase": "It's okay right now, actually", "feeling": "peace"},
+          {"phrase": "I've stopped bracing", "feeling": "peace"},
+          {"phrase": "I don't need it to be more than this", "feeling": "peace"}]},
+        {"name": "Accepting", "leaves": [
+          {"phrase": "It didn't go how I wanted and I'm okay", "feeling": "peace"},
+          {"phrase": "I'm slowly becoming okay again", "feeling": "hope"},
+          {"phrase": "I can carry it differently now", "feeling": "grief"}]},
+        {"name": "Tired", "leaves": [
+          {"phrase": "Not sad, just worn out", "feeling": "calm"},
+          {"phrase": "I've been carrying it all day", "feeling": "sorrow"},
+          {"phrase": "I want tomorrow to be lighter", "feeling": "hope"}]}
+      ]
+    },
+    {
+      "name": "Lonely", "emoji": "🌙", "accent": "#93a6cc",
+      "branches": [
+        {"name": "Unseen", "leaves": [
+          {"phrase": "People are around and none of them know", "feeling": "loneliness"},
+          {"phrase": "Nobody checks on the person who checks on everyone", "feeling": "loneliness"},
+          {"phrase": "I'd have to explain too much", "feeling": "loneliness"}]},
+        {"name": "Left behind", "leaves": [
+          {"phrase": "Everyone moved on and I didn't", "feeling": "grief"},
+          {"phrase": "They stopped replying", "feeling": "hurt"},
+          {"phrase": "The group carried on without me", "feeling": "loneliness"}]},
+        {"name": "Homesick", "leaves": [
+          {"phrase": "I miss a house that isn't there anymore", "feeling": "nostalgia"},
+          {"phrase": "I miss a time, not a place", "feeling": "nostalgia"},
+          {"phrase": "I want to go back and I can't", "feeling": "nostalgia"}]},
+        {"name": "Awake", "leaves": [
+          {"phrase": "It's late and the room feels rigged", "feeling": "anxiety"},
+          {"phrase": "Everyone else is asleep", "feeling": "loneliness"},
+          {"phrase": "It's quieter now and worse", "feeling": "sorrow"}]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "_comment": "There is no bundler and no TypeScript in the shipped site — the browser gets the same .js files that are in the repo. This config exists so `npx tsc -p jsconfig.json` can type-check them from their JSDoc annotations, which gives the same safety net as .ts without adding a build step Vercel would have to run.",
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["ES2017", "DOM", "DOM.Iterable"],
+    "module": "ES2015",
+    "checkJs": true,
+    "allowJs": true,
+    "noEmit": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "skipLibCheck": true
+  },
+  "include": ["*.js", "types/*.d.ts"],
+  "exclude": ["node_modules", "api", "moods-data.js", "feelings-data.js", "tool-content.js"]
+}

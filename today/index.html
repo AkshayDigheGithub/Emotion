@@ -3,26 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>If a payment didn’t open your feeling — Moodshop</title>
-<meta name="description" content="What to do if a Moodshop payment was cancelled, failed, or finished without opening the piece.">
-<link rel="canonical" href="https://www.moodshop.lol/help/payment/">
-<meta name="robots" content="noindex, follow">
+<title>Today’s mood — Moodshop</title>
+<meta name="description" content="One feeling a day, the same one for everybody, changing at midnight. A short piece of writing for whatever today turned out to be.">
+<link rel="canonical" href="https://www.moodshop.lol/today/">
+<meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0e0e15">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Payment help — Moodshop">
-<meta property="og:description" content="Cancelled, failed, or paid and nothing opened.">
-<meta property="og:url" content="https://www.moodshop.lol/help/payment/">
+<meta property="og:title" content="Moodshop — today’s mood">
+<meta property="og:description" content="One feeling a day. It changes at midnight.">
+<meta property="og:url" content="https://www.moodshop.lol/today/">
 <meta property="og:site_name" content="Moodshop">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.moodshop.lol/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Payment help — Moodshop">
+<meta property="og:image:alt" content="Moodshop — today’s mood">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Payment help — Moodshop">
-<meta name="twitter:description" content="Cancelled, failed, or paid and nothing opened.">
+<meta name="twitter:title" content="Moodshop — today’s mood">
+<meta name="twitter:description" content="One feeling a day. It changes at midnight.">
 <meta name="twitter:image" content="https://www.moodshop.lol/og-image.jpg">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AD%3C/text%3E%3C/svg%3E">
@@ -38,7 +38,10 @@
 <script defer src="/analytics.js"></script>
 <script defer src="/moods-data.js"></script>
 <script defer src="/moodshop.js"></script>
-
+<script defer src="/feelings-data.js"></script>
+<script defer src="/tool-content.js"></script>
+<script defer src="/recommend.js"></script>
+<script defer src="/tools.js"></script>
 </head>
 <body>
 <script>document.documentElement.className+=' js';</script>
@@ -51,53 +54,54 @@
       <li><a href="/moods/">Moods</a></li>
       <li><a href="/tools/">Tools</a></li>
       <li><a href="/collections/">Collections</a></li>
-      <li><a href="/today/">Today</a></li>
+      <li><a href="/today/" aria-current="page">Today</a></li>
       <li><a href="/about/">About</a></li>
     </ul>
     <a class="nav-cta" href="/tools/mood-finder/" data-track="mood_finder_started" data-track-from="nav">Find my mood</a>
   </div>
 </nav>
 <main id="main">
-
-<header class="wrap narrow" style="padding-top:clamp(2.5rem,8vw,4rem);">
-  <p class="eyebrow">If something went wrong</p>
-  <h1>Let’s get you to the feeling.</h1>
-  <p class="lede">Payments run on Buy Me a Coffee, which means three things can go sideways. Here’s each one, and what actually fixes it.</p>
+<span id="today-page" hidden></span>
+<header class="wrap narrow tool-head">
+  <p class="eyebrow">Today’s mood</p>
+  <h1>One feeling a day.</h1>
+  <p class="lede">Chosen by the date, not by you — everyone sees the same one today, and it changes at midnight. Come back tomorrow for a different one.</p>
 </header>
 
-<section class="wrap narrow" style="padding-top:0;">
-  <details open>
-    <summary>You changed your mind and cancelled</summary>
-    <p>Nothing was charged, and nothing is waiting on you. The free opening of every feeling stays where it was, and three full pieces are free to read. <a href="/moods/">Find another feeling →</a></p>
-  </details>
-  <details>
-    <summary>The payment was declined or failed</summary>
-    <p>Buy Me a Coffee handles cards, Apple Pay and PayPal — if one is refused, another usually isn’t. Nothing reaches Moodshop either way; no half-charge is sitting anywhere. Go back to the feeling and try once more.</p>
-  </details>
-  <details>
-    <summary>You paid, and no page opened</summary>
-    <p>That’s the one real failure, and it’s on my side: it happens when a piece’s redirect isn’t set up properly. Message me through Buy Me a Coffee — the same place your receipt came from — and say which feeling you bought. I’ll send you the link straight away, and refund it if you’d rather.</p>
-    <p><a href="https://www.buymeacoffee.com/digheakshaf" rel="nofollow noopener">Message me on Buy Me a Coffee →</a></p>
-  </details>
-  <details>
-    <summary>You lost the link</summary>
-    <p>The page you unlocked stays live — it just isn’t listed anywhere and there’s no account to log into, so the bookmark is the only way back. If you’ve lost it, message me with your receipt and I’ll send it again.</p>
-  </details>
-  <details>
-    <summary>It didn’t do anything for you</summary>
-    <p>Then say so. Refunds on a few dollars of writing aren’t worth anyone’s afternoon, so I’d rather send you a different feeling — but if you want the money back, ask and it’s yours.</p>
-  </details>
+<section class="wrap" style="padding-top:0;">
+  <div class="result-card" id="today-page-face">
+    <p class="result-lede">Today</p>
+    <p class="result-name" id="today-page-name">—</p>
+    <p class="result-desc" id="today-page-tag"></p>
+    <p class="result-desc" id="today-page-thought" style="font-style:italic;margin-top:1.4rem;opacity:0.85;"></p>
+  </div>
+  <div class="cta-row" style="margin-top:1.6rem;">
+    <a class="btn btn-primary" id="today-page-link" href="/moods/" data-track="mood_selected" data-track-from="today-page">Read today’s mood</a>
+    <a class="btn btn-ghost" href="/tools/mood-finder/" data-track="mood_finder_started" data-track-from="today-page">Not today’s? Find my mood</a>
+  </div>
+  <noscript><p class="lede" style="margin-top:1.6rem;">Today’s pick is worked out in your browser from the date. With JavaScript off, <a href="/moods/" style="color:var(--ink);">all eight are here</a>.</p></noscript>
 </section>
 
-<section class="wrap narrow">
-  <div class="cta-row">
-    <a class="btn btn-primary" href="/moods/">Find another feeling →</a>
-    <a class="btn btn-ghost" href="/">Back to Moodshop</a>
+<section class="wrap">
+  <div class="bundle reveal">
+    <span class="badge">Opening soon</span>
+    <h2>The Complete Mood Pack</h2>
+    <p class="line">Every piece on the shelf, opened by one link. For the weeks where you can&#x27;t name it in advance.</p>
+    <div class="price-row">
+      <p class="price">$9 <small>once</small></p>
+      <p class="was"><s>$23</s> one at a time — save $14</p>
+    </div>
+    <ul class="ticks">
+      <li>All eight feelings, one payment</li>
+      <li>One link that opens every one</li>
+      <li>New feelings added to the shelf, free</li>
+      <li>Send any of them on, as often as you like</li>
+    </ul>
+    <div class="cta-row"><a class="btn btn-ghost" href="/moods/" data-track="bundle_clicked" data-track-from="today-page">Start with one feeling — from $1</a></div>
+    <p class="hint">The pack isn’t buyable yet — there’s no checkout behind it, and a button that takes $9 and delivers nothing isn’t a button. Single feelings are open now.</p>
   </div>
 </section>
-
 </main>
-
 <footer class="site-foot">
   <div class="wrap">
     <div class="cols">

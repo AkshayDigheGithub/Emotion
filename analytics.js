@@ -63,7 +63,8 @@
 
   /* ---------- declarative tracking ---------- */
   document.addEventListener("click", function (ev) {
-    var el = ev.target && ev.target.closest && ev.target.closest("[data-track]");
+    var t = /** @type {Element} */ (ev.target);
+    var el = t && t.closest && t.closest("[data-track]");
     if (!el) return;
     var props = {};
     if (el.getAttribute("data-track-mood")) props.mood = el.getAttribute("data-track-mood");
@@ -73,11 +74,18 @@
 
   /* ---------- every outbound checkout, however it was reached ---------- */
   document.addEventListener("click", function (ev) {
-    var a = ev.target && ev.target.closest && ev.target.closest("a[href]");
+    var t2 = /** @type {Element} */ (ev.target);
+    var a = t2 && t2.closest && t2.closest("a[href]");
     if (!a) return;
     var href = a.getAttribute("href") || "";
     if (href.indexOf("buymeacoffee.com") === -1) return;
-    if (a.getAttribute("data-track") === "checkout_started") return; // already counted
-    track("checkout_started", { mood: a.getAttribute("data-track-mood") || "tip" });
+    var mood = a.getAttribute("data-track-mood") || "tip";
+    // `checkout_started` predates the tools and is what the existing dashboards
+    // are built on; `purchase_clicked` is the same moment under the name the
+    // tools spec uses. Both fire so neither set of numbers has a hole in it.
+    if (a.getAttribute("data-track") !== "checkout_started") {
+      track("checkout_started", { mood: mood });
+    }
+    track("purchase_clicked", { mood: mood });
   }, true);
 })();

@@ -3,26 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Every feeling — Moodshop</title>
-<meta name="description" content="Eight short pieces of writing for very specific feelings: calm, nostalgia, happiness, hope, hurt, sorrow, grief, rage. From $1, no account.">
-<link rel="canonical" href="https://www.moodshop.lol/moods/">
+<title>Mood Finder — Discover What You’re Feeling | Moodshop</title>
+<meta name="description" content="Not sure what you’re feeling? Answer three questions and find a short Moodshop experience that fits. No account, no AI, nothing stored.">
+<link rel="canonical" href="https://www.moodshop.lol/tools/mood-finder/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0e0e15">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Moodshop — every feeling">
-<meta property="og:description" content="Tiny pieces of writing for very specific feelings.">
-<meta property="og:url" content="https://www.moodshop.lol/moods/">
+<meta property="og:title" content="Moodshop — Find My Mood">
+<meta property="og:description" content="Answer a few questions and discover a feeling that might fit.">
+<meta property="og:url" content="https://www.moodshop.lol/tools/mood-finder/">
 <meta property="og:site_name" content="Moodshop">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.moodshop.lol/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Moodshop — every feeling">
+<meta property="og:image:alt" content="Moodshop — Find My Mood">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Moodshop — every feeling">
-<meta name="twitter:description" content="Tiny pieces of writing for very specific feelings.">
+<meta name="twitter:title" content="Moodshop — Find My Mood">
+<meta name="twitter:description" content="Answer a few questions and discover a feeling that might fit.">
 <meta name="twitter:image" content="https://www.moodshop.lol/og-image.jpg">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AD%3C/text%3E%3C/svg%3E">
@@ -35,58 +35,46 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Every feeling in the Moodshop",
-  "numberOfItems": 8,
-  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "@type": "WebApplication",
+  "name": "Find My Mood — Moodshop",
+  "url": "https://www.moodshop.lol/tools/mood-finder/",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "Any web browser",
+  "description": "Not sure what you’re feeling? Answer three questions and find a short Moodshop experience that fits. No account, no AI, nothing stored.",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Akshay"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
-      "url": "https://www.moodshop.lol/mood/calm/",
-      "name": "Calm"
+      "name": "Moodshop",
+      "item": "https://www.moodshop.lol/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "url": "https://www.moodshop.lol/mood/nostalgia/",
-      "name": "Nostalgia"
+      "name": "Tools",
+      "item": "https://www.moodshop.lol/tools/"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "url": "https://www.moodshop.lol/mood/happiness/",
-      "name": "Happiness"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "url": "https://www.moodshop.lol/mood/hope/",
-      "name": "Hope"
-    },
-    {
-      "@type": "ListItem",
-      "position": 5,
-      "url": "https://www.moodshop.lol/mood/hurt/",
-      "name": "Hurt"
-    },
-    {
-      "@type": "ListItem",
-      "position": 6,
-      "url": "https://www.moodshop.lol/mood/sorrow/",
-      "name": "Sorrow"
-    },
-    {
-      "@type": "ListItem",
-      "position": 7,
-      "url": "https://www.moodshop.lol/mood/grief/",
-      "name": "Grief"
-    },
-    {
-      "@type": "ListItem",
-      "position": 8,
-      "url": "https://www.moodshop.lol/mood/rage/",
-      "name": "Rage"
+      "name": "Find My Mood",
+      "item": "https://www.moodshop.lol/tools/mood-finder/"
     }
   ]
 }
@@ -96,7 +84,10 @@
 <script defer src="/analytics.js"></script>
 <script defer src="/moods-data.js"></script>
 <script defer src="/moodshop.js"></script>
-
+<script defer src="/feelings-data.js"></script>
+<script defer src="/tool-content.js"></script>
+<script defer src="/recommend.js"></script>
+<script defer src="/tools.js"></script>
 </head>
 <body>
 <script>document.documentElement.className+=' js';</script>
@@ -106,8 +97,8 @@
   <div class="nav-in">
     <a class="brand" href="/"><span class="dot" aria-hidden="true"></span> Moodshop</a>
     <ul class="nav-links">
-      <li><a href="/moods/" aria-current="page">Moods</a></li>
-      <li><a href="/tools/">Tools</a></li>
+      <li><a href="/moods/">Moods</a></li>
+      <li><a href="/tools/" aria-current="page">Tools</a></li>
       <li><a href="/collections/">Collections</a></li>
       <li><a href="/today/">Today</a></li>
       <li><a href="/about/">About</a></li>
@@ -116,68 +107,36 @@
   </div>
 </nav>
 <main id="main">
-<header class="wrap" style="padding-top:clamp(2.5rem,8vw,4rem);">
-  <p class="eyebrow">All moods</p>
-  <h1>Maybe you’re feeling…</h1>
-  <p class="lede">Eight short pieces of writing, each built to do exactly one thing. Every one opens with its real first lines, free, before anything is asked of you.</p>
-  <div class="cta-row"><a class="btn btn-ghost btn-sm" href="/#finder">Not sure? Find my mood</a><a class="btn btn-ghost btn-sm" href="/free/">Read three for free</a></div>
+<header class="wrap narrow tool-head">
+  <a class="back-link" href="/tools/">← All tools</a>
+  <span class="ico" aria-hidden="true">🧭</span>
+  <h1>How are you feeling?</h1>
+  <p class="lede">You don’t have to know exactly. We’ll help you narrow it down.</p>
 </header>
+<section class="wrap narrow" style="padding-top:0;">
+  <div class="tool-stage">
+    <p class="hint" style="margin:0 0 1.4rem 0;">Three questions. Nothing is stored, nothing is sent anywhere, and there is no wrong answer — including the one that says you don&#x27;t know.</p>
+    <div id="quiz">
+      <p class="quiz-progress" id="quiz-progress"></p>
+      <div id="quiz-stage"></div>
+    </div>
+    <div id="quiz-result" hidden></div>
+    <button class="btn btn-ghost btn-sm" type="button" id="quiz-again" hidden style="margin-top:1.4rem;">Try again</button>
+    <noscript>
+      <p class="lede" style="margin:0;">The quiz needs JavaScript to add up your answers — it does the scoring in your browser so nothing has to be sent anywhere. With JS off, <a href="/moods/" style="color:var(--ink);">the eight feelings are all here</a> to read through instead.</p>
+    </noscript>
+  </div>
+  <p class="hint">This is a weighted score over your three answers, not a diagnosis. It says <em>might</em> on purpose.</p>
+</section>
 
-<section class="wrap" style="padding-top:clamp(1.5rem,4vw,2.5rem);">
-  <ul class="mood-grid reveal">
-    <li>
-      <a class="mood-card" href="/mood/calm/" style="background:linear-gradient(140deg,#bfe3da,#69a194);color:#14312b;"
-         data-track="mood_selected" data-track-mood="calm" data-track-from="moods-index">
-        <span>
-          <span class="name">Calm</span>
-          <span class="tag">For when everything feels too loud.</span>
-        </span>
-        <span class="foot"><span class="go">Enter the feeling →</span><span class="cost">$1</span></span>
-      </a>
-    </li>
-    <li>
-      <a class="mood-card" href="/mood/nostalgia/" style="background:linear-gradient(140deg,#e0bd8f,#b67f54);color:#2e1c0f;"
-         data-track="mood_selected" data-track-mood="nostalgia" data-track-from="moods-index">
-        <span>
-          <span class="name">Nostalgia</span>
-          <span class="tag">For when you miss a version of your life that doesn&#x27;t exist anymore.</span>
-        </span>
-        <span class="foot"><span class="go">Enter the feeling →</span><span class="cost">$1</span></span>
-      </a>
-    </li>
-    <li>
-      <a class="mood-card" href="/mood/happiness/" style="background:linear-gradient(140deg,#ffd889,#e08a2b);color:#3a2600;"
-         data-track="mood_selected" data-track-mood="happiness" data-track-from="moods-index">
-        <span>
-          <span class="name">Happiness</span>
-          <span class="tag">For when you forgot you&#x27;re allowed to feel good.</span>
-        </span>
-        <span class="foot"><span class="go">Enter the feeling →</span><span class="cost">$2</span></span>
-      </a>
-    </li>
-    <li>
-      <a class="mood-card" href="/mood/hope/" style="background:radial-gradient(115% 90% at 92% 126%,rgba(246,201,138,0.4) 0%,rgba(246,201,138,0) 60%),linear-gradient(140deg,#565694,#211f3d);color:#f4ecdf;"
-         data-track="mood_selected" data-track-mood="hope" data-track-from="moods-index">
-        <span>
-          <span class="name">Hope</span>
-          <span class="tag">For when tomorrow feels uncertain.</span>
-        </span>
-        <span class="foot"><span class="go">Enter the feeling →</span><span class="cost">$2</span></span>
-      </a>
-    </li>
-    <li>
-      <a class="mood-card" href="/mood/hurt/" style="background:linear-gradient(140deg,#6b1a24,#2a0a0d);color:#f4e0e2;"
-         data-track="mood_selected" data-track-mood="hurt" data-track-from="moods-index">
-        <span>
-          <span class="name">Hurt</span>
-          <span class="tag">For what you never said.</span>
-        </span>
-        <span class="foot"><span class="go">Enter the feeling →</span><span class="cost">$4</span></span>
-      </a>
-    </li>
+<section class="wrap" aria-labelledby="rel-mood-finder">
+  <p class="eyebrow">Go deeper</p>
+  <h2 id="rel-mood-finder">Related Moodshop experiences</h2>
+  <p class="lede">The tools are free. These are the short pieces they point at — two minutes each, from $1.</p>
+  <ul class="mood-grid">
     <li>
       <a class="mood-card" href="/mood/sorrow/" style="background:linear-gradient(140deg,#33547e,#0e1a2b);color:#e8eef7;"
-         data-track="mood_selected" data-track-mood="sorrow" data-track-from="moods-index">
+         data-track="mood_selected" data-track-mood="sorrow" data-track-from="tool-mood-finder">
         <span>
           <span class="name">Sorrow</span>
           <span class="tag">For the days that feel heavier than usual.</span>
@@ -186,33 +145,24 @@
       </a>
     </li>
     <li>
-      <a class="mood-card" href="/mood/grief/" style="background:linear-gradient(140deg,#40374f,#100e14);color:#eae5f0;"
-         data-track="mood_selected" data-track-mood="grief" data-track-from="moods-index">
+      <a class="mood-card" href="/mood/nostalgia/" style="background:linear-gradient(140deg,#e0bd8f,#b67f54);color:#2e1c0f;"
+         data-track="mood_selected" data-track-mood="nostalgia" data-track-from="tool-mood-finder">
         <span>
-          <span class="name">Grief</span>
-          <span class="tag">For someone or something you still carry with you.</span>
+          <span class="name">Nostalgia</span>
+          <span class="tag">For when you miss a version of your life that doesn&#x27;t exist anymore.</span>
         </span>
-        <span class="foot"><span class="go">Enter the feeling →</span><span class="cost">$5</span></span>
+        <span class="foot"><span class="go">Enter the feeling →</span><span class="cost">$1</span></span>
       </a>
     </li>
     <li>
-      <a class="mood-card" href="/mood/rage/" style="background:linear-gradient(140deg,#5c0f0f,#1a0505);color:#f6e3e3;"
-         data-track="mood_selected" data-track-mood="rage" data-track-from="moods-index">
+      <a class="mood-card" href="/mood/hope/" style="background:radial-gradient(115% 90% at 92% 126%,rgba(246,201,138,0.4) 0%,rgba(246,201,138,0) 60%),linear-gradient(140deg,#565694,#211f3d);color:#f4ecdf;"
+         data-track="mood_selected" data-track-mood="hope" data-track-from="tool-mood-finder">
         <span>
-          <span class="name">Rage</span>
-          <span class="tag">For the feeling you don&#x27;t know where to put.</span>
+          <span class="name">Hope</span>
+          <span class="tag">For when tomorrow feels uncertain.</span>
         </span>
-        <span class="foot"><span class="go">Enter the feeling →</span><span class="cost">$3</span></span>
+        <span class="foot"><span class="go">Enter the feeling →</span><span class="cost">$2</span></span>
       </a>
-    </li>
-    <li>
-      <div class="mood-card soon">
-        <span>
-          <span class="name">Love</span>
-          <span class="tag">For when someone occupies your thoughts.</span>
-        </span>
-        <span class="foot"><span class="go">Being written now</span></span>
-      </div>
     </li>
   </ul>
 </section>
@@ -232,10 +182,24 @@
       <li>New feelings added to the shelf, free</li>
       <li>Send any of them on, as often as you like</li>
     </ul>
-    <div class="cta-row"><a class="btn btn-ghost" href="/moods/" data-track="bundle_clicked" data-track-from="moods-index">Start with one feeling — from $1</a></div>
+    <div class="cta-row"><a class="btn btn-ghost" href="/moods/" data-track="bundle_clicked" data-track-from="tool-mood-finder">Start with one feeling — from $1</a></div>
     <p class="hint">The pack isn’t buyable yet — there’s no checkout behind it, and a button that takes $9 and delivers nothing isn’t a button. Single feelings are open now.</p>
   </div>
 </section>
+
+<section class="wrap tool-foot" aria-labelledby="other-mood-finder">
+  <p class="eyebrow">Keep going</p>
+  <h2 id="other-mood-finder">Explore another tool</h2>
+  <ul class="tool-links" style="margin-top:1.2rem;">
+      <li><a class="chip-link" href="/tools/emotion-wheel/">🎡 Emotion Wheel</a></li>
+      <li><a class="chip-link" href="/tools/message-i-cant-send/">✍️ Message I Can’t Send</a></li>
+      <li><a class="chip-link" href="/tools/mood-journal/">📓 Mood Journal</a></li>
+      <li><a class="chip-link" href="/tools/send-a-feeling/">💌 Send a Feeling</a></li>
+      <li><a class="chip-link" href="/tools/thought-generator/">💭 Thought Generator</a></li>
+      <li><a class="chip-link" href="/tools/2am/">🌙 2AM Mode</a></li>
+  </ul>
+</section>
+
 </main>
 <footer class="site-foot">
   <div class="wrap">

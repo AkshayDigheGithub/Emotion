@@ -18,6 +18,7 @@
   var REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function track(name, props) { if (window.msTrack) window.msTrack(name, props); }
+  /** @param {string} id @returns {any} The caller knows the element type; casting each use would be noise. */
   function byId(id) { return document.getElementById(id); }
   function bySlug(slug) {
     for (var i = 0; i < MOODS.length; i++) if (MOODS[i].slug === slug) return MOODS[i];
