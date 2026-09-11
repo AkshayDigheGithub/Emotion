@@ -8,106 +8,166 @@ no database, no email.
 ## Structure
 
 ```
-index.html       landing page — hero, free preview picker, shelf, plans, FAQ
-bundle.html      "Whole Shelf" delivery page — links to all 8, unlisted
-gift.js          gifting: composes and reads gift links (no backend)
-happiness.html   $2  (linked nowhere except the BMC redirect for this listing)
-sorrow.html      $5
-hurt.html        $4
-calm.html        $1
-nostalgia.html   $1
-rage.html        $3
-hope.html        $2
-grief.html       $5
-robots.txt       blocks crawlers from the emotion + bundle pages, allows the landing page
-sitemap.xml      lists only index.html, on purpose
-api/counter.js   Vercel serverless function — see "Unlock counter" below
-img/<key>.jpg    product images for the JSON-LD, one per piece — see "SEO notes"
-tools/           regenerates img/ — not shipped to the browser
+content/moods.json     THE SHELF — the 8 purchasable pieces: price, teaser,
+                       palette, Buy Me a Coffee URL
+content/feelings.json  THE TAXONOMY — 12 feelings the free tools run on, plus
+                       the mood-finder quiz and its weights
+content/wheel.json     the emotion wheel: 9 categories x 4 branches x 3 leaves
+content/tool-content.json  every curated line the tools compose from
+scripts/build.py       generates the whole site. Run after any content edit.
+scripts/tools_pages.py the /tools pages, imported by build.py
+templates/*.html       hand-written body copy for the bespoke pages
+
+--- generated, do not hand-edit ---
+index.html  moods/  mood/<slug>/  collections/  about/  send/  for/
+help/payment/  404.html  today/
+tools/  tools/<tool>/          the seven free tools
+moods-data.js  feelings-data.js  tool-content.js
+sitemap.xml  robots.txt  img/og/<slug>.jpg
+
+--- shared, hand-written ---
+moodshop.css     one stylesheet for every public page
+moodshop.js      homepage + mood page behaviour
+recommend.js     the scoring engine: pure, deterministic, no DOM
+tools.js         all seven tools' interaction
+analytics.js     msTrack() over Vercel Analytics + Datafast
+gift.js          gifting from a paid page
+types/globals.d.ts  ambient types so `tsc` can check the .js files
+jsconfig.json    typecheck config — never shipped (.vercelignore)
+
+--- the paid product: NEVER generated, never restyled by the shop ---
+calm.html nostalgia.html happiness.html hope.html
+rage.html hurt.html sorrow.html grief.html
+bundle.html      the pack's delivery page
+api/counter.js   Vercel serverless function
 ```
 
-The pricing table in the original spec also mentioned "Longing" at $3, but the
-site structure only calls for these 8 pages. Add a `longing.html` the same way
-as the others (copy `rage.html`'s structure, swap palette/copy) if you want a 9th.
+`.vercelignore` keeps `content/`, `scripts/`, `templates/` and
+`jsconfig.json` out of the deployment — they build the site, they are not
+part of it, and nothing should be able to fetch them from moodshop.lol.
+(The build scripts used to live in `tools/`, which is now a public route.)
+
+### The rule that matters
+
+**The reader pages are what people paid for.** They are self-contained: their
+own `<style>`, their own fonts, no dependency on `moodshop.css` or
+`moodshop.js`. A change to the shop can therefore never break a page someone
+already bought. `scripts/build.py` does not write to them. Keep it that way.
+
+### Adding a ninth mood
+
+1. Add an entry to `content/moods.json` (copy an existing one).
+2. Write `<slug>.html` — the paid piece — by copying an existing reader page.
+3. Create the Buy Me a Coffee Extra, set its success page to redirect to
+   `https://moodshop.lol/<slug>.html`, and paste the `/e/` URL into
+   `checkoutUrl`.
+4. Add the slug to `EMOTIONS` in `api/counter.js`.
+5. `python3 scripts/build.py` — the homepage grid, `/mood/<slug>/`, `/moods/`,
+   the finder, the sitemap, robots.txt, the JSON-LD and the OG image all
+   update themselves.
+
+Nothing in that list involves touching a component, which is the whole point:
+the shop scales to 50 moods without a rewrite.
 
 ## The landing page
 
-`index.html` is the whole sales pitch. Top to bottom:
+`index.html` answers one question — *how do you want to feel?* — and then
+gets out of the way. Top to bottom:
 
-1. **Hero** — one promise ("Feel _______ in two minutes"), a rotating feeling
-   word, four objection-killing chips (~2 min, nothing to install, no signup,
-   from $1), and the honest unlock counter as social proof.
-2. **Free preview picker** — the conversion engine. Eight mood chips plus a
-   "Surprise me". Picking one themes the whole page in that emotion's palette
-   and shows the *real* opening of that piece — 45-odd words lifted verbatim
-   from the page you're selling — then fades the next line out under a mask
-   and offers "Unlock the rest — $N". Nobody has to buy blind any more.
-3. **How it works** — three steps, because "pay a stranger and get redirected
-   somewhere" needs explaining before it feels safe.
-4. **The shelf** — the eight cards, each now carrying its own opening line as
-   a pull-quote and two actions: `Unlock` (straight to BMC) and `Preview`
-   (scrolls back up and loads that piece into the picker).
-5. **Plans** — see below.
-6. **FAQ** — six questions, also emitted as `FAQPage` JSON-LD.
+1. **Hero** — "How do you want to feel?" with a rotating tail word,
+   "Tiny pieces of writing for very specific feelings", two CTAs (*Find my
+   mood* / *Explore all moods*), four objection-killing chips, and the honest
+   unlock counter.
+2. **Maybe you're feeling…** — the eight mood cards. Each is a whole-card
+   link to `/mood/<slug>/`, carrying its name, its one-line tagline and its
+   price. A ninth dashed card marks *Love* as being written; it is not
+   clickable and not buyable.
+3. **Find your mood** — one question, eight answers, a recommendation. Pure
+   client-side, no login, no storage. Answers map to moods in
+   `content/moods.json` under `finder`.
+4. **Today's mood** — one feeling a day, picked from the UTC date so everyone
+   sees the same one and it changes at midnight. No database, no cron.
+5. **Before any of this is a shop** — the free piece of writing the site opens
+   with. It used to be the first thing on the page; it now sits after the
+   product so the page says what it is before it gives something away.
+6. **The Complete Mood Pack** — see below.
+7. **Send a feeling** — entry point to `/send/`.
+8. **How it works**, then the trust line, then the FAQ (`FAQPage` JSON-LD),
+   then the signed author note.
 
-Everything is still one static file with no build step and no dependencies.
-Motion is gated behind `prefers-reduced-motion`, and the scroll-reveal
-animation is gated behind a `.js` class on `<html>` plus a 2.5s timer
-fallback, so a JS failure can never leave the page blank.
+Motion is gated behind `prefers-reduced-motion`, and scroll-reveal is gated
+behind a `.js` class on `<html>` plus a 2.5s timer fallback, so a JS failure
+can never leave the page blank.
 
-### Keeping the previews honest
+### Keeping the teasers honest
 
-The excerpts in the picker are copy-pasted from the emotion pages, and the
-word counts next to them are real. If you rewrite a piece, update its
-`excerpt`/`tail`/`words` in the `PIECES` array in `index.html` or the preview
-stops matching what buyers get.
+Every teaser is the *real* opening of the piece it sells — 24–35% of the
+words, cut mid-thought with a CSS mask. If you rewrite a piece, update its
+`teaser` / `teaserTail` / `words` in `content/moods.json` and rebuild, or the
+preview stops matching what buyers get.
 
 ## Plans
-
-Three tiers on the landing page:
 
 | Plan | Price | What it is | Status |
 |---|---|---|---|
 | One feeling | $1–$5 | Any single piece — the 8 existing BMC Extras | **Live** |
-| The Whole Shelf | $9 | All eight in one payment (vs $23 separately) | **Needs one BMC step — see below** |
+| The Complete Mood Pack | $9 | All eight in one payment (vs $23 separately) | **Needs one BMC step — see below** |
 | Tip jar | Any | The plain BMC profile, no delivery promised | **Live** |
 
-### The Whole Shelf is deliberately not buyable yet
+### Why prices are $1–$5 and not a flat $1
 
-The plan card is on the page, priced, with the $23-vs-$9 comparison — but its
-button goes to `#shelf`, not to a checkout. That's on purpose, and it should
-stay that way until the BMC Extra exists.
+The per-piece prices here are the prices of the **live Buy Me a Coffee
+Extras**. They are set on BMC, not in this repo, and the site displays
+whatever `price` says in `content/moods.json`. Those two must agree: showing
+"Enter this feeling — $1" on a button that opens a $5 checkout is a broken
+purchase and a false price claim, so the data mirrors reality.
 
-**Why:** there is no "Whole Shelf" Extra on Buy Me a Coffee, so a real
-checkout would take $9 and deliver nothing automatically — you'd be emailing
-the link by hand. A shop that takes money and goes quiet is worse than a shop
-with one plan not open yet.
+If you want the flat $1-per-piece / $5-pack model:
 
-**Why keep the card at all:** it's a price anchor. $9 for eight makes a $1
-piece read as trivial, which is exactly the decision we want a first-time
-visitor to make. The card's button funnels to the shelf — "Start with one —
-from $1" — so it sells singles instead of nothing.
+1. Re-price all eight Extras to $1 on Buy Me a Coffee.
+2. Set every `"price": 1` in `content/moods.json`, and the bundle to `5`.
+3. `python3 scripts/build.py`.
 
-**To open it** (three steps, then it's a real product):
+Every price on the site — cards, buttons, JSON-LD offers, OG images, the
+"$23 → save $14" anchor — is computed from that one file, so it is a
+three-minute change once BMC agrees.
 
-1. Create a BMC Extra called **The Whole Shelf**, priced **$9**.
+### The Complete Mood Pack is deliberately not buyable yet
+
+`bundle.html` (the delivery page) is built and live. What does not exist is a
+BMC Extra to sell it, so `content/moods.json` has `bundle.checkoutUrl: null`
+and **every** pack block on the site renders as a price anchor pointing at
+`/moods/`, never as a checkout. That is enforced in one place —
+`bundle_block()` in `scripts/build.py` — so it cannot be half-done.
+
+**Why:** a real checkout would take $9 and deliver nothing automatically.
+
+**Why keep the card at all:** it is a price anchor. $9 for eight makes a $1
+piece read as trivial, which is exactly the decision a first-time visitor
+should make.
+
+**To open it:**
+
+1. Create a BMC Extra called **The Complete Mood Pack**, priced **$9**.
 2. Set its success page to **Redirect to a URL** →
-   `https://moodshop.lol/bundle.html` — already built, live, and unlisted.
-3. In `index.html`, replace that card's `<a class="btn btn-ghost" href="#shelf">`
-   with `<a class="btn btn-primary" href="<the /e/ URL>" rel="nofollow">Take
-   the whole shelf — $9</a>`, swap the badge back to `Best value` (dropping
-   `badge-soon`), and move the `featured` class from "One feeling" onto it.
+   `https://moodshop.lol/bundle.html`.
+3. Put the `/e/` URL in `content/moods.json` as `bundle.checkoutUrl`.
+4. `python3 scripts/build.py`.
 
-Also restore the bundle to the `ItemList` JSON-LD when you do — it was removed
-so structured data doesn't advertise an offer nobody can accept.
+Step 4 flips every pack block on every page to a live "Get the complete
+collection — $9" button with a *Best value* badge. Nothing else to edit.
 
 ## Cross-sell on the emotion pages
 
-Each emotion page now ends with a quiet line under the share button —
-"You've got Grief. Seven other feelings are on the shelf, from $1 — or take
-all eight for $9." — linking back to `#plans` and `#shelf`. It sits below the
-piece and after the share button on purpose: the product gets read first, the
-shop gets mentioned second.
+Each reader page ends with a quiet line under the share button — "You've got
+Grief. Seven other feelings are on the shelf, from $1." — now linking to
+`/moods/` rather than the old `#shelf` anchor, which no longer exists. It sits
+below the piece and after the share button on purpose: the product gets read
+first, the shop gets mentioned second.
+
+Those pages also load `analytics.js` and fire `purchase_completed` on load —
+they are reachable only through the BMC redirect, so a load *is* a purchase.
+A load carrying a gift fragment is excluded: there, the sender paid.
 
 ## Gifting (no backend, no database)
 
@@ -222,24 +282,15 @@ The rule is only that the repo and Vercel must agree.
 
 ## The overture
 
-The landing page opens with a complete short piece — no price, no buttons, no
-nav — and only becomes a shop below it. That inversion is deliberate.
+The site used to open with ~250 words of free writing before any product was
+visible. That writing is still on the homepage — under *"Before any of this is
+a shop"* — but it now sits **after** the mood grid, the finder and today's
+mood.
 
-Every previous version of the page *described* feelings and then asked for
-money: a headline, four chips, two buttons. A page selling emotional writing
-cannot argue anyone into feeling something; the only persuasion available to
-it is to do the thing first, for free, with nothing attached. So the visitor
-now gets something before they are asked for anything, and the piece ends by
-saying so plainly — "that was free, and there's no catch attached to it."
-
-The text is written for this slot and published nowhere else, so it adds
-words to the one indexable page without duplicating `/free/`. A short
-time-of-day line above it ("It's late. You're still awake." / "Good
-morning.") is set client-side from the visitor's own clock, so the page
-meets them at the hour they actually arrived.
-
-Everything else — hero, picker, shelf, plans, FAQ, author note — is
-unchanged and sits below.
+The reason for the move: a visitor arriving cold could not tell what Moodshop
+*was* until they had scrolled past an essay. The page now answers "how do you
+want to feel?" in the first viewport and gives the free thing once the offer
+is understood. Nothing was deleted.
 
 ## Live deployment
 
@@ -315,22 +366,51 @@ a few dozen px of blank space depending on version), and replace the file.
 
 ## Why the emotion pages aren't linked anywhere
 
-This is the spec's "unlisted, not locked" approach: the only way to reach
+This is the "unlisted, not locked" approach: the only way to reach
 `sorrow.html` etc. is the BMC redirect after payment. To keep it that way:
 
-- `index.html` never links to the emotion pages directly, only out to BMC.
-- Each emotion page ships `<meta name="robots" content="noindex, nofollow">`.
-- `robots.txt` explicitly disallows them.
-- `sitemap.xml` lists only the landing page.
+- Nothing on the shop links to a reader page — the public page for a feeling
+  is `/mood/<slug>/`, which sells it and shows only its opening.
+- Each reader page ships `<meta name="robots" content="noindex, nofollow">`.
+- `robots.txt` disallows them, and `scripts/build.py` regenerates that list from
+  `readerPage` in `content/moods.json`, so a new mood can't be forgotten.
+- `sitemap.xml` lists only public pages.
 
 It's a soft gate, not real security — anyone with the direct URL can still
 open the page. That's the intended tradeoff (no backend, no auth).
 
+**Do not confuse the two URL shapes:**
+
+| URL | What it is | Indexed? |
+|---|---|---|
+| `/mood/grief/` | the shop page — tagline, teaser, price, buy button | yes |
+| `/grief.html` | the piece itself, what a payment opens | no |
+
 ## SEO notes
 
-- `index.html` carries title/description, canonical, Open Graph, Twitter
-  Card, and JSON-LD (`WebSite` + `ItemList` of `Product`/`Offer` + `FAQPage`)
-  so it can show up well in search and when shared on social.
+Every feeling has its own indexable page at `/mood/<slug>/` with a unique
+title, description, canonical, Open Graph + Twitter card, its own 1200x630
+OG image, and `Product` + `BreadcrumbList` JSON-LD. Titles are written around
+the intent someone actually types — "something to read when you're grieving
+someone", "something to read when everything feels too loud" — rather than
+stuffed with keywords.
+
+Page inventory and their markup:
+
+| Route | JSON-LD |
+|---|---|
+| `/` | `WebSite` + `ItemList` of 8 `Product`/`Offer` + `FAQPage` |
+| `/moods/` | `ItemList` |
+| `/mood/<slug>/` | `Product` + `Offer` + `BreadcrumbList` |
+| `/free/` | `CollectionPage` (pre-existing) |
+| `/tools/` | `ItemList` of the seven tools |
+| `/tools/<tool>/` | `WebApplication` (free) + `BreadcrumbList` |
+| `/today/` | none — the content changes daily |
+| `/collections/`, `/about/`, `/send/` | none needed |
+| `/for/`, `/help/payment/` | `noindex` — not search destinations |
+
+`sitemap.xml` and `robots.txt` are both generated by `scripts/build.py`. Adding
+a mood adds its sitemap entry and its reader-page `Disallow` automatically.
 
 ### The Product markup, and what Search Console wants from it
 
@@ -340,8 +420,8 @@ result. The `ItemList` now gives every piece the full set:
 
 | Property | Value |
 |---|---|
-| `image` | `https://www.moodshop.lol/img/<key>.jpg` — 1200×1200, the piece's own gradient |
-| `url` | `https://www.moodshop.lol/#piece-<key>` — the shelf card, which the renderer gives that `id` |
+| `image` | `https://www.moodshop.lol/img/og/<slug>.jpg` — 1200×630, the piece's own gradient |
+| `url` | `https://www.moodshop.lol/mood/<slug>/` — that feeling's own page |
 | `sku` | `moodshop-<key>` |
 | `brand` | Moodshop |
 | `offers.url` | the BMC Extra that actually sells it |
@@ -349,9 +429,9 @@ result. The `ItemList` now gives every piece the full set:
 
 Two things to keep in mind when editing:
 
-- **The prices in the JSON-LD and in `PIECES` have to agree.** Structured data
-  that disagrees with the visible page is a manual-action risk, not just a
-  warning. Same for the word counts in each `description`.
+- **The prices in the JSON-LD and on the page can no longer disagree** — both
+  come from `price` in `content/moods.json`. This used to be a manual-action
+  risk; now it is one number in one file. Same for the word counts.
 - **`priceValidUntil` is 2027-12-31.** Once it's in the past Google treats the
   offer as expired and the item drops out of rich results. Push it forward.
 
@@ -363,17 +443,20 @@ real ratings ever exist, add them then. `shippingDetails` and
 written refund policy to encode yet (the FAQ says a wrong piece gets swapped,
 not refunded). Encode it only once it's a real policy.
 
-Regenerate the images after a palette change:
+Regenerate the OG images after a palette change:
 
 ```
 pip install Pillow
-python3 tools/make-product-images.py
+python3 scripts/build.py
 ```
 
-The palettes live in two places — `PIECES` in `index.html` and the table at
-the top of that script — so change both.
-- Emotion pages are intentionally `noindex` — they're the paid product, not
-  content you want ranking or showing up in search results out of context.
+`scripts/make-product-images.py` is the older 1200x1200 square generator; its
+output in `img/*.jpg` is no longer referenced by any markup, and its palette
+table is a hand-kept copy. `scripts/build.py` reads the palettes straight from
+`content/moods.json`, so there is nothing to keep in sync.
+- Reader pages stay `noindex` — they're the paid product, not content you
+  want ranking or showing up in search results out of context. `/mood/<slug>/`
+  is the page that ranks for a feeling.
 - Consider adding a few backlinks / a short blog post around "Moodshop"
   once the domain is live — the JSON-LD alone won't rank an empty domain.
 
@@ -445,21 +528,192 @@ Known limitations, worth knowing before you rely on this:
 
 ## Share feature
 
-Each emotion page has a quiet "Share this feeling" button at the bottom
-(below the piece, doesn't clutter the reading experience). Clicking it:
+Two different share surfaces, on purpose.
 
-1. Draws a 1080×1080 quote card client-side (`<canvas>`) using that page's
-   own gradient colors and a short pull-quote from the piece.
-2. Tries the native share sheet (`navigator.share` with the image file) —
-   works on most mobile browsers.
-3. Falls back to downloading the PNG + copying a caption to the clipboard
-   on desktop/unsupported browsers.
+**On the shop (`/mood/<slug>/`)** — a row of five: *Send this feeling*
+(native share sheet), *Copy link*, *Post on X*, *WhatsApp*, *Save the card*.
+The last one draws a 1080x1080 quote card client-side on a `<canvas>` in that
+feeling's own gradient, then offers it to the native share sheet or downloads
+it. Everything shared points at `/mood/<slug>/` — the page with the teaser,
+not the piece — so a shared link converts instead of leaking.
 
-Deliberately **does not** share the emotion page's own URL — only a caption
-+ link back to the landing page (`moodshop.lol`). Sharing the
-direct page link would let anyone who receives it read the full piece for
-free, defeating the point of the paywall. The quote card gives people
-something to post without giving away the product itself.
+**On a reader page** — the pre-existing quiet "Share this feeling" button,
+unchanged. It shares a caption and the card, never the reader page's own URL,
+because that link would give the full piece away.
+
+## Send a feeling (`/send/` and `/for/`)
+
+A pre-purchase gifting loop that needs no backend, no account and no database.
+
+1. On `/send/`, someone picks a feeling, a recipient name and a short note.
+2. `moodshop.js` encodes `{m, t, f, n}` as url-safe base64 into the
+   **fragment** of `https://www.moodshop.lol/for/#<payload>`.
+3. They send that link themselves, in whatever app they already use.
+4. `/for/` decodes the fragment, shows "For Sam." over their note in that
+   feeling's colours, and offers *Open the feeling →* into `/mood/<slug>/`.
+
+**A fragment is never transmitted to the server.** The note reaches Vercel,
+this repo and every analytics provider exactly never — it exists only in the
+two people's browsers. There is nothing to store and nothing to leak.
+
+The recipient gets the free teaser, like everyone else. This is deliberately
+*not* a way to give away paid writing: that is what `gift.js` on a reader page
+is for, and it requires having paid first.
+
+`/for/` is `noindex` and degrades gracefully — a missing, truncated or
+mangled payload shows a written empty state, and `<noscript>` explains why the
+note needs JS and links on to the shelf.
+
+## The free tools (`/tools`)
+
+Seven tools, all free, all no-account, and **none of them call a model or a
+server**. Every result is composed in the browser from hand-written blocks
+in `content/tool-content.json` using the rules in `recommend.js`. That is a
+product decision before it is a technical one: these are supposed to feel
+written, and a tool that has to wait on an API is a tool that fails at 2am
+on a bad connection.
+
+| Route | What it does | Where the output comes from |
+|---|---|---|
+| `/tools/` | the hub | static |
+| `/tools/mood-finder/` | 3 questions → a feeling | weighted scoring over `content/feelings.json` |
+| `/tools/emotion-wheel/` | 9 categories → 36 branches → 108 precise feelings | `content/wheel.json` |
+| `/tools/message-i-cant-send/` | who × what × tone → a message | 61 hand-written blocks composing 336 messages |
+| `/tools/mood-journal/` | private journal | `localStorage`, nothing else |
+| `/tools/send-a-feeling/` | a curated card with a share link | 24 curated lines; the link is a URL fragment |
+| `/tools/thought-generator/` | one original line per feeling | 84 hand-written thoughts |
+| `/tools/2am/` | one question at a time, darker | 16 prompts |
+
+### The scoring, and why it is deterministic
+
+`recommend.js` is pure: no DOM, no fetch, no `Math.random`, no model. The
+mood finder adds up the weights on the answers you picked and takes the
+highest. **Ties break on a published order** (`quiz.tiebreak`) rather than
+on object key order, so re-serialising the JSON can never silently change
+what the tool tells people. The same three answers always produce the same
+feeling — a tool that answers differently each time is not telling you
+anything.
+
+The result says **"You might be feeling…"**, never "You are". It is a
+weighted score over three taps, and the page says so underneath.
+
+### Twelve feelings, eight products
+
+`content/feelings.json` is deliberately wider than the shelf: a tool has to
+be able to name what someone is in, including the four feelings with no
+piece written yet (Love, Loneliness, Anxiety, Peace — and Joy, which is
+called Happiness on the shelf). Every feeling therefore carries:
+
+- `product` — the purchasable mood it resolves to, and
+- `productNote` — the sentence that says so out loud when they differ.
+
+So Loneliness recommends Sorrow *and tells you it is doing that*, rather
+than quietly swapping the product under the reader or pretending a
+Loneliness piece exists. `resolveProduct()` is the only place that mapping
+lives; nothing else in the codebase guesses.
+
+### Privacy, concretely
+
+- **The journal** is `localStorage` under `moodshop.journal.v1`. No account,
+  no server, no sync. Every read and write is wrapped — private mode and a
+  full quota both fail closed with a written message rather than an
+  exception.
+- **A sent feeling** encodes the recipient's name and the line into the URL
+  **fragment**. Browsers never transmit the part after `#`, so it reaches
+  neither Vercel nor either analytics provider.
+- **Analytics never sees text.** `journal_entry_created` carries a mood slug
+  and nothing else; `message_generator_used` carries nothing at all. This is
+  asserted in the test suite, not just intended.
+
+### No JavaScript, or a screen reader
+
+Every tool degrades in writing rather than silently: each carries a
+`<noscript>` explaining *why* it needs JS (the work happens in your browser,
+which is the reason nothing has to be sent anywhere) and links somewhere
+useful. The emotion wheel goes further — the full 108-feeling taxonomy is
+rendered into the HTML as a nested list under "Every feeling, as a list",
+so keyboard and screen-reader users get the whole thing without the
+three-step interaction, and so do crawlers.
+
+### Adding a tool, or a feeling
+
+A feeling: add it to `content/feelings.json` with a `product` that already
+exists, add its thoughts to `content/tool-content.json`, rebuild. It appears
+in the wheel's targets, the thought generator, the journal's tag list and
+the finder's scoring without touching a component.
+
+A tool: add an entry to `TOOLS` in `scripts/tools_pages.py` and a body
+function in `BODIES`. The hub card, the route, the SEO metadata, the
+breadcrumb and `WebApplication` JSON-LD, the sitemap entry and the
+"explore another tool" links on all the other tools update themselves.
+
+## Typechecking a site with no build step
+
+The browser gets the same `.js` files that are in the repo — there is no
+bundler and no TypeScript to compile. The types are real anyway: the code
+is annotated with JSDoc, the `window.*` globals are declared in
+`types/globals.d.ts`, and
+
+```
+npx tsc -p jsconfig.json
+```
+
+type-checks the lot. It passes clean. `jsconfig.json` is in `.vercelignore`,
+so adding it cannot change how Vercel builds or serves the site.
+
+## Analytics
+
+`analytics.js` defines `window.msTrack(name, props)` over the two providers
+already on the site — Vercel Web Analytics (`window.va`) and Datafast
+(`window.datafast`). Either may be blocked by a content blocker; every call is
+wrapped, so a missing provider is a no-op and never an exception. Calls made
+before the deferred provider scripts run are queued and flushed.
+
+Events, and where they fire:
+
+| Event | Fired by |
+|---|---|
+| `homepage_view` | the providers' own pageview — not duplicated here |
+| `mood_selected` | any mood card, today's mood, a finder result, a gift open |
+| `mood_finder_started` | first answer tapped, or the nav/hero *Find my mood* |
+| `mood_finder_completed` | a recommendation is shown |
+| `mood_page_view` | the providers' own pageview on `/mood/<slug>/` |
+| `teaser_view` | the teaser scrolls 40% into view |
+| `checkout_started` | any click on any `buymeacoffee.com` link, anywhere |
+| `purchase_completed` | a reader page or `bundle.html` loads without a gift fragment |
+| `bundle_clicked` | any pack CTA |
+| `share_clicked` / `share_completed` | the share row |
+| `send_feeling_clicked` | the *Send a feeling* entry points and `/send/` submit |
+| `tools_viewed` | a tool card, on the hub or the homepage |
+| `emotion_wheel_used` | each step of the wheel, and the result |
+| `message_generator_used` | a message is composed — **never the message** |
+| `journal_entry_created` | an entry is saved — **mood slug only, never the text** |
+| `send_feeling_started` | the send tool builds a link |
+| `thought_generated` | a thought is shown |
+| `2am_mode_started` | 2AM mode opens |
+| `mood_recommendation_clicked` | any "explore this feeling" out of a tool |
+
+Declarative usage: `data-track="…"` plus optional `data-track-mood` /
+`data-track-from` on any element. No personal data is collected — event names
+and a mood slug, nothing else. Custom events need a Vercel Web Analytics plan
+that supports them; the calls are harmless either way.
+
+## Error and empty states
+
+| State | Page |
+|---|---|
+| 404 | `404.html` — "Looks like this feeling got lost." + all eight moods. Vercel serves it automatically for unmatched paths on a static deployment. |
+| Payment cancelled / declined / paid-but-nothing-opened / link lost | `/help/payment/`, linked from every mood page under the buy button |
+| A gift link that carried nothing | the empty state on `/for/` |
+| JS off on `/for/` | `<noscript>` explains and links to `/moods/` |
+
+## Social proof
+
+There are no testimonials, so none are shown. The structure is in
+`templates/home.html` as a commented-out section, and `content/moods.json`
+has an empty `testimonials` array. Real quotes go in there. **Nothing
+invented goes there** — fake reviews are the fastest way to lose both trust
+and a rich result.
 
 ## Content
 

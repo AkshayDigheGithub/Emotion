@@ -6,7 +6,7 @@ generic og-image for eight different pieces isn't much of a product shot. Each
 image here is the piece's own gradient and ink colour — the same palette the
 reader actually lands on — with the feeling set in italic serif.
 
-Run from the repo root:  python3 tools/make-product-images.py
+Run from the repo root:  python3 scripts/make-product-images.py
 Requires Pillow.  Output: img/<key>.jpg (1200x1200).
 
 The palettes below are copied from the PIECES array in index.html. If you

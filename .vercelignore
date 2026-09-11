@@ -1,0 +1,6 @@
+# Build-time sources. They generate the site; they are not part of it, and
+# nothing should be able to fetch them from moodshop.lol.
+content/
+scripts/
+templates/
+jsconfig.json

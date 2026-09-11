@@ -1,0 +1,193 @@
+<main id="main">
+
+<!-- ================= hero ================= -->
+<header class="hero wrap">
+  <h1>How do you want to <span class="rotator" id="rotator">feel?</span></h1>
+  <p class="sell">Tiny pieces of writing for very specific feelings.</p>
+  <div class="cta-row center">
+    <a class="btn btn-primary" href="/tools/mood-finder/" data-track="mood_finder_started" data-track-from="hero">Find my mood</a>
+    <a class="btn btn-ghost" href="#moods">Explore all moods</a>
+  </div>
+  <ul class="chips">
+    <li>Two minutes each</li>
+    <li>Free opening, every one</li>
+    <li>From ${{MIN_PRICE}}</li>
+    <li>No account, ever</li>
+  </ul>
+  <p class="proof" id="unlock-count" aria-live="polite"></p>
+</header>
+
+<!-- ================= mood discovery ================= -->
+<section id="moods" class="wrap" aria-labelledby="moods-h">
+  <div class="reveal">
+    <p class="eyebrow">Eight feelings</p>
+    <h2 id="moods-h">Maybe you’re feeling…</h2>
+    <p class="lede">Each one is a single short piece, written to do exactly one thing to you. Tap a feeling to read its real first lines — free, before anything is asked.</p>
+  </div>
+{{GRID}}
+  <p class="lede" style="margin:2rem 0 0 0;">Not ready to pay for one? <a href="/free/" style="color:var(--ink);">Three more are free to read in full</a> — different feelings, same two minutes.</p>
+</section>
+
+<!-- ================= mood finder ================= -->
+<section id="finder" class="wrap" aria-labelledby="finder-h">
+  <div class="finder reveal">
+    <p class="eyebrow">Find your mood</p>
+    <h2 id="finder-h">What brought you here?</h2>
+    <ul class="finder-options" id="finder-options"></ul>
+
+    <div class="finder-result" id="finder-result" hidden>
+      <p class="verdict" id="finder-verdict"></p>
+      <p class="why" id="finder-why"></p>
+      <div class="cta-row">
+        <a class="btn btn-primary" id="finder-cta" href="/moods/" data-track="mood_selected" data-track-from="finder">Enter the feeling →</a>
+        <button class="finder-again" type="button" id="finder-again">That’s not it — ask me again</button>
+      </div>
+    </div>
+    <p class="hint" style="margin-top:1.4rem;">That’s the one-question version. <a href="/tools/mood-finder/" style="color:var(--sub);" data-track="mood_finder_started" data-track-from="home-teaser">The full three-question one is here →</a></p>
+  </div>
+</section>
+
+<!-- ================= tools ================= -->
+<section class="wrap" aria-labelledby="tools-h">
+  <div class="reveal">
+    <p class="eyebrow">Free tools</p>
+    <h2 id="tools-h">Tools for feelings.</h2>
+    <p class="lede">Seven small things that cost nothing: work out what you’re feeling, find the words for something you’ve never said, or put it somewhere private. No account, and nothing you type leaves your browser.</p>
+  </div>
+  <ul class="tool-grid reveal">
+    <li><a class="tool-card" href="/tools/mood-finder/" data-track="tools_viewed" data-track-from="home"><span class="ico" aria-hidden="true">🧭</span><span class="name">Find My Mood</span><span class="desc">Answer a few questions and discover a feeling that might fit.</span><span class="try">Try it →</span></a></li>
+    <li><a class="tool-card" href="/tools/emotion-wheel/" data-track="tools_viewed" data-track-from="home"><span class="ico" aria-hidden="true">🎡</span><span class="name">Emotion Wheel</span><span class="desc">Explore the many ways we can feel.</span><span class="try">Try it →</span></a></li>
+    <li><a class="tool-card" href="/tools/message-i-cant-send/" data-track="tools_viewed" data-track-from="home"><span class="ico" aria-hidden="true">✍️</span><span class="name">Message I Can’t Send</span><span class="desc">Find the words for something you’ve never said.</span><span class="try">Try it →</span></a></li>
+  </ul>
+  <div class="cta-row" style="margin-top:1.4rem;">
+    <a class="btn btn-ghost" href="/tools/">All seven tools →</a>
+  </div>
+</section>
+
+<!-- ================= today's mood ================= -->
+<section id="today" class="wrap" aria-labelledby="today-h">
+  <div class="reveal">
+    <p class="eyebrow">Today’s mood</p>
+    <h2 id="today-h">One feeling a day, chosen for everyone.</h2>
+    <p class="lede">It changes at midnight. Come back tomorrow and it’s something else.</p>
+  </div>
+  <div class="today reveal">
+    <div class="face" id="today-face">
+      <p class="label">Today</p>
+      <p class="name" id="today-name">Calm</p>
+      <p class="quote" id="today-quote"></p>
+    </div>
+    <div class="side">
+      <p id="today-what"></p>
+      <div class="cta-row">
+        <a class="btn btn-primary" id="today-link" href="/moods/" data-track="mood_selected" data-track-from="today">Read today’s mood</a>
+        <a class="btn btn-ghost" href="/today/">Today’s page →</a>
+      </div>
+      <p class="hint" style="margin:0;">Free opening, then $1–$5 to go the rest of the way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= the free one ================= -->
+<section class="wrap narrow" aria-labelledby="gift-h">
+  <div class="reveal">
+    <p class="eyebrow">Take a moment — free</p>
+    <h2 id="gift-h">Before any of this is a shop.</h2>
+  </div>
+  <div class="serif-body reveal" style="max-width:62ch;">
+    <p>You didn’t come here for nothing.</p>
+    <p>Maybe a link. Maybe a search at an hour you wouldn’t admit to. Either way, something moved you enough to open a page about feelings — and most people scroll straight past those.</p>
+    <p>Whatever today has been, you carried it. Nobody watched you do that. There was no moment where someone stopped and said: <em>that was heavy, and you did it anyway.</em> So let this be that moment. It’s small, and it’s from a stranger, but it counts.</p>
+    <p>You’re allowed to put it down for a minute. Not solve it. Not be positive about it. Just set it on the floor beside you and sit here, where nothing is being asked of you.</p>
+    <p style="color:var(--sub);font-family:var(--sans);font-size:0.95rem;line-height:1.7;">That was free, and there’s no catch attached to it — no email, nothing to close, nothing that follows you.</p>
+  </div>
+</section>
+
+<!-- ================= the pack ================= -->
+<section class="wrap" aria-labelledby="pack-h">
+  <div class="reveal">
+    <p class="eyebrow">Want all of them?</p>
+    <h2 id="pack-h">One evening. Eight feelings.</h2>
+  </div>
+{{BUNDLE}}
+</section>
+
+<!-- ================= send a feeling ================= -->
+<section class="wrap narrow" aria-labelledby="send-h">
+  <div class="reveal">
+    <p class="eyebrow">Send a feeling</p>
+    <h2 id="send-h">Sometimes words are easier to send than to say.</h2>
+    <p class="lede">Pick a feeling, write one line, and send them the link. They open it and read your note first. Nothing is stored anywhere — your words live in the link itself.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/tools/send-a-feeling/" data-track="send_feeling_clicked" data-track-from="home">Send someone a feeling</a>
+      <a class="btn btn-ghost" href="/send/" data-track="send_feeling_clicked" data-track-from="home-own-words">Use my own words</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= how it works ================= -->
+<section class="wrap" aria-labelledby="how-h">
+  <div class="reveal">
+    <p class="eyebrow">How it works</p>
+    <h2 id="how-h">Three taps, no account.</h2>
+  </div>
+  <ul class="cards steps reveal">
+    <li class="panel">
+      <h3>Pick a feeling</h3>
+      <p>The one you’re actually in, or the one you want to be in. Read its opening free first.</p>
+    </li>
+    <li class="panel">
+      <h3>Take the moment</h3>
+      <p>One tap on Buy Me a Coffee — card or Apple Pay, a few seconds. Nothing to create, nothing to remember.</p>
+    </li>
+    <li class="panel">
+      <h3>The feeling opens</h3>
+      <p>Their redirect drops you straight onto your page. Bookmark it — the link stays live for you.</p>
+    </li>
+  </ul>
+{{TRUST}}
+</section>
+
+<!-- ================= questions ================= -->
+<section class="wrap" aria-labelledby="faq-h">
+  <div class="narrow reveal">
+    <p class="eyebrow">Questions</p>
+    <h2 id="faq-h">The honest answers.</h2>
+{{FAQ}}
+  </div>
+</section>
+
+<!--
+  ================= social proof =================
+  Structure is ready and deliberately empty. Real quotes go in
+  content/moods.json under "testimonials" ({quote, who, mood}) and this
+  section un-hides itself in moodshop.js once there is at least one.
+  Nothing invented goes here.
+
+  <section class="wrap" id="testimonials" hidden aria-labelledby="proof-h">
+    <p class="eyebrow">From readers</p>
+    <h2 id="proof-h">Some feelings stay with you.</h2>
+    <ul class="cards" id="testimonial-list"></ul>
+  </section>
+-->
+
+<!-- ================= who's behind this ================= -->
+<section class="wrap" aria-labelledby="who-h">
+  <div class="reveal">
+    <p class="eyebrow">Who’s behind this</p>
+    <h2 id="who-h" class="sr-only">Who’s behind Moodshop</h2>
+    <div class="note">
+      <p>Moodshop is one person, not a company.</p>
+      <p>I chose these eight feelings, and I wrote them with AI in the loop — I’m telling you because you’d guess anyway, and I’d rather you hear it from me. What I did was decide what stays: nothing is on this shelf that I wouldn’t send to a friend having a bad night.</p>
+      <p>A dollar or two, on purpose. No account, no email list, nothing follows you after you close the tab.</p>
+      <p class="sig">— Akshay</p>
+    </div>
+    <p class="hint" style="margin-top:1.4rem;">
+      <a href="https://www.producthunt.com/products/moodshop?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-moodshop" target="_blank" rel="noopener noreferrer">
+        <img alt="Moodshop on Product Hunt" width="250" height="54" loading="lazy" decoding="async" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1231497&amp;theme=light&amp;t=1787719957267">
+      </a>
+    </p>
+  </div>
+</section>
+
+</main>

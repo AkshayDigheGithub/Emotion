@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Whole Shelf — Moodshop</title>
+<title>The Complete Mood Pack — Moodshop</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="All eight Moodshop pieces, unlocked.">
+<meta name="description" content="All eight Moodshop feelings, unlocked.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,6 +103,7 @@
     *{transition-duration:0.001ms !important;}
   }
 </style>
+<script defer src="/analytics.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer data-website-id="dfid_6nLSJ7Yb6pX8SrM441xsu" data-domain="moodshop.lol" src="https://datafa.st/js/script.js"></script>
 </head>
@@ -110,7 +111,7 @@
 <div class="wrap">
 
 <header>
-  <p class="eyebrow">The Whole Shelf</p>
+  <p class="eyebrow">The Complete Mood Pack</p>
   <h1>All eight are open to you now.</h1>
   <p>Read them in any order, whenever the feeling turns up. There's nothing to download and nothing to log into — this page is the key.</p>
   <p class="keep">Bookmark this page. It's the only way back in.</p>
@@ -153,9 +154,15 @@
 
 <footer>
   <p>Thank you — genuinely. This is a one-person shop and you just funded the next piece.</p>
-  <p><a href="https://www.buymeacoffee.com/digheakshaf" rel="nofollow">Leave a note on Buy Me a Coffee</a> · <a href="/">Back to Moodshop</a></p>
+  <p><a href="https://www.buymeacoffee.com/digheakshaf" rel="nofollow">Leave a note on Buy Me a Coffee</a> · <a href="/moods/">Find another feeling</a> · <a href="/">Moodshop</a></p>
 </footer>
 
 </div>
+<script>
+// This page is what the pack's payment opens.
+document.addEventListener('DOMContentLoaded', function(){
+  if(window.msTrack) window.msTrack('purchase_completed', {mood:'complete-mood-pack'});
+});
+</script>
 </body>
 </html>

@@ -151,8 +151,8 @@
         "Someone paid to send you this. There are seven other feelings on the shelf, from $1. "
       ));
       var a = document.createElement("a");
-      a.href = STORE_URL + "#shelf";
-      a.textContent = "See the shelf →";
+      a.href = STORE_URL + "moods/";
+      a.textContent = "Find another feeling →";
       more.appendChild(a);
     }
   }

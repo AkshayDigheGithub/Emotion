@@ -1,0 +1,47 @@
+<main id="main" data-for-page>
+<span id="for-page" hidden></span>
+
+<section class="wrap narrow" style="padding-top:clamp(3rem,10vw,5rem);">
+
+  <div id="for-card" class="gift-card" hidden>
+    <p class="label" id="for-to" style="font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;font-weight:700;opacity:0.7;margin:0 0 1rem 0;">For you.</p>
+    <p id="for-note" style="font-family:var(--serif);font-size:clamp(1.25rem,3.4vw,1.75rem);line-height:1.7;margin:0;"></p>
+    <p id="for-from" hidden style="font-family:var(--sans);font-size:0.9rem;opacity:0.75;margin:1.2rem 0 0 0;"></p>
+    <div class="cta-row" style="margin-top:2rem;">
+      <a class="btn btn-unlock" id="for-open" href="/moods/" data-track="mood_selected" data-track-from="gift">Open the feeling →</a>
+    </div>
+  </div>
+
+  <div id="for-empty" hidden>
+    <p class="eyebrow">Hm</p>
+    <h1>This link didn’t carry anything.</h1>
+    <p class="lede">Either it got cut in half on its way to you — long links sometimes do — or it was never finished. Ask them to send it again, or just pick a feeling yourself.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/moods/">Find a feeling →</a>
+      <a class="btn btn-ghost" href="/">Moodshop</a>
+    </div>
+  </div>
+
+  <noscript>
+    <p class="eyebrow">One thing</p>
+    <h1>Someone sent you a feeling.</h1>
+    <p class="lede">Their note travels inside the link and is unwrapped by your browser, so it needs JavaScript on to appear. With it off, you can still go straight to the shelf.</p>
+    <p><a class="btn btn-primary" href="/moods/">Find a feeling →</a></p>
+  </noscript>
+</section>
+
+<section class="wrap narrow" id="for-next">
+  <p class="eyebrow">And you?</p>
+  <h2>How are you feeling?</h2>
+  <p class="lede">Someone sent you theirs. If you don’t know what yours is yet, three questions will narrow it down — free, no account, nothing stored.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="/tools/mood-finder/" data-track="mood_finder_started" data-track-from="gift">Find my mood</a>
+    <a class="btn btn-ghost" href="/tools/">All the free tools</a>
+  </div>
+</section>
+
+<section class="wrap narrow">
+  <p class="hint">This is Moodshop — tiny pieces of writing for very specific feelings. Whoever sent you this didn’t give away your name or theirs to anybody: the note travelled inside the link and never touched a server. <a href="/about/" style="color:var(--sub);">What this place is →</a></p>
+</section>
+
+</main>
