@@ -1,27 +1,803 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.moodshop.lol/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.moodshop.lol/moods/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/moods/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/moods/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/moods/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/moods/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/moods/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/moods/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/moods/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/moods/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/moods/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/moods/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/moods/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/moods/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/moods/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/moods/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/moods/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/moods/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/moods/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/moods/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/moods/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/moods/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/moods/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/moods/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/moods/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/moods/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/moods/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/moods/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/moods/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/moods/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/moods/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/moods/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/moods/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/moods/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/moods/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/moods/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/moods/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/moods/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/moods/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/moods/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/moods/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/moods/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/moods/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/moods/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/moods/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/moods/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/moods/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/moods/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/moods/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/moods/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/moods/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/moods/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/moods/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/moods/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/moods/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/moods/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/moods/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/moods/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/moods/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/moods/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/moods/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/moods/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/moods/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/moods/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/moods/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/moods/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/moods/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/moods/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/moods/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/moods/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/moods/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/moods/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/moods/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/moods/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/moods/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/moods/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/moods/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/moods/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/moods/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/moods/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/moods/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/moods/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/moods/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/moods/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/moods/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/moods/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/moods/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/moods/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/moods/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/moods/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/moods/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/moods/"/>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.moodshop.lol/collections/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/collections/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/collections/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/collections/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/collections/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/collections/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/collections/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/collections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/collections/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/collections/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/collections/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/collections/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/collections/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/collections/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/collections/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/collections/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/collections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/collections/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/collections/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/collections/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/collections/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/collections/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/collections/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/collections/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/collections/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/collections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/collections/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/collections/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/collections/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/collections/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/collections/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/collections/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/collections/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/collections/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/collections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/collections/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/collections/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/collections/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/collections/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/collections/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/collections/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/collections/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/collections/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/collections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/collections/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/collections/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/collections/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/collections/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/collections/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/collections/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/collections/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/collections/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/collections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/collections/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/collections/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/collections/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/collections/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/collections/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/collections/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/collections/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/collections/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/collections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/collections/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/collections/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/collections/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/collections/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/collections/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/collections/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/collections/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/collections/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/collections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/collections/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/collections/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/collections/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/collections/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/collections/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/collections/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/collections/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/collections/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/collections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/collections/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/collections/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/collections/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/collections/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/collections/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/collections/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/collections/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/collections/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/collections/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/collections/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/collections/"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.moodshop.lol/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/about/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/about/"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.moodshop.lol/send/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/send/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/send/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/send/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/send/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/send/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/send/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/send/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/send/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/send/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/send/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/send/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/send/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/send/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/send/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/send/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/send/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/send/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/send/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/send/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/send/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/send/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/send/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/send/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/send/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/send/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/send/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/send/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/send/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/send/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/send/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/send/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/send/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/send/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/send/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/send/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/send/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/send/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/send/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/send/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/send/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/send/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/send/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/send/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/send/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/send/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/send/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/send/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/send/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/send/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/send/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/send/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/send/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/send/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/send/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/send/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/send/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/send/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/send/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/send/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/send/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/send/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/send/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/send/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/send/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/send/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/send/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/send/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/send/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/send/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/send/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/send/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/send/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/send/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/send/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/send/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/send/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/send/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/send/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/send/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/send/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/send/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/send/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/send/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/send/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/send/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/send/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/send/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/send/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/send/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/send/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/send/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/send/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/send/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/send/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/send/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/send/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/send/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/send/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/send/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/send/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/send/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/send/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/send/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/send/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/send/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/send/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/send/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/send/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/send/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/send/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/send/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/send/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/send/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/send/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/send/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/send/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/send/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/send/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/send/"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -57,41 +833,1281 @@
   </url>
   <url>
     <loc>https://www.moodshop.lol/mood/calm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/calm/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/mood/calm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/calm/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/mood/calm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/calm/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/mood/calm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/calm/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/mood/calm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/calm/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/mood/calm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/calm/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/mood/calm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/calm/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/mood/calm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/calm/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/mood/calm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/calm/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/mood/calm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/calm/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/calm/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.moodshop.lol/mood/nostalgia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/mood/nostalgia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/mood/nostalgia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/mood/nostalgia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/mood/nostalgia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/mood/nostalgia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/mood/nostalgia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/mood/nostalgia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/mood/nostalgia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/mood/nostalgia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/nostalgia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/nostalgia/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.moodshop.lol/mood/happiness/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/happiness/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/mood/happiness/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/happiness/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/mood/happiness/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/happiness/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/mood/happiness/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/happiness/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/mood/happiness/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/happiness/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/mood/happiness/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/happiness/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/mood/happiness/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/happiness/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/mood/happiness/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/happiness/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/mood/happiness/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/happiness/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/mood/happiness/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/happiness/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/happiness/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.moodshop.lol/mood/hope/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hope/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/mood/hope/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hope/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/mood/hope/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hope/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/mood/hope/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hope/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/mood/hope/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hope/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/mood/hope/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hope/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/mood/hope/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hope/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/mood/hope/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hope/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/mood/hope/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hope/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/mood/hope/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hope/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hope/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.moodshop.lol/mood/hurt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hurt/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/mood/hurt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hurt/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/mood/hurt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hurt/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/mood/hurt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hurt/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/mood/hurt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hurt/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/mood/hurt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hurt/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/mood/hurt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hurt/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/mood/hurt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hurt/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/mood/hurt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hurt/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/mood/hurt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/hurt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/hurt/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.moodshop.lol/mood/sorrow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/mood/sorrow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/mood/sorrow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/mood/sorrow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/mood/sorrow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/mood/sorrow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/mood/sorrow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/mood/sorrow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/mood/sorrow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/mood/sorrow/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/sorrow/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/sorrow/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.moodshop.lol/mood/grief/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/grief/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/mood/grief/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/grief/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/mood/grief/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/grief/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/mood/grief/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/grief/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/mood/grief/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/grief/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/mood/grief/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/grief/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/mood/grief/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/grief/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/mood/grief/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/grief/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/mood/grief/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/grief/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/mood/grief/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/grief/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/grief/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.moodshop.lol/mood/rage/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/rage/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/de/mood/rage/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/rage/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/es/mood/rage/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/rage/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/fr/mood/rage/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/rage/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/pt/mood/rage/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/rage/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/hi/mood/rage/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/rage/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/zh/mood/rage/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/rage/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ja/mood/rage/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/rage/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ru/mood/rage/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/rage/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/ar/mood/rage/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.moodshop.lol/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.moodshop.lol/de/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.moodshop.lol/es/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.moodshop.lol/fr/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.moodshop.lol/pt/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.moodshop.lol/hi/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.moodshop.lol/zh/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.moodshop.lol/ja/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.moodshop.lol/ru/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.moodshop.lol/ar/mood/rage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.moodshop.lol/mood/rage/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
