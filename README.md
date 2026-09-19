@@ -121,6 +121,19 @@ Every translated page is canonical to itself — `/es/mood/calm/` points at
 what tells a crawler these are one page in ten languages, not ten thin
 duplicates of one.
 
+`<lastmod>` is real. It is not the build time — every build rewrites every
+file, so that would claim 143 pages changed every time and be worth
+nothing. It is the date of the last commit that touched the *sources* of
+that page's words (the content JSON, the language catalogue, the
+template), with an uncommitted edit counting as today. Changing
+`scripts/build.py` deliberately does not bump it: new page furniture is
+not new writing.
+
+`/for/` and `/help/payment/` are `noindex`, so they carry no `hreflang`
+set at all — a page you have asked not to index has no business
+advertising alternates. They keep their self-canonical and their language
+picker, which is a reader's concern rather than a crawler's.
+
 The tools, `/today/` and the free reader pages are English-only for now:
 one URL each, no `hreflang` set, and no invented translated URL that would
 404. `i18n.LOCALIZED` is the single place that decides, and a link to one of

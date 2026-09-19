@@ -26,10 +26,12 @@ NOT generated, and deliberately left alone: the paid reader pages
 what Buy Me a Coffee redirects to; nothing here may break them.
 """
 
+import datetime
 import html
 import json
 import os
 import re
+import subprocess
 import sys
 
 import i18n
@@ -83,6 +85,48 @@ def out(lang, relpath):
     """Where a page for this language goes on disk: English at the root,
     everything else under its own directory."""
     return relpath if lang.is_default else "%s/%s" % (lang.code, relpath)
+
+
+# --------------------------------------------------------------------------
+# when a page last actually changed
+# --------------------------------------------------------------------------
+#
+# <lastmod> is the one hint in a sitemap that Google still leans on, which
+# is exactly why it has to be true. The mtime of a generated file is no use
+# — every build rewrites every file — so the date comes from the last commit
+# that touched the *sources* of that page's words: the content JSON, the
+# language catalogue, the template. A source with uncommitted edits counts
+# as today, because it is about to be.
+#
+# Deliberately not included: scripts/build.py itself. Changing the page
+# furniture does not mean 143 pages changed for a reader, and a sitemap
+# that claims everything changed on every build is one nobody believes.
+
+TODAY = datetime.date.today().isoformat()
+_DATES = {}
+
+
+def _git(args):
+    try:
+        r = subprocess.run(["git"] + args, cwd=ROOT, capture_output=True, text=True, timeout=10)
+        return r.stdout.strip() if r.returncode == 0 else ""
+    except (OSError, subprocess.SubprocessError):
+        return ""
+
+
+def source_date(*relpaths):
+    """The newest 'last really changed' date across these source files."""
+    best = ""
+    for rel in relpaths:
+        if rel not in _DATES:
+            if not os.path.exists(os.path.join(ROOT, rel)):
+                _DATES[rel] = ""
+            elif _git(["status", "--porcelain", "--", rel]):
+                _DATES[rel] = TODAY           # edited, not yet committed
+            else:
+                _DATES[rel] = _git(["log", "-1", "--format=%cs", "--", rel]) or TODAY
+        best = max(best, _DATES[rel])
+    return best or TODAY
 
 
 # --------------------------------------------------------------------------
@@ -234,14 +278,21 @@ def head(lang, path, title, description, *, og_title=None, og_desc=None, og_imag
         '<script type="application/ld+json">\n%s\n</script>' % json.dumps(b, indent=2, ensure_ascii=False)
         for b in jsonld
     )
+    # A noindex page is not a search result, so it advertises no
+    # alternates: hreflang on a page you have asked not to be indexed is
+    # ignored anyway, and stating it is a contradiction. The language
+    # picker in the nav still works — that is the reader's business, not
+    # the crawler's.
+    indexable = "noindex" not in robots
+    pairs = i18n.alternates(ORIGIN, path) if indexable else []
     alts = "\n".join(
         '<link rel="alternate" hreflang="%s" href="%s">' % (code, e(href))
-        for code, href in i18n.alternates(ORIGIN, path)
+        for code, href in pairs
     )
     og_alts = "\n".join(
         '<meta property="og:locale:alternate" content="%s">' % other.locale
         for other in LANGS if other.code != lang.code
-    ) if i18n.is_localized(path) else ""
+    ) if pairs else ""
 
     return """<!DOCTYPE html>
 <html lang="{htmllang}" dir="{dir}">
@@ -875,34 +926,42 @@ def build_sitemap():
     """One entry per URL, and for a translated page every language's copy
     carries the full xhtml:link set — that is what tells a crawler the ten
     URLs are one page in ten languages rather than ten thin duplicates."""
+    SHELF = "content/moods.json"
+    TOOLS_SRC = ("content/tool-content.json", "content/feelings.json",
+                 "content/wheel.json", "scripts/tools_pages.py")
+
+    # (path, changefreq, priority, sources whose last change dates the page)
     paths = [
-        ("/", "weekly", "1.0"),
-        ("/moods/", "weekly", "0.9"),
-        ("/collections/", "monthly", "0.6"),
-        ("/about/", "monthly", "0.5"),
-        ("/send/", "monthly", "0.6"),
-        ("/tools/", "weekly", "0.9"),
-        ("/today/", "daily", "0.7"),
-        ("/free/", "monthly", "0.8"),
-        ("/free/cant-sleep.html", "yearly", "0.7"),
-        ("/free/waiting-for-news.html", "yearly", "0.7"),
-        ("/free/the-strong-one.html", "yearly", "0.7"),
+        ("/", "weekly", "1.0", (SHELF, "templates/home.html")),
+        ("/moods/", "weekly", "0.9", (SHELF,)),
+        ("/collections/", "monthly", "0.6", (SHELF,)),
+        ("/about/", "monthly", "0.5", ("templates/about.html",)),
+        ("/send/", "monthly", "0.6", ("templates/send.html",)),
+        ("/tools/", "weekly", "0.9", TOOLS_SRC),
+        ("/today/", "daily", "0.7", (SHELF,) + TOOLS_SRC),
+        ("/free/", "monthly", "0.8", ("free/index.html",)),
+        ("/free/cant-sleep.html", "yearly", "0.7", ("free/cant-sleep.html",)),
+        ("/free/waiting-for-news.html", "yearly", "0.7", ("free/waiting-for-news.html",)),
+        ("/free/the-strong-one.html", "yearly", "0.7", ("free/the-strong-one.html",)),
     ]
-    paths += [("/mood/%s/" % m["slug"], "monthly", "0.9") for m in MOODS]
-    paths += [("/tools/%s/" % t["slug"], "monthly", "0.8") for t in tools_pages.TOOLS]
+    paths += [("/mood/%s/" % m["slug"], "monthly", "0.9", (SHELF,)) for m in MOODS]
+    paths += [("/tools/%s/" % t["slug"], "monthly", "0.8", TOOLS_SRC)
+              for t in tools_pages.TOOLS]
 
     entries = []
-    for path, cf, pr in paths:
+    for path, cf, pr, sources in paths:
         alts = i18n.alternates(ORIGIN, path)
         links = "".join(
             '\n    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (code, e(href))
             for code, href in alts
         )
         for lang in (LANGS if alts else [EN]):
+            # A translated page also changes when its own catalogue does.
+            srcs = sources + (("content/i18n/%s.json" % lang.code,) if alts else ())
             entries.append(
-                "  <url>\n    <loc>%s</loc>%s\n    <changefreq>%s</changefreq>"
-                "\n    <priority>%s</priority>\n  </url>"
-                % (lang.abs_u(ORIGIN, path), links, cf, pr)
+                "  <url>\n    <loc>%s</loc>%s\n    <lastmod>%s</lastmod>"
+                "\n    <changefreq>%s</changefreq>\n    <priority>%s</priority>\n  </url>"
+                % (lang.abs_u(ORIGIN, path), links, source_date(*srcs), cf, pr)
             )
 
     write("sitemap.xml",
