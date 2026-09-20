@@ -17,6 +17,30 @@
   var ORIGIN = (DATA.site && DATA.site.origin) || "https://www.moodshop.lol";
   var REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ================= language ================= */
+  /* BASE is "" on the English site and "/es", "/ja"… on the others, so a
+     link this script builds stays in the language the reader is in.
+     T() reads the strings the build put in /<lang>/moods-data.js; the
+     English fallback keeps the page working if that file is stale. */
+
+  var BASE = DATA.base || "";
+  var STRINGS = DATA.i18n || {};
+
+  function T(key, fallback, vars) {
+    var s = STRINGS[key];
+    if (s == null) s = fallback;
+    if (vars) {
+      for (var k in vars) {
+        if (Object.prototype.hasOwnProperty.call(vars, k)) {
+          s = s.split("{" + k + "}").join(vars[k]);
+        }
+      }
+    }
+    return s;
+  }
+  function path(p) { return BASE + p; }
+  function moodUrl(slug) { return ORIGIN + BASE + "/mood/" + slug + "/"; }
+
   function track(name, props) { if (window.msTrack) window.msTrack(name, props); }
   /** @param {string} id @returns {any} The caller knows the element type; casting each use would be noise. */
   function byId(id) { return document.getElementById(id); }
@@ -87,7 +111,8 @@
      funnel is measured on, so they exist under the same names everywhere. */
 
   if (pagemood) track("mood_page_view", { mood: pagemood });
-  else if (location.pathname === "/" || /\/index\.html$/.test(location.pathname)) track("homepage_view", {});
+  else if (location.pathname === BASE + "/" || location.pathname === BASE ||
+           /\/index\.html$/.test(location.pathname)) track("homepage_view", { lang: DATA.lang || "en" });
 
   /* ================= teaser_view ================= */
 
@@ -127,9 +152,9 @@
       byId("today-name").textContent = t.name;
       byId("today-quote").textContent = "“" + t.shareLine + "”";
       var tl = byId("today-link");
-      tl.href = "/mood/" + t.slug + "/";
+      tl.href = path("/mood/" + t.slug + "/");
       tl.setAttribute("data-track-mood", t.slug);
-      tl.textContent = "Read today’s mood — " + t.name;
+      tl.textContent = T("today.read", "Read today’s mood — {name}", { name: t.name });
       var tw = byId("today-what");
       if (tw) tw.textContent = t.tagline;
     }
@@ -159,12 +184,12 @@
       var mood = bySlug(opt.mood);
       if (!mood || !result) return;
 
-      byId("finder-verdict").textContent = "You might need " + mood.name + ".";
+      byId("finder-verdict").textContent = T("finder.verdict", "You might need {name}.", { name: mood.name });
       byId("finder-why").textContent = opt.because;
 
       var cta = byId("finder-cta");
-      cta.href = "/mood/" + mood.slug + "/";
-      cta.textContent = "Enter " + mood.name + " →";
+      cta.href = path("/mood/" + mood.slug + "/");
+      cta.textContent = T("finder.cta", "Enter {name} →", { name: mood.name });
       cta.setAttribute("data-track-mood", mood.slug);
 
       result.hidden = false;
@@ -236,7 +261,7 @@
     var mood = bySlug(box.getAttribute("data-share"));
     if (!mood) return;
 
-    var url = ORIGIN + "/mood/" + mood.slug + "/";
+    var url = moodUrl(mood.slug);
     var caption = "“" + mood.shareLine + "”";
     var status = box.querySelector(".share-status");
     function say(msg) { if (status) status.textContent = msg; }
@@ -268,7 +293,7 @@
         if (to === "copy") {
           if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(url).then(function () {
-              say("Link copied — paste it wherever you like.");
+              say(T("share.copied", "Link copied — paste it wherever you like."));
               track("share_completed", { mood: mood.slug, from: "copy" });
             }).catch(function () { say(url); });
           } else { say(url); }
@@ -282,7 +307,7 @@
               .catch(function () { say(""); });
           } else if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(caption + " " + url).then(function () {
-              say("Copied — your device can’t share directly, so paste it instead.");
+              say(T("share.nativeFallback", "Copied — your device can’t share directly, so paste it instead."));
               track("share_completed", { mood: mood.slug, from: "native-fallback" });
             }).catch(function () { say(url); });
           } else { say(url); }
@@ -290,7 +315,7 @@
         }
 
         if (to === "image") {
-          say("Making the card…");
+          say(T("share.making", "Making the card…"));
           buildCard(mood).then(function (blob) {
             var file = new File([blob], "moodshop-" + mood.slug + ".png", { type: "image/png" });
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
@@ -304,9 +329,9 @@
             a.href = href; a.download = "moodshop-" + mood.slug + ".png";
             document.body.appendChild(a); a.click(); document.body.removeChild(a);
             setTimeout(function () { URL.revokeObjectURL(href); }, 4000);
-            say("Saved — it’s square, ready for a story.");
+            say(T("share.saved", "Saved — it’s square, ready for a story."));
             track("share_completed", { mood: mood.slug, from: "image" });
-          }).catch(function () { say("Couldn’t make the card — try the link instead."); });
+          }).catch(function () { say(T("share.cardFail", "Couldn’t make the card — try the link instead.")); });
         }
       });
     });
@@ -325,7 +350,7 @@
     MOODS.forEach(function (m) {
       var o = document.createElement("option");
       o.value = m.slug;
-      o.textContent = m.name + " — " + m.tagline;
+      o.textContent = T("send.option", "{name} — {tagline}", { name: m.name, tagline: m.tagline });
       picker.appendChild(o);
     });
 
@@ -347,26 +372,32 @@
       };
 
       var url;
-      try { url = ORIGIN + "/for/#" + encode(payload); }
-      catch (e) { sendStatus.textContent = "Couldn’t build the link — try shorter text."; return; }
+      try { url = ORIGIN + BASE + "/for/#" + encode(payload); }
+      catch (e) { sendStatus.textContent = T("send.tooLong", "Couldn’t build the link — try shorter text."); return; }
 
       out.hidden = false;
       linkEl.textContent = url;
       track("send_feeling_clicked", { mood: mood.slug });
 
       if (navigator.share) {
-        navigator.share({ title: "Moodshop", text: payload.t ? payload.t + " — I sent you something." : "I sent you something.", url: url })
-          .then(function () { sendStatus.textContent = "Sent."; })
-          .catch(function () { sendStatus.textContent = "Link ready — copy it below."; });
+        navigator.share({
+          title: "Moodshop",
+          text: payload.t
+            ? T("send.shareTextNamed", "{name} — I sent you something.", { name: payload.t })
+            : T("send.shareText", "I sent you something."),
+          url: url
+        })
+          .then(function () { sendStatus.textContent = T("send.sent", "Sent."); })
+          .catch(function () { sendStatus.textContent = T("send.ready", "Link ready — copy it below."); });
         return;
       }
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(function () {
-          sendStatus.textContent = "Link copied — paste it wherever you talk to them.";
-        }).catch(function () { sendStatus.textContent = "Copy the link below and send it to them."; });
+          sendStatus.textContent = T("send.copied", "Link copied — paste it wherever you talk to them.");
+        }).catch(function () { sendStatus.textContent = T("send.copyManual", "Copy the link below and send it to them."); });
         return;
       }
-      sendStatus.textContent = "Copy the link below and send it to them.";
+      sendStatus.textContent = T("send.copyManual", "Copy the link below and send it to them.");
     });
   }
 
@@ -393,18 +424,22 @@
       card.style.color = mood.theme.ink;
 
       var to = clamp(gift.t, 40), from = clamp(gift.f, 40), note = clamp(gift.n, 240);
-      byId("for-to").textContent = to ? "For " + to + "." : "For you.";
+      byId("for-to").textContent = to
+        ? T("for.forName", "For {name}.", { name: to })
+        : T("for.forYou", "For you.");
       var noteEl = byId("for-note");
       if (note) { noteEl.textContent = "“" + note + "”"; }
-      else { noteEl.textContent = "I didn’t always know how to say it. So I sent you this instead."; }
+      else { noteEl.textContent = T("for.defaultNote", "I didn’t always know how to say it. So I sent you this instead."); }
       var fromEl = byId("for-from");
       if (from) { fromEl.textContent = "— " + from; fromEl.hidden = false; }
 
       var open = byId("for-open");
-      open.href = "/mood/" + mood.slug + "/";
-      open.textContent = "Open the feeling →";
+      open.href = path("/mood/" + mood.slug + "/");
+      open.textContent = T("for.open", "Open the feeling →");
       open.setAttribute("data-track-mood", mood.slug);
-      document.title = (to ? "For " + to : "For you") + " — Moodshop";
+      document.title = to
+        ? T("for.titleNamed", "For {name} — Moodshop", { name: to })
+        : T("for.titleYou", "For you — Moodshop");
     }
   }
 
@@ -417,9 +452,11 @@
       .then(function (data) {
         if (!data.ok) return;
         var total = data.total;
+        var n = total.toLocaleString(DATA.lang || "en");
         counter.innerHTML = '<span class="pulse"></span>' + (total > 0
-          ? total.toLocaleString() + (total === 1 ? " feeling opened so far" : " feelings opened so far")
-          : "No one has opened a feeling yet — be the first.");
+          ? T(total === 1 ? "count.one" : "count.many",
+              total === 1 ? "{n} feeling opened so far" : "{n} feelings opened so far", { n: n })
+          : T("count.none", "No one has opened a feeling yet — be the first."));
         counter.classList.add("visible");
       })
       .catch(function () {});
@@ -429,7 +466,7 @@
 
   var rotator = byId("rotator");
   if (rotator && !REDUCED) {
-    var words = ["feel?", "feel today?", "feel tonight?", "feel right now?"];
+    var words = STRINGS.rotator || ["feel?", "feel today?", "feel tonight?", "feel right now?"];
     var idx = 0;
     setInterval(function () {
       rotator.classList.add("swap");

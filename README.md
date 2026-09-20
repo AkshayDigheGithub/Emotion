@@ -14,15 +14,19 @@ content/feelings.json  THE TAXONOMY — 12 feelings the free tools run on, plus
                        the mood-finder quiz and its weights
 content/wheel.json     the emotion wheel: 9 categories x 4 branches x 3 leaves
 content/tool-content.json  every curated line the tools compose from
+content/i18n/<lang>.json   THE TRANSLATIONS — one catalogue per language
+                       (en de es fr pt hi zh ja ru ar). en.json is the source.
 scripts/build.py       generates the whole site. Run after any content edit.
+scripts/i18n.py        the languages: catalogues, URL shape, hreflang
 scripts/tools_pages.py the /tools pages, imported by build.py
 templates/*.html       hand-written body copy for the bespoke pages
 
 --- generated, do not hand-edit ---
 index.html  moods/  mood/<slug>/  collections/  about/  send/  for/
 help/payment/  404.html  today/
+<lang>/...                     the same pages in the nine other languages
 tools/  tools/<tool>/          the seven free tools
-moods-data.js  feelings-data.js  tool-content.js
+moods-data.js  <lang>/moods-data.js  feelings-data.js  tool-content.js
 sitemap.xml  robots.txt  img/og/<slug>.jpg
 
 --- shared, hand-written ---
@@ -68,6 +72,86 @@ already bought. `scripts/build.py` does not write to them. Keep it that way.
 
 Nothing in that list involves touching a component, which is the whole point:
 the shop scales to 50 moods without a rewrite.
+
+## Ten languages
+
+The site is published in English, German, Spanish, French, Portuguese,
+Hindi, Chinese, Japanese, Russian and Arabic. Not a widget that swaps words
+at runtime: every language is generated at build time, with its own URLs,
+its own `<title>`, its own JSON-LD and its own copy of the writing.
+
+```
+/mood/calm/        en   — and the x-default
+/es/mood/calm/     es
+/ar/mood/calm/     ar   — <html dir="rtl">
+```
+
+English sits at the root; the other nine live under their own prefix.
+
+### Where the words live
+
+`content/i18n/en.json` is the source of truth and the fallback. Each
+catalogue has the same shape:
+
+| key | what it holds |
+| --- | --- |
+| `meta` | native name, `hreflang`, `og:locale`, `dir` |
+| `ui` | every string the page furniture and the templates use |
+| `js` | the strings `moodshop.js` writes into the DOM |
+| `pages` | `title` / `description` / `og:*` for each page |
+| `faq` | the seven questions on the homepage |
+| `moods` | the eight feelings: name, tagline, teaser, `seoTitle`, keywords |
+| `bundle`, `collections`, `finder`, `writingNow` | the rest of the shelf |
+
+A key a translation hasn't got yet falls back to English rather than
+vanishing, so a half-finished language still renders a whole site.
+`{price}`, `{name}`, `{n}` and friends are filled in by the build — the
+currency symbol sits in the translation, because "$1" and "1 دولار" don't
+put it in the same place.
+
+Templates use two placeholders: `{{t:key}}` for a string and `{{u:/path/}}`
+for a link, so one `templates/home.html` is the source of all ten homepages.
+
+### Canonical, language by language
+
+Every translated page is canonical to itself — `/es/mood/calm/` points at
+`/es/mood/calm/`, never at the English one — and carries the full
+`rel="alternate" hreflang` set (ten languages plus `x-default` → English).
+`sitemap.xml` repeats the same set as `xhtml:link` on every entry. That is
+what tells a crawler these are one page in ten languages, not ten thin
+duplicates of one.
+
+`<lastmod>` is real. It is not the build time — every build rewrites every
+file, so that would claim 143 pages changed every time and be worth
+nothing. It is the date of the last commit that touched the *sources* of
+that page's words (the content JSON, the language catalogue, the
+template), with an uncommitted edit counting as today. Changing
+`scripts/build.py` deliberately does not bump it: new page furniture is
+not new writing.
+
+`/for/` and `/help/payment/` are `noindex`, so they carry no `hreflang`
+set at all — a page you have asked not to index has no business
+advertising alternates. They keep their self-canonical and their language
+picker, which is a reader's concern rather than a crawler's.
+
+The tools, `/today/` and the free reader pages are English-only for now:
+one URL each, no `hreflang` set, and no invented translated URL that would
+404. `i18n.LOCALIZED` is the single place that decides, and a link to one of
+those pages from a translated page points at the English original. The
+language picker on such a page sends you to that language's home instead.
+
+### Adding a language
+
+1. Copy `content/i18n/en.json` to `content/i18n/<code>.json` and translate it.
+   Set `meta.hreflang`, `meta.locale` and, for a right-to-left script,
+   `meta.dir` to `rtl`.
+2. Add the code to `ORDER` in `scripts/i18n.py`, in picker order.
+3. `python3 scripts/build.py`. The pages, the picker, every `hreflang`, the
+   sitemap and the per-language `moods-data.js` all update themselves.
+
+Nothing about `moodshop.js` changes: it reads its strings and its link
+prefix from `<lang>/moods-data.js`, with the English text compiled in as a
+fallback.
 
 ## The landing page
 
@@ -394,6 +478,11 @@ OG image, and `Product` + `BreadcrumbList` JSON-LD. Titles are written around
 the intent someone actually types — "something to read when you're grieving
 someone", "something to read when everything feels too loud" — rather than
 stuffed with keywords.
+
+Multiply that by ten: the same page exists in ten languages, each canonical
+to itself, each carrying the full `hreflang` set and its own `og:locale`,
+`inLanguage` and intent-shaped title in that language. See **Ten languages**
+above.
 
 Page inventory and their markup:
 

@@ -846,3 +846,92 @@ body.mode-2am .nav{background:rgba(5,5,10,0.82);}
   min-height:58vh;display:flex;flex-direction:column;justify-content:center;
   padding-top:clamp(2rem,8vw,4rem);
 }
+
+/* ---------- language picker ---------- */
+/*
+  Ten languages, each written in its own script, laid out two to a row —
+  the reader finds their own name for their own language, not a flag or a
+  two-letter code. It is a <details>, so it opens and closes with no
+  JavaScript, and every entry is a real link to the same page in that
+  language (see scripts/i18n.py), which is also what a crawler follows.
+*/
+.nav-end{display:flex;align-items:center;gap:0.5rem;flex:none;}
+
+.langbox{position:relative;}
+.langbox > summary{
+  list-style:none;cursor:pointer;
+  display:inline-flex;align-items:center;gap:0.4rem;
+  font-size:0.82rem;font-weight:600;color:var(--sub);
+  padding:0.45rem 0.7rem;border-radius:999px;
+  border:1px solid var(--line);
+  white-space:nowrap;
+  transition:color 0.2s ease,border-color 0.2s ease,background 0.2s ease;
+}
+.langbox > summary::-webkit-details-marker{display:none;}
+.langbox > summary::marker{content:'';}
+/* the shared accordion style puts a +/x on every summary; the picker
+   is a menu, not an accordion, so it opts out */
+.langbox > summary::after{content:none;}
+.langbox > summary:hover,
+.langbox[open] > summary{color:var(--ink);background:var(--faint);border-color:var(--line-strong);}
+.langbox > summary .globe{font-size:0.95em;line-height:1;}
+.langbox .langmenu{
+  position:absolute;inset-inline-end:0;top:calc(100% + 0.5rem);z-index:60;
+  min-width:19rem;
+  background:var(--bg-2);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:0.9rem 1rem 1rem;
+  box-shadow:0 18px 44px rgba(0,0,0,0.45);
+}
+@media (max-width:620px){
+  .langbox{position:static;}
+  .langbox .langmenu{inset-inline:0;min-width:0;}
+}
+
+.lang-label{
+  font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--sub);font-weight:700;margin:0 0 0.6rem 0;
+}
+.lang-grid{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0.15rem 0.5rem;
+}
+.lang-grid a{
+  display:block;
+  padding:0.5rem 0.7rem;border-radius:10px;
+  color:var(--sub);text-decoration:none;
+  font-size:0.95rem;font-weight:600;
+  transition:color 0.2s ease,background 0.2s ease;
+}
+.lang-grid a:hover{color:var(--ink);background:var(--faint);}
+.lang-grid a[aria-current="true"]{
+  color:var(--accent);
+  background:color-mix(in srgb,var(--accent) 14%,transparent);
+}
+
+/* the same picker again, as a plain block near the foot of a page:
+   crawlable without opening anything, and easier to hit on a phone */
+.lang-pick{padding-top:clamp(2rem,5vw,3rem);}
+.lang-pick .lang-grid{
+  grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));
+  gap:0.2rem 0.6rem;max-width:44rem;
+}
+.lang-pick .hint{margin-top:1rem;}
+
+/* ---------- right-to-left ---------- */
+/* Only the handful of rules that are actually side-specific; everything
+   else is either centred, symmetric, or already logical. */
+[dir="rtl"] .brand{margin-right:0;margin-left:auto;}
+[dir="rtl"] .skip{left:auto;right:-9999px;}
+[dir="rtl"] .skip:focus{right:0;}
+[dir="rtl"] .badge .pulse{margin-right:0;margin-left:0.5rem;}
+[dir="rtl"] .finder-options button{text-align:right;}
+[dir="rtl"] blockquote{
+  border-left:0;border-right:2px solid var(--accent);
+  padding-left:0;padding-right:0.9rem;
+}
+[dir="rtl"] .ticks li::before{left:auto;right:0;}
+[dir="rtl"] .ticks li{padding-left:0;padding-right:1.5rem;}
+[dir="rtl"] details > summary{margin-left:0;margin-right:0.2rem;}
