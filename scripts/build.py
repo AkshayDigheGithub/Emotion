@@ -51,6 +51,7 @@ SITE = DATA["site"]
 ORIGIN = SITE["origin"]
 MOODS = DATA["moods"]
 BUNDLE = DATA["bundle"]
+GUIDES = DATA.get("guides", [])
 COLLECTIONS = DATA["collections"]
 
 FONTS = ("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400"
@@ -439,6 +440,62 @@ def bundle_block(lang, track_from):
                    cta=cta, note=note)
 
 
+def guide_block(lang, track_from, *, mood=None, section=True):
+    """The longer guides: products sold and delivered by Gumroad rather than
+    a Buy Me a Coffee redirect. English-only, because the guides are — a
+    translated page gets nothing rather than an English sales block.
+
+    With `mood`, only guides that list that slug under `moods` render, so a
+    guide about overthinking sits on /mood/calm/ and not on /mood/rage/."""
+    if not lang.is_default:
+        return ""
+    picked = [g for g in GUIDES if mood is None or mood in g.get("moods", [])]
+    if not picked:
+        return ""
+    cards = []
+    for g in picked:
+        cards.append("""  <div class="bundle guide reveal" id="guide-{slug}">
+    <span class="badge hot">{badge}</span>
+    <h2>{name}</h2>
+    <p class="line">{line} {blurb}</p>
+    <div class="price-row">
+      <p class="price">${price} <small>{once}</small></p>
+      <p class="was">{fmt}</p>
+    </div>
+    <ul class="ticks">
+      <li>{tick1}</li>
+      <li>{tick2}</li>
+      <li>{tick3}</li>
+      <li>{tick4}</li>
+    </ul>
+    <div class="cta-row"><a class="btn btn-primary" href="{url}" rel="noopener"
+       data-track="guide_clicked" data-track-mood="{slug}" data-track-from="{src}">{cta}</a></div>
+    <p class="hint">{note}</p>
+  </div>""".format(
+            slug=e(g["slug"]), badge=e(lang.t("guide.badge")), name=e(g["name"]),
+            line=e(g["line"]), blurb=e(g["blurb"]), price=e(g["price"]),
+            once=e(lang.t("bundle.once")),
+            fmt=e(lang.t("guide.format", pages=g["pages"], format=g["format"])),
+            tick1=e(lang.t("guide.tick1")), tick2=e(lang.t("guide.tick2")),
+            tick3=e(lang.t("guide.tick3")), tick4=e(lang.t("guide.tick4")),
+            url=e(g["checkoutUrl"]), src=track_from,
+            cta=e(lang.t("guide.cta", price=g["price"])), note=e(lang.t("guide.note"))))
+    inner = "\n".join(cards)
+    if not section:
+        return inner
+    # Trailing blank line included, so an empty block leaves no trace in
+    # the pages it is skipped on.
+    return """<section class="wrap" id="guides" aria-labelledby="guides-h">
+  <div class="reveal">
+    <p class="eyebrow">{eyebrow}</p>
+    <h2 id="guides-h">{h}</h2>
+  </div>
+{inner}
+</section>
+
+""".format(eyebrow=e(lang.t("guide.eyebrow")), h=e(lang.t("guide.h")), inner=inner)
+
+
 def share_block(lang, slug):
     return """  <div class="share-row-wrap" data-share="{slug}">
     <ul class="share-row">
@@ -601,7 +658,7 @@ def build_mood_pages(lang):
   </div>
 </section>
 
-<section class="wrap">
+{guide}<section class="wrap">
 {bundle}
 </section>
 
@@ -633,6 +690,7 @@ def build_mood_pages(lang):
             all_eight=e(lang.t("moodpage.allEight")), not_sure=e(lang.t("moodpage.notSure")),
             trust=trust(lang), share=share_block(lang, slug), more=more,
             bundle=bundle_block(lang, "mood-page"),
+            guide=guide_block(lang, "mood-page", mood=slug),
             langpick=lang_menu(lang, path, inline=True),
         )
 
@@ -691,7 +749,7 @@ def build_moods_index(lang):
 {grid}
 </section>
 
-<section class="wrap">
+{guide}<section class="wrap">
 {bundle}
 </section>
 
@@ -701,6 +759,7 @@ def build_moods_index(lang):
                   not_sure=e(lang.t("moodsidx.notSure")), free=e(lang.u("/free/")),
                   free_l=e(lang.t("moodsidx.free")),
                   grid=mood_grid(lang, "moods-index"), bundle=bundle_block(lang, "moods-index"),
+                  guide=guide_block(lang, "moods-index"),
                   langpick=lang_menu(lang, path, inline=True))
 
     write(out(lang, "moods/index.html"), page(
@@ -876,6 +935,7 @@ def build_static_pages(lang):
         jsonld=(website_ld, itemlist_ld, faq_ld),
         body=template(lang, "home.html",
                       GRID=mood_grid(lang, "home"), BUNDLE=bundle_block(lang, "home"),
+                      GUIDE=guide_block(lang, "home"),
                       FAQ=faq_html, TRUST=trust(lang),
                       TODAY_NAME=e(lang.mood(MOODS[0])["name"]),
                       LANGPICK=lang_menu(lang, "/", inline=True)),

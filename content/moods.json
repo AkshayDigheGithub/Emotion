@@ -17,6 +17,20 @@
     "checkoutUrl": null,
     "comment": "checkoutUrl stays null until a Buy Me a Coffee Extra exists for the pack. Nothing anywhere renders a checkout button while it is null — see README, 'The Complete Mood Pack is deliberately not buyable yet'."
   },
+  "guides": [
+    {
+      "slug": "quieting-your-mind",
+      "name": "The Art of Quieting Your Mind",
+      "line": "For the nights your head won't stop.",
+      "blurb": "A short illustrated guide for overthinkers. Calm, practical tools to slow a racing mind, not 300 pages of theory.",
+      "price": "5.99",
+      "pages": 20,
+      "format": "PDF",
+      "checkoutUrl": "https://cultagrix.gumroad.com/l/cnkwce",
+      "moods": ["calm"],
+      "comment": "Sold and delivered by Gumroad, not Buy Me a Coffee. price must match the live Gumroad price. English-only, so the block renders on English pages only. moods lists the /mood/<slug>/ pages that also show it."
+    }
+  ],
   "moods": [
     {
       "slug": "calm",

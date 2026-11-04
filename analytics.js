@@ -78,7 +78,8 @@
     var a = t2 && t2.closest && t2.closest("a[href]");
     if (!a) return;
     var href = a.getAttribute("href") || "";
-    if (href.indexOf("buymeacoffee.com") === -1) return;
+    // Buy Me a Coffee sells the pieces; Gumroad sells the longer guides.
+    if (href.indexOf("buymeacoffee.com") === -1 && href.indexOf("gumroad.com") === -1) return;
     var mood = a.getAttribute("data-track-mood") || "tip";
     // `checkout_started` predates the tools and is what the existing dashboards
     // are built on; `purchase_clicked` is the same moment under the name the
