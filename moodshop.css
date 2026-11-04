@@ -362,6 +362,12 @@ h3{font-size:1.05rem;margin:0 0 0.4rem 0;font-weight:700;}
 }
 .badge.hot{background:var(--accent);color:#14141c;border-color:var(--accent);}
 
+/* ---------- shop ---------- */
+.shop-list{display:grid;gap:1.6rem;}
+@media (min-width:980px){
+  .shop-list{grid-template-columns:repeat(auto-fit,minmax(26rem,1fr));}
+}
+
 /* ---------- generic cards / steps ---------- */
 .cards{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));

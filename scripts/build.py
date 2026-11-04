@@ -51,7 +51,7 @@ SITE = DATA["site"]
 ORIGIN = SITE["origin"]
 MOODS = DATA["moods"]
 BUNDLE = DATA["bundle"]
-GUIDES = DATA.get("guides", [])
+PRODUCTS = DATA.get("products", [])
 COLLECTIONS = DATA["collections"]
 
 FONTS = ("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400"
@@ -136,6 +136,7 @@ def source_date(*relpaths):
 
 NAV_ITEMS = [
     ("/moods/", "nav.moods", "moods"),
+    ("/shop/", "nav.shop", "shop"),
     ("/tools/", "nav.tools", "tools"),
     ("/collections/", "nav.collections", "collections"),
     ("/today/", "nav.today", "today"),
@@ -218,6 +219,7 @@ def footer(lang):
       <div>
         <h2>{shop}</h2>
         <ul>
+          <li><a href="{shop_u}">{shop_l}</a></li>
           <li><a href="{about}">{about_l}</a></li>
           <li><a href="{collections}">{collections_l}</a></li>
           <li><a href="{tools}">{tools_l}</a></li>
@@ -246,6 +248,7 @@ def footer(lang):
         feelings=e(lang.t("foot.feelings")), mood_links=mood_links,
         moods=e(lang.u("/moods/")), all_eight=e(lang.t("foot.allEight")),
         shop=e(lang.t("foot.shop")),
+        shop_u=e(lang.u("/shop/")), shop_l=e(lang.t("nav.shop")),
         about=e(lang.u("/about/")), about_l=e(lang.t("foot.about")),
         collections=e(lang.u("/collections/")), collections_l=e(lang.t("foot.collections")),
         tools=e(lang.u("/tools/")), tools_l=e(lang.t("foot.tools")),
@@ -440,49 +443,47 @@ def bundle_block(lang, track_from):
                    cta=cta, note=note)
 
 
-def guide_block(lang, track_from, *, mood=None, section=True):
-    """The longer guides: products sold and delivered by Gumroad rather than
-    a Buy Me a Coffee redirect. English-only, because the guides are — a
-    translated page gets nothing rather than an English sales block.
-
-    With `mood`, only guides that list that slug under `moods` render, so a
-    guide about overthinking sits on /mood/calm/ and not on /mood/rage/."""
-    if not lang.is_default:
-        return ""
-    picked = [g for g in GUIDES if mood is None or mood in g.get("moods", [])]
-    if not picked:
-        return ""
-    cards = []
-    for g in picked:
-        cards.append("""  <div class="bundle guide reveal" id="guide-{slug}">
-    <span class="badge hot">{badge}</span>
+def product_card(lang, p, track_from):
+    """One shop product. Sold through its own checkout link (Gumroad for
+    now), never through the Buy Me a Coffee redirect the pieces use."""
+    ticks = "\n".join("      <li>%s</li>" % e(t) for t in p.get("ticks", []))
+    return """  <div class="bundle guide reveal" id="product-{slug}">
+    <span class="badge hot">{kind}</span>
     <h2>{name}</h2>
     <p class="line">{line} {blurb}</p>
     <div class="price-row">
       <p class="price">${price} <small>{once}</small></p>
-      <p class="was">{fmt}</p>
+      <p class="was">{details}</p>
     </div>
     <ul class="ticks">
-      <li>{tick1}</li>
-      <li>{tick2}</li>
-      <li>{tick3}</li>
-      <li>{tick4}</li>
+{ticks}
     </ul>
     <div class="cta-row"><a class="btn btn-primary" href="{url}" rel="noopener"
        data-track="guide_clicked" data-track-mood="{slug}" data-track-from="{src}">{cta}</a></div>
     <p class="hint">{note}</p>
   </div>""".format(
-            slug=e(g["slug"]), badge=e(lang.t("guide.badge")), name=e(g["name"]),
-            line=e(g["line"]), blurb=e(g["blurb"]), price=e(g["price"]),
-            once=e(lang.t("bundle.once")),
-            fmt=e(lang.t("guide.format", pages=g["pages"], format=g["format"])),
-            tick1=e(lang.t("guide.tick1")), tick2=e(lang.t("guide.tick2")),
-            tick3=e(lang.t("guide.tick3")), tick4=e(lang.t("guide.tick4")),
-            url=e(g["checkoutUrl"]), src=track_from,
-            cta=e(lang.t("guide.cta", price=g["price"])), note=e(lang.t("guide.note"))))
-    inner = "\n".join(cards)
-    if not section:
-        return inner
+        slug=e(p["slug"]), kind=e(p["kind"]), name=e(p["name"]),
+        line=e(p["line"]), blurb=e(p["blurb"]), price=e(p["price"]),
+        once=e(lang.t("bundle.once")), details=e(p["details"]), ticks=ticks,
+        url=e(p["checkoutUrl"]), src=track_from,
+        cta=e(lang.t("guide.cta", price=p["price"])),
+        note=e(lang.t("guide.note", seller=p.get("seller", "Gumroad"))))
+
+
+def guide_block(lang, track_from, *, mood=None):
+    """Shop products, cross-sold on the homepage (the `featured` ones) or on
+    a mood page (the ones that list that mood under `moods`). English-only,
+    because the products are: a translated page gets nothing rather than an
+    English sales block. Ends with a link to the whole shop."""
+    if not lang.is_default:
+        return ""
+    if mood is None:
+        picked = [p for p in PRODUCTS if p.get("featured")]
+    else:
+        picked = [p for p in PRODUCTS if mood in p.get("moods", [])]
+    if not picked:
+        return ""
+    inner = "\n".join(product_card(lang, p, track_from) for p in picked)
     # Trailing blank line included, so an empty block leaves no trace in
     # the pages it is skipped on.
     return """<section class="wrap" id="guides" aria-labelledby="guides-h">
@@ -491,9 +492,11 @@ def guide_block(lang, track_from, *, mood=None, section=True):
     <h2 id="guides-h">{h}</h2>
   </div>
 {inner}
+  <div class="cta-row" style="margin-top:1.6rem;"><a class="btn btn-ghost" href="{shop}">{to_shop}</a></div>
 </section>
 
-""".format(eyebrow=e(lang.t("guide.eyebrow")), h=e(lang.t("guide.h")), inner=inner)
+""".format(eyebrow=e(lang.t("guide.eyebrow")), h=e(lang.t("guide.h")), inner=inner,
+           shop=e(lang.u("/shop/")), to_shop=e(lang.t("guide.toShop")))
 
 
 def share_block(lang, slug):
@@ -771,6 +774,83 @@ def build_moods_index(lang):
 
 
 # --------------------------------------------------------------------------
+# /shop/ — the digital products (English only; see i18n.LOCALIZED)
+# --------------------------------------------------------------------------
+
+def build_shop():
+    """Every product in content/moods.json `products`, then a pointer back
+    to the $1-$5 pieces. A new product is one JSON entry and a rebuild."""
+    lang, path = EN, "/shop/"
+    title = "Shop — guides and downloads for how you feel | Moodshop"
+    description = ("Longer guides and downloads from Moodshop, for the feelings that "
+                   "stay. One payment, instant download, no account.")
+    itemlist = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Moodshop shop",
+        "numberOfItems": len(PRODUCTS),
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": i + 1,
+                "item": {
+                    "@type": "Product",
+                    "name": p["name"],
+                    "description": p["blurb"],
+                    "url": "%s/shop/#product-%s" % (ORIGIN, p["slug"]),
+                    "brand": {"@type": "Brand", "name": SITE["name"]},
+                    "offers": {
+                        "@type": "Offer",
+                        "url": p["checkoutUrl"],
+                        "price": p["price"],
+                        "priceCurrency": "USD",
+                        "availability": "https://schema.org/InStock",
+                    },
+                },
+            }
+            for i, p in enumerate(PRODUCTS)
+        ],
+    }
+    cards = "\n".join(product_card(lang, p, "shop") for p in PRODUCTS)
+    body = """<main id="main">
+<header class="wrap" style="padding-top:clamp(2.5rem,8vw,4rem);">
+  <p class="eyebrow">{eyebrow}</p>
+  <h1>{h1}</h1>
+  <p class="lede">{lede}</p>
+</header>
+
+<section class="wrap" style="padding-top:clamp(1.5rem,4vw,2.5rem);">
+  <div class="shop-list">
+{cards}
+  </div>
+</section>
+
+<section class="wrap narrow">
+  <h2>{small_h}</h2>
+  <p class="lede">{small_lede}</p>
+  <div class="cta-row"><a class="btn btn-ghost" href="{moods}" data-track="mood_selected" data-track-from="shop">{small_cta}</a></div>
+</section>
+
+<section class="wrap narrow">
+  <h2>{soon_h}</h2>
+  <p class="lede" style="margin-bottom:0;">{soon_lede} <a href="{free}" style="color:var(--ink);">{free_l}</a></p>
+</section>
+</main>""".format(eyebrow=e(lang.t("shop.eyebrow")), h1=e(lang.t("shop.h1")),
+                  lede=e(lang.t("shop.lede")), cards=cards,
+                  small_h=e(lang.t("shop.smallH")),
+                  small_lede=e(lang.t("shop.smallLede", price=MIN_PRICE)),
+                  small_cta=e(lang.t("shop.smallCta")), moods=e(lang.u("/moods/")),
+                  soon_h=e(lang.t("shop.soonH")), soon_lede=e(lang.t("shop.soonLede")),
+                  free=e(lang.u("/free/")), free_l=e(lang.t("foot.free")))
+
+    write("shop/index.html", page(
+        lang, path, title=title, description=description,
+        og_title="Moodshop — the shop", og_desc=description,
+        jsonld=(itemlist,), body=body, active="shop",
+    ))
+
+
+# --------------------------------------------------------------------------
 # /collections/
 # --------------------------------------------------------------------------
 
@@ -994,6 +1074,7 @@ def build_sitemap():
     paths = [
         ("/", "weekly", "1.0", (SHELF, "templates/home.html")),
         ("/moods/", "weekly", "0.9", (SHELF,)),
+        ("/shop/", "weekly", "0.9", (SHELF,)),
         ("/collections/", "monthly", "0.6", (SHELF,)),
         ("/about/", "monthly", "0.5", ("templates/about.html",)),
         ("/send/", "monthly", "0.6", ("templates/send.html",)),
@@ -1154,6 +1235,7 @@ def main():
         build_moods_index(lang)
         build_collections(lang)
         build_static_pages(lang)
+    build_shop()
     build_tool_pages()
     build_sitemap()
     build_og_images()

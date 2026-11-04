@@ -241,6 +241,29 @@ should make.
 Step 4 flips every pack block on every page to a live "Get the complete
 collection — $9" button with a *Best value* badge. Nothing else to edit.
 
+## The shop
+
+`/shop/` lists the longer digital products (guides, downloads) that sell
+through their own checkout link, currently Gumroad, rather than through
+the Buy Me a Coffee redirect the eight pieces use. They live in
+`content/moods.json` under `products`.
+
+To add one:
+
+1. Create the product on Gumroad (or wherever it sells) and copy its URL.
+2. Copy the existing entry in `products` and fill in `name`, `kind`,
+   `line`, `blurb`, `price` (must match the live checkout), `details`,
+   `ticks` and `checkoutUrl`.
+3. Optional: `moods` lists the `/mood/<slug>/` pages that also show it,
+   and `featured: true` puts it on the homepage.
+4. `python3 scripts/build.py`.
+
+The shop is English-only (one URL, not in `i18n.LOCALIZED`), and product
+blocks render on English pages only, because the products are in English.
+The "Shop" menu link is translated and points at the English page.
+Clicks on a product button fire `guide_clicked`, plus `checkout_started` /
+`purchase_clicked` from `analytics.js`, the same as a Buy Me a Coffee click.
+
 ## Cross-sell on the emotion pages
 
 Each reader page ends with a quiet line under the share button — "You've got
