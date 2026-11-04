@@ -232,7 +232,7 @@ def footer(lang):
         <h2>{payhelp}</h2>
         <ul>
           <li><a href="{help}">{help_l}</a></li>
-          <li><a href="https://www.buymeacoffee.com/digheakshaf" rel="nofollow noopener">{contact}</a></li>
+          <li><a href="{contact_u}" rel="noopener">{contact}</a></li>
           <li><a href="{terms}">{terms_l}</a></li>
           <li><a href="{privacy}">{privacy_l}</a></li>
         </ul>
@@ -257,7 +257,7 @@ def footer(lang):
         free=e(lang.u("/free/")), free_l=e(lang.t("foot.free")),
         payhelp=e(lang.t("foot.payHelp")),
         help=e(lang.u("/help/payment/")), help_l=e(lang.t("foot.paymentDidnt")),
-        contact=e(lang.t("foot.contact")),
+        contact=e(lang.t("foot.contact")), contact_u=e(SITE["contact"]),
         terms=e(lang.u("/about/#terms")), terms_l=e(lang.t("foot.terms")),
         privacy=e(lang.u("/about/#privacy")), privacy_l=e(lang.t("foot.privacy")),
         tagline=e(lang.site("tagline")), payments=e(lang.t("foot.payments")),
