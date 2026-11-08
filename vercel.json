@@ -1,11 +1,11 @@
 {
   "rewrites": [
     {
-      "source": "/:lang(de|es|fr|pt|hi|zh|ja|ru|ar)",
+      "source": "/(de|es|fr|pt|hi|zh|ja|ru|ar)",
       "destination": "/api/gone"
     },
     {
-      "source": "/:lang(de|es|fr|pt|hi|zh|ja|ru|ar)/:path*",
+      "source": "/(de|es|fr|pt|hi|zh|ja|ru|ar)/(.*)",
       "destination": "/api/gone"
     }
   ]
