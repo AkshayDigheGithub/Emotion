@@ -57,6 +57,16 @@ COLLECTIONS = DATA["collections"]
 FONTS = ("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400"
          "&family=Nunito+Sans:wght@300;400;600;700&display=swap")
 
+# Google AdSense. One tag, site-wide: the loader is all that Auto ads
+# need, and the placements themselves are configured in the AdSense
+# account rather than here. Deliberately absent from the paid reader
+# pages (calm.html and friends, bundle.html) — nobody pays to read
+# something and then gets served ads inside it — and from 404.html,
+# because a page with no content of its own is not a place for ads.
+ADSENSE = ('<script async src="https://pagead2.googlesyndication.com/pagead/js/'
+           'adsbygoogle.js?client=ca-pub-1650962715407503"\n'
+           '     crossorigin="anonymous"></script>')
+
 FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'"
            "%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AD%3C/text%3E%3C/svg%3E")
 
@@ -280,7 +290,7 @@ def footer():
 # order, and a page-specific script always builds on the shared ones.
 def head(path, title, description, *, og_title=None, og_desc=None, og_image=None,
          og_type="website", robots="index, follow", extra_head="", jsonld=(), theme="#0e0e15",
-         keywords=""):
+         keywords="", ads=True):
     """The <head>. The canonical is this page's own URL."""
     canonical = ORIGIN + path
     og_image = og_image or (ORIGIN + "/og-image.jpg")
@@ -328,7 +338,7 @@ def head(path, title, description, *, og_title=None, og_desc=None, og_image=None
 <script defer src="/analytics.js"></script>
 <script defer src="{data_js}"></script>
 <script defer src="/moodshop.js"></script>
-{extra_head}
+{adsense}{extra_head}
 </head>""".format(
         htmllang=EN.hreflang, dir=EN.dir,
         title=e(title), description=e(description), canonical=e(canonical), robots=robots,
@@ -337,6 +347,7 @@ def head(path, title, description, *, og_title=None, og_desc=None, og_image=None
         theme=theme, og_type=og_type, og_title=e(og_title or title), og_desc=e(og_desc or description),
         og_image=e(og_image), favicon=FAVICON, fonts=FONTS,
         data_js="/moods-data.js",
+        adsense=(ADSENSE + "\n") if ads else "",
         extra_head=extra_head, blocks=blocks,
     )
 
@@ -1017,7 +1028,7 @@ def build_static_pages():
     # ---- 404 ----
     write(("404.html"), page(
         "/404.html",
-        robots="noindex, nofollow",
+        robots="noindex, nofollow", ads=False,
         body=template("404.html", GRID=mood_grid("404")), **meta_of("404")
     ))
 
