@@ -153,7 +153,7 @@ def body_mood_finder(ctx, t):
     <div id="quiz-result" hidden></div>
     <button class="btn btn-ghost btn-sm" type="button" id="quiz-again" hidden style="margin-top:1.4rem;">Try again</button>
     <noscript>
-      <p class="lede" style="margin:0;">The quiz needs JavaScript to add up your answers — it does the scoring in your browser so nothing has to be sent anywhere. With JS off, <a href="/moods/" style="color:var(--ink);">the eight feelings are all here</a> to read through instead.</p>
+      <p class="lede" style="margin:0;">The quiz needs JavaScript to add up your answers — it does the scoring in your browser so nothing has to be sent anywhere. With JS off, <a href="/moods/" style="color:var(--ink);">all fourteen feelings are here</a> to read through instead.</p>
     </noscript>
   </div>
   <p class="hint">This is a weighted score over your three answers, not a diagnosis. It says <em>might</em> on purpose.</p>
@@ -460,7 +460,7 @@ def build(ctx):
   <p class="lede">Each tool ends by pointing at a short piece of writing built for that one feeling — two minutes, no account, and you read its real opening before paying anything.</p>
   <div class="cta-row">
     <a class="btn btn-primary" href="/tools/mood-finder/" data-track="mood_finder_started" data-track-from="tools-hub">Start with Find My Mood</a>
-    <a class="btn btn-ghost" href="/moods/">See the eight feelings</a>
+    <a class="btn btn-ghost" href="/moods/">See all fourteen feelings</a>
   </div>
 </section>
 
@@ -534,7 +534,7 @@ def build(ctx):
     <a class="btn btn-primary" id="today-page-link" href="/moods/" data-track="mood_selected" data-track-from="today-page">Read today’s mood</a>
     <a class="btn btn-ghost" href="/tools/mood-finder/" data-track="mood_finder_started" data-track-from="today-page">Not today’s? Find my mood</a>
   </div>
-  <noscript><p class="lede" style="margin-top:1.6rem;">Today’s pick is worked out in your browser from the date. With JavaScript off, <a href="/moods/" style="color:var(--ink);">all eight are here</a>.</p></noscript>
+  <noscript><p class="lede" style="margin-top:1.6rem;">Today’s pick is worked out in your browser from the date. With JavaScript off, <a href="/moods/" style="color:var(--ink);">all fourteen are here</a>.</p></noscript>
 </section>
 
 <section class="wrap">

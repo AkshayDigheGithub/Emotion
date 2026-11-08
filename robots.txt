@@ -13,6 +13,12 @@ Disallow: /hurt.html
 Disallow: /sorrow.html
 Disallow: /grief.html
 Disallow: /rage.html
+Disallow: /love.html
+Disallow: /heartbreak.html
+Disallow: /restless.html
+Disallow: /longing.html
+Disallow: /mending.html
+Disallow: /dread.html
 Disallow: /bundle.html
 
 Sitemap: https://www.moodshop.lol/sitemap.xml

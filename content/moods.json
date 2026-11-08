@@ -290,14 +290,249 @@
         "card": "linear-gradient(140deg,#5c0f0f,#1a0505)",
         "cardInk": "#f6e3e3"
       }
-    }
-  ],
-  "writingNow": [
+    },
     {
+      "slug": "love",
       "name": "Love",
-      "tagline": "For when someone occupies your thoughts."
+      "tagline": "For when someone occupies your thoughts.",
+      "description": "A piece about the quiet, constant kind of love — the sort that arrives in the gaps of an ordinary day.",
+      "whatThisIs": "For the stage before anything is settled, when someone has simply moved into your attention and won't leave.",
+      "teaserTitle": "They keep arriving in the middle of things",
+      "teaser": "You were doing something ordinary. Filling a glass, locking a door, halfway through a sentence to somebody else. And there they were again, arriving the way weather does. It isn't dramatic. Nobody warns you about that part — that love mostly happens in the gaps. In the three seconds before the kettle boils. In the walk from the car to the front door.",
+      "teaserTail": "You've started noticing things on their behalf. A song they'd like.",
+      "shareLine": "Love mostly happens in the gaps.",
+      "words": 170,
+      "readingTime": 2,
+      "price": 2,
+      "checkoutUrl": null,
+      "readerPage": "/love.html",
+      "seoTitle": "Something to read when you can't stop thinking about someone",
+      "seoKeywords": "something to read when you like someone, short writing about love, words for thinking about someone",
+      "theme": {
+        "accent": "#f0a3b2",
+        "accent2": "#8e2f49",
+        "colors": [
+          "#210d13",
+          "#3f1724",
+          "#7d2b40"
+        ],
+        "ink": "#f8e4e9",
+        "light": false,
+        "card": "linear-gradient(140deg,#7d2b40,#210d13)",
+        "cardInk": "#f9e7ec"
+      },
+      "body": [
+        "You were doing something ordinary. Filling a glass, locking a door, halfway through a sentence to somebody else. And there they were again, arriving the way weather does.",
+        "It isn't dramatic. Nobody warns you about that part — that love mostly happens in the gaps. In the three seconds before the kettle boils. In the walk from the car to the front door.",
+        "You've started noticing things on their behalf. A song they'd like. A particular blue. The way the light does something at six o'clock that you'd want them to see.",
+        "That's what it is, mostly. Not the declarations. The running commentary you've started keeping for an audience of one.",
+        "You don't know yet what any of it comes to. Whether it's returned in the same shape. Whether it lasts the winter. Whether you ever say it out loud.",
+        "But something in you has already decided to carry them around, and it didn't ask you first.",
+        "Let it be unresolved tonight. You're allowed to simply be full of someone."
+      ]
+    },
+    {
+      "slug": "heartbreak",
+      "name": "Heartbreak",
+      "tagline": "For the nights when you still think about them.",
+      "description": "A piece about the conversation that never happens, and the future you lost along with the person.",
+      "whatThisIs": "For the rehearsing stage — when your mind keeps staging the talk that would fix it, and the ending holds anyway.",
+      "teaserTitle": "It isn't the missing. It's the rehearsing.",
+      "teaser": "You've had the conversation again tonight — the one that never happens. You said the right thing this time. They understood. It still didn't help. That's the part that exhausts you. Not the missing exactly, but the rehearsing. Your mind keeps staging it, looking for the version where it ends differently.",
+      "teaserTail": "There isn't one. You've checked every angle by now, at every hour, and the ending holds.",
+      "shareLine": "You're not being pathetic. You're being someone who meant it.",
+      "words": 157,
+      "readingTime": 2,
+      "price": 4,
+      "checkoutUrl": null,
+      "readerPage": "/heartbreak.html",
+      "seoTitle": "Something to read when you're still thinking about them",
+      "seoKeywords": "something to read after a breakup, short writing about heartbreak, words for missing an ex",
+      "theme": {
+        "accent": "#c98f9c",
+        "accent2": "#4a2b3a",
+        "colors": [
+          "#120e12",
+          "#241a22",
+          "#4a2b3a"
+        ],
+        "ink": "#ece2e6",
+        "light": false,
+        "card": "linear-gradient(140deg,#4a2b3a,#120e12)",
+        "cardInk": "#eee4e8"
+      },
+      "body": [
+        "You've had the conversation again tonight — the one that never happens. You said the right thing this time. They understood. It still didn't help.",
+        "That's the part that exhausts you. Not the missing exactly, but the rehearsing. Your mind keeps staging it, looking for the version where it ends differently.",
+        "There isn't one. You've checked every angle by now, at every hour, and the ending holds.",
+        "Somewhere in the last few weeks you stopped missing the person and started missing the future — the one with them in it, already furnished, that you had quietly been living in.",
+        "That future was real to you. Losing it is a real loss, even though nobody sends flowers for it.",
+        "You will stop rehearsing. Not tonight, and not because you decided to. One ordinary evening you'll notice the conversation didn't run, and you'll already be somewhere else.",
+        "Until then: you're not being pathetic. You're being someone who meant it."
+      ]
+    },
+    {
+      "slug": "restless",
+      "name": "Restless",
+      "tagline": "For thoughts that only arrive when everyone else is asleep.",
+      "description": "A piece for the hour when the house is quiet and your mind decides to audit you.",
+      "whatThisIs": "For 2am — when knowing a thought isn't true does nothing at all to stop it.",
+      "teaserTitle": "The hours that don't belong to anyone",
+      "teaser": "It's late in the way that stops being late and starts being early. The house has gone quiet in that particular way, and your thoughts have got louder to fill it. Almost nothing you think at this hour survives the morning. You know that. It doesn't help, because at 2am knowing something is not the same as believing it.",
+      "teaserTail": "This is when the mind audits you. Old conversations.",
+      "shareLine": "At 2am, knowing something is not the same as believing it.",
+      "words": 175,
+      "readingTime": 2,
+      "price": 2,
+      "checkoutUrl": null,
+      "readerPage": "/restless.html",
+      "seoTitle": "Something to read when you can't sleep at 2am",
+      "seoKeywords": "something to read at 2am, short writing for insomnia, words for racing thoughts at night",
+      "theme": {
+        "accent": "#8fa3d8",
+        "accent2": "#2a3358",
+        "colors": [
+          "#0a0d1a",
+          "#161c33",
+          "#2a3358"
+        ],
+        "ink": "#e2e7f5",
+        "light": false,
+        "card": "linear-gradient(140deg,#2a3358,#0a0d1a)",
+        "cardInk": "#e4e9f6"
+      },
+      "body": [
+        "It's late in the way that stops being late and starts being early. The house has gone quiet in that particular way, and your thoughts have got louder to fill it.",
+        "Almost nothing you think at this hour survives the morning. You know that. It doesn't help, because at 2am knowing something is not the same as believing it.",
+        "This is when the mind audits you. Old conversations. Something you said at nineteen. A decision from three years ago it has chosen to reopen tonight, without warning.",
+        "None of it is urgent. All of it feels urgent. That's the trick of this hour — it hands you real things at the one time you can do nothing about any of them.",
+        "You are not failing at sleep. You are awake in a quiet house, which people have been doing for as long as there have been houses.",
+        "Nothing is being decided right now. The audit closes on its own.",
+        "Put it down. It will still be there at a reasonable hour, and so will you."
+      ]
+    },
+    {
+      "slug": "longing",
+      "name": "Longing",
+      "tagline": "For someone you can't quite let go of.",
+      "description": "A piece about the message you keep almost sending, and why missing someone isn't a problem to solve.",
+      "whatThisIs": "For the reaching-for-your-phone moment, and the part of you that feels embarrassed about it.",
+      "teaserTitle": "You keep almost sending it",
+      "teaser": "The message is written. It has been for a while now — in your head if not in your phone — and you keep almost sending it. You've found reasons not to. Good ones, mostly. It's late. It's been too long. It would reopen something you have nearly finished closing.",
+      "teaserTail": "But the wanting doesn't take instruction. It arrives when a song does, or when something happens that only they would have found funny, and you reach for your phone before you remember you'd stopped doing that.",
+      "shareLine": "You can hold someone in mind without holding them in your life.",
+      "words": 172,
+      "readingTime": 2,
+      "price": 3,
+      "checkoutUrl": null,
+      "readerPage": "/longing.html",
+      "seoTitle": "Something to read when you miss someone you shouldn't text",
+      "seoKeywords": "something to read when you miss someone, short writing about longing, words for wanting to text them",
+      "theme": {
+        "accent": "#d9a87c",
+        "accent2": "#6b4530",
+        "colors": [
+          "#140e0a",
+          "#2a1c14",
+          "#6b4530"
+        ],
+        "ink": "#f1e4d9",
+        "light": false,
+        "card": "linear-gradient(140deg,#6b4530,#140e0a)",
+        "cardInk": "#f3e7dc"
+      },
+      "body": [
+        "The message is written. It has been for a while now — in your head if not in your phone — and you keep almost sending it.",
+        "You've found reasons not to. Good ones, mostly. It's late. It's been too long. It would reopen something you have nearly finished closing.",
+        "But the wanting doesn't take instruction. It arrives when a song does, or when something happens that only they would have found funny, and you reach for your phone before you remember you'd stopped doing that.",
+        "Missing someone isn't a problem to be solved. It's evidence — of a real thing, that was real, and hasn't finished being real in you yet.",
+        "Nobody gets to time that for you. Not them, not the people who think you should be over it, and not the version of you reading this and feeling faintly embarrassed.",
+        "You can hold someone in mind without holding them in your life. Those are different rooms.",
+        "Put the phone down tonight. You can miss them in the morning too."
+      ]
+    },
+    {
+      "slug": "mending",
+      "name": "Mending",
+      "tagline": "For when you're slowly becoming okay again.",
+      "description": "A piece for the week you noticed you were fine, and didn't quite trust it.",
+      "whatThisIs": "For the suspicious part of recovery — treating a good week as weather rather than climate.",
+      "teaserTitle": "You noticed you were fine, and it startled you",
+      "teaser": "Something happened this week that you'd have expected to flatten you, and it didn't. You went about the day. You only noticed afterwards. That seems to be how it goes. Not a morning when you wake up healed — just a slow redistribution of weight, until the thing you're carrying has quietly changed shape.",
+      "teaserTail": "Part of you is suspicious of this. Waiting for it to be taken back.",
+      "shareLine": "Recovery isn't a line you cross. It's ordinary days, with fewer ambushes.",
+      "words": 156,
+      "readingTime": 2,
+      "price": 3,
+      "checkoutUrl": null,
+      "readerPage": "/mending.html",
+      "seoTitle": "Something to read when you're starting to feel better",
+      "seoKeywords": "something to read while healing, short writing about recovery, words for feeling better slowly",
+      "theme": {
+        "accent": "#9ccfae",
+        "accent2": "#4e8463",
+        "colors": [
+          "#eaf5ee",
+          "#c6e4d2",
+          "#9ccfae"
+        ],
+        "ink": "#1e3a2a",
+        "light": true,
+        "card": "linear-gradient(140deg,#c6e4d2,#74ab8a)",
+        "cardInk": "#153023"
+      },
+      "body": [
+        "Something happened this week that you'd have expected to flatten you, and it didn't. You went about the day. You only noticed afterwards.",
+        "That seems to be how it goes. Not a morning when you wake up healed — just a slow redistribution of weight, until the thing you're carrying has quietly changed shape.",
+        "Part of you is suspicious of this. Waiting for it to be taken back. Treating a good week as weather rather than climate.",
+        "Let it be weather for now. You don't have to trust it in order to be in it.",
+        "You're allowed not to know whether you're over it. Recovery isn't a line you cross with a certificate. It's more and more ordinary days, with fewer and fewer ambushes.",
+        "Some of the old thing will stay. In time it becomes something you know, rather than something that happens to you.",
+        "You are further along than you were. That counts, even unfinished."
+      ]
+    },
+    {
+      "slug": "dread",
+      "name": "Dread",
+      "tagline": "For the strange heaviness before Monday begins.",
+      "description": "A piece for the Sunday evening that starts leaving before it's over.",
+      "whatThisIs": "For the five o'clock feeling that isn't about anything in particular, and can't be fixed by making the most of it.",
+      "teaserTitle": "The evening starts leaving before it's over",
+      "teaser": "It arrives around five. Nothing has happened. The day was fine, maybe even good, and then something in the light changes and the weekend starts packing up without you. You're not dreading anything in particular. That's what makes it hard to argue with — there's no single thing you could fix tomorrow to make this evening feel different.",
+      "teaserTail": "What you're feeling is the edge of a week you haven't started yet, pressed against the last few hours of one that's nearly done.",
+      "shareLine": "Let it be an ordinary evening that happens to come before a Monday.",
+      "words": 169,
+      "readingTime": 2,
+      "price": 2,
+      "checkoutUrl": null,
+      "readerPage": "/dread.html",
+      "seoTitle": "Something to read on a Sunday night",
+      "seoKeywords": "something to read on sunday night, short writing about sunday scaries, words for dreading monday",
+      "theme": {
+        "accent": "#a9b4c4",
+        "accent2": "#4a5668",
+        "colors": [
+          "#101418",
+          "#1e252e",
+          "#4a5668"
+        ],
+        "ink": "#e6eaf0",
+        "light": false,
+        "card": "linear-gradient(140deg,#4a5668,#101418)",
+        "cardInk": "#e8ecf1"
+      },
+      "body": [
+        "It arrives around five. Nothing has happened. The day was fine, maybe even good, and then something in the light changes and the weekend starts packing up without you.",
+        "You're not dreading anything in particular. That's what makes it hard to argue with — there's no single thing you could fix tomorrow to make this evening feel different.",
+        "What you're feeling is the edge of a week you haven't started yet, pressed against the last few hours of one that's nearly done.",
+        "Everyone you know feels some version of this and almost nobody mentions it, which is why it can seem like a personal failing instead of a Sunday.",
+        "You don't have to make the most of the evening. That instruction is part of the problem — it turns the last few hours into one more thing to perform.",
+        "Let it be an ordinary evening that happens to come before a Monday.",
+        "The week will start whether you brace for it or not. You may as well not brace."
+      ]
     }
   ],
+  "writingNow": [],
   "collections": [
     {
       "slug": "heartbreak",
@@ -309,6 +544,7 @@
         "cardInk": "#f4e0e2"
       },
       "moods": [
+        "heartbreak",
         "hurt",
         "grief",
         "sorrow"
@@ -324,6 +560,7 @@
         "cardInk": "#e3e6f2"
       },
       "moods": [
+        "restless",
         "sorrow",
         "hope",
         "calm"
@@ -339,6 +576,7 @@
         "cardInk": "#2e1c0f"
       },
       "moods": [
+        "longing",
         "nostalgia",
         "grief",
         "hurt"
@@ -354,6 +592,7 @@
         "cardInk": "#14312b"
       },
       "moods": [
+        "mending",
         "calm",
         "hope",
         "happiness"
@@ -369,6 +608,7 @@
         "cardInk": "#f4ecdf"
       },
       "moods": [
+        "dread",
         "calm",
         "hope",
         "nostalgia"

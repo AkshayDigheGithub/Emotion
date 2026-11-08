@@ -70,9 +70,13 @@ ADSENSE = ('<script async src="https://pagead2.googlesyndication.com/pagead/js/'
 FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'"
            "%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AD%3C/text%3E%3C/svg%3E")
 
-INDIVIDUAL_TOTAL = sum(m["price"] for m in MOODS)
-MIN_PRICE = min(m["price"] for m in MOODS)
-MAX_PRICE = max(m["price"] for m in MOODS)
+# A piece is on sale once it has a Buy Me a Coffee product behind it.
+# The newer pieces are written and readable in part, but not yet buyable,
+# so they stay out of every price the copy quotes.
+ON_SALE = [m for m in MOODS if m.get("checkoutUrl")]
+INDIVIDUAL_TOTAL = sum(m["price"] for m in ON_SALE)
+MIN_PRICE = min(m["price"] for m in ON_SALE)
+MAX_PRICE = max(m["price"] for m in ON_SALE)
 
 # One language. Every string comes from content/strings.json.
 EN = strings.load(MOODS, COLLECTIONS, DATA.get("writingNow", []))
@@ -375,11 +379,13 @@ def mood_card(m, *, track_from):
           <span class="name">{name}</span>
           <span class="tag">{tagline}</span>
         </span>
-        <span class="foot"><span class="go">{enter}</span><span class="cost">${price}</span></span>
+        <span class="foot"><span class="go">{enter}</span>{cost}</span>
       </a>
     </li>""".format(href=e("/mood/%s/" % m["slug"]), slug=m["slug"], card=t["card"],
                     ink=t["cardInk"], name=e(m["name"]), tagline=e(m["tagline"]),
-                    price=m["price"], src=track_from, enter=e(EN.t("card.enter")))
+                    cost=('<span class="cost">$%d</span>' % m["price"]) if m.get("checkoutUrl") else "",
+                    src=track_from,
+                    enter=e(EN.t("card.enter") if m.get("checkoutUrl") else EN.t("coll.soon")))
 
 
 def mood_grid(track_from):
@@ -569,10 +575,11 @@ def build_mood_pages():
             "category": "Digital writing",
             "offers": {
                 "@type": "Offer",
-                "url": m["checkoutUrl"],
+                "url": m["checkoutUrl"] or url,
                 "price": "%.2f" % m["price"],
                 "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
+                "availability": ("https://schema.org/InStock" if m.get("checkoutUrl")
+                                 else "https://schema.org/PreOrder"),
                 "itemCondition": "https://schema.org/NewCondition",
                 "priceValidUntil": "2027-12-31",
                 "seller": {"@type": "Person", "name": SITE["author"]},
@@ -616,8 +623,7 @@ def build_mood_pages():
     <p class="excerpt">{teaser}</p>
     <div class="fade-out" aria-hidden="true">{tail}</div>
     <div class="teaser-foot">
-      <a class="btn btn-unlock" href="{checkout}" rel="nofollow noopener"
-         data-track="checkout_started" data-track-mood="{slug}" data-track-from="mood-page">{unlock}</a>
+      {unlock_cta}
       <span class="teaser-meta">{continue_}</span>
     </div>
   </article>
@@ -657,7 +663,13 @@ def build_mood_pages():
 </section>
 </main>""".format(
             name=e(m["name"]), tagline=e(m["tagline"]), slug=slug, price=m["price"],
-            checkout=e(m["checkoutUrl"]),
+            unlock_cta=(
+                '<a class="btn btn-unlock" href="%s" rel="nofollow noopener"\n'
+                '         data-track="checkout_started" data-track-mood="%s" '
+                'data-track-from="mood-page">%s</a>'
+                % (e(m["checkoutUrl"]), slug, e(EN.t("moodpage.unlock", price=m["price"])))
+                if m.get("checkoutUrl")
+                else '<span class="badge">%s</span>' % e(EN.t("coll.soon"))),
             teaser_title=e(m["teaserTitle"]), teaser=e(m["teaser"]), tail=e(m["teaserTail"]),
             what=e(m["whatThisIs"]), description=e(m["description"]),
             c0=t["colors"][0], c1=t["colors"][1], c2=t["colors"][2], ink=t["ink"],
@@ -670,7 +682,6 @@ def build_mood_pages():
             no_account=e(EN.t("moodpage.noAccount")),
             free_look=e(EN.t("moodpage.freeLook", name=m["name"])),
             kicker=e(EN.t("moodpage.kicker", name=m["name"])),
-            unlock=e(EN.t("moodpage.unlock", price=m["price"])),
             continue_=e(EN.t("moodpage.continue", n=m["readingTime"])),
             real_opening=e(EN.t("moodpage.realOpening")),
             payment_link=e(EN.t("moodpage.paymentLink")),
@@ -907,7 +918,10 @@ def build_collection_pages():
     """
     for c in EN.collections():
         path = coll_path(c)
-        picked = [m for m in MOODS if m["slug"] in c.get("moods", [])]
+        # the collection's own order: its centrepiece leads, then the
+        # feelings it gathers — not whatever order the shelf happens to be in
+        by_slug = {m["slug"]: m for m in MOODS}
+        picked = [by_slug[s] for s in c.get("moods", []) if s in by_slug]
         grid = '  <ul class="mood-grid reveal">\n%s\n  </ul>' % "\n".join(
             mood_card(m, track_from="collection-%s" % c["slug"]) for m in picked)
         body = """<main id="main">
@@ -1036,10 +1050,11 @@ def build_static_pages():
                     "category": "Digital writing",
                     "offers": {
                         "@type": "Offer",
-                        "url": m["checkoutUrl"],
+                        "url": m["checkoutUrl"] or (ORIGIN + "/mood/%s/" % m["slug"]),
                         "price": "%.2f" % m["price"],
                         "priceCurrency": "USD",
-                        "availability": "https://schema.org/InStock",
+                        "availability": ("https://schema.org/InStock" if m.get("checkoutUrl")
+                                         else "https://schema.org/PreOrder"),
                         "itemCondition": "https://schema.org/NewCondition",
                         "priceValidUntil": "2027-12-31",
                         "seller": {"@type": "Person", "name": SITE["author"]},
@@ -1100,6 +1115,55 @@ def build_static_pages():
         robots="noindex, nofollow", ads=False,
         body=template("404.html", GRID=mood_grid("404")), **meta_of("404")
     ))
+
+
+NUMBER = ("no", "one", "two", "three", "four", "five", "six", "seven", "eight",
+          "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen")
+
+
+def build_reader_pages():
+    """The page a buyer lands on, for the pieces whose text lives in the data.
+
+    The nine older reader pages are hand-written and stay that way — they
+    are what Buy Me a Coffee redirects paying readers to, and nothing here
+    may break them. A mood carrying a `body` is a newer piece whose text
+    is in content/moods.json instead, and its page is written from that,
+    using templates/reader.html — which is calm.html with the mood-specific
+    parts lifted out, so the two kinds of page are the same page.
+    """
+    shell = open(os.path.join(ROOT, "templates", "reader.html"), encoding="utf-8").read()
+    for m in MOODS:
+        body = m.get("body")
+        if not body:
+            continue
+        t = m["theme"]
+        assert m["name"].replace(" ", "").isalnum(), (
+            "a mood name also lands in a <script> string: %r" % m["name"])
+        others = len(ON_SALE) - (1 if m.get("checkoutUrl") else 0)
+        # Prose is element content, so only &, < and > need escaping — the
+        # apostrophes in it are the author's and should read as apostrophes.
+        def text(x):
+            return html.escape(str(x), quote=False)
+        prose = "<h1>%s</h1>\n\n%s" % (
+            text(m["teaserTitle"]),
+            "\n\n".join("<p>%s</p>" % text(par) for par in body))
+        more = ('<p>You&rsquo;ve got %s. %s other feelings are on the shelf, from $%d. '
+                '<a href="%s/moods/">Find another feeling &rarr;</a></p>'
+                % (text(m["name"]), NUMBER[others].capitalize(), MIN_PRICE, ORIGIN))
+        tagline = m["tagline"]
+        page_html = shell
+        for k, v in (("{{NAME}}", e(m["name"])),
+                     ("{{SLUG}}", m["slug"]),
+                     ("{{METADESC}}", e("A short piece written %s%s"
+                                        % (tagline[:1].lower(), tagline[1:]))),
+                     ("{{C0}}", t["colors"][0]), ("{{C1}}", t["colors"][1]),
+                     ("{{C2}}", t["colors"][2]), ("{{INK}}", t["ink"]),
+                     ("{{QUOTE}}", json.dumps(m["shareLine"])[1:-1]),
+                     ("{{COLORS}}", json.dumps(t["colors"], separators=(",", ":"))),
+                     ("{{PROSE}}", prose), ("{{MORE}}", more)):
+            page_html = page_html.replace(k, v)
+        assert "{{" not in page_html, "unfilled placeholder in %s.html" % m["slug"]
+        write("%s.html" % m["slug"], page_html)
 
 
 # --------------------------------------------------------------------------
@@ -1282,6 +1346,7 @@ def main():
     build_collections()
     build_collection_pages()
     build_static_pages()
+    build_reader_pages()
     build_shop()
     build_tool_pages()
     build_sitemap()
