@@ -106,6 +106,9 @@ def out(lang, relpath):
 TODAY = datetime.date.today().isoformat()
 _DATES = {}
 
+# A date we are not entitled to state. See _boundary() below.
+UNDATABLE = object()
+
 
 def _git(args):
     try:
@@ -115,18 +118,72 @@ def _git(args):
         return ""
 
 
+_BOUNDARY = None
+
+
+def _boundary():
+    """The graft point of a shallow clone, as (commit hashes, its date).
+
+    In a shallow clone git holds no parent for the oldest commit it fetched,
+    so it cannot diff that commit against anything. Every file whose real
+    last edit happened before the graft therefore looks to `git log` as
+    though it were introduced *by* the graft, and asking when it last
+    changed returns the graft's date instead of the truth.
+
+    That is not a corner case here: cloud build sessions clone shallow by
+    default, and a build in one once stamped eleven URLs with a boundary
+    date seven weeks newer than the real edit. So when the history is
+    shallow we find the graft and refuse to quote its date as fact.
+
+    ("" for a full clone, where the root commit really did add its files.)
+    """
+    global _BOUNDARY
+    if _BOUNDARY is None:
+        if _git(["rev-parse", "--is-shallow-repository"]) == "true":
+            heads = _git(["rev-list", "--max-parents=0", "HEAD"]).split()
+            dates = [_git(["log", "-1", "--format=%cs", h]) for h in heads]
+            _BOUNDARY = (frozenset(heads), max([d for d in dates if d] or [""]))
+        else:
+            _BOUNDARY = (frozenset(), "")
+    return _BOUNDARY
+
+
+def _file_date(rel):
+    """When this one source last really changed, or UNDATABLE."""
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return ""
+    if _git(["status", "--porcelain", "--", rel]):
+        return TODAY                          # edited, not yet committed
+    last = _git(["log", "-1", "--format=%H %cs", "--", rel])
+    if not last:
+        return TODAY                          # no commit records it yet
+    commit, _, date = last.partition(" ")
+    if commit in _boundary()[0]:
+        return UNDATABLE
+    return date or TODAY
+
+
 def source_date(*relpaths):
-    """The newest 'last really changed' date across these source files."""
+    """The newest 'last really changed' date across these source files.
+
+    None when the honest answer is "no idea" — the caller then leaves
+    <lastmod> out altogether, which the sitemap spec allows and which
+    costs far less trust than a date that is wrong.
+    """
     best = ""
+    capped = False
     for rel in relpaths:
         if rel not in _DATES:
-            if not os.path.exists(os.path.join(ROOT, rel)):
-                _DATES[rel] = ""
-            elif _git(["status", "--porcelain", "--", rel]):
-                _DATES[rel] = TODAY           # edited, not yet committed
-            else:
-                _DATES[rel] = _git(["log", "-1", "--format=%cs", "--", rel]) or TODAY
-        best = max(best, _DATES[rel])
+            _DATES[rel] = _file_date(rel)
+        if _DATES[rel] is UNDATABLE:
+            capped = True
+        else:
+            best = max(best, _DATES[rel])
+    # An undatable source last changed at *or before* the graft, so a known
+    # sibling at least that recent still settles the newest date between
+    # them. Only when nothing known reaches the graft is the answer unknown.
+    if capped and (not best or best < _boundary()[1]):
+        return None
     return best or TODAY
 
 
@@ -1090,6 +1147,7 @@ def build_sitemap():
               for t in tools_pages.TOOLS]
 
     entries = []
+    undated = []
     for path, cf, pr, sources in paths:
         alts = i18n.alternates(ORIGIN, path)
         links = "".join(
@@ -1099,10 +1157,14 @@ def build_sitemap():
         for lang in (LANGS if alts else [EN]):
             # A translated page also changes when its own catalogue does.
             srcs = sources + (("content/i18n/%s.json" % lang.code,) if alts else ())
+            changed = source_date(*srcs)
+            lastmod = "\n    <lastmod>%s</lastmod>" % changed if changed else ""
+            if not changed:
+                undated.append(lang.abs_u(ORIGIN, path))
             entries.append(
-                "  <url>\n    <loc>%s</loc>%s\n    <lastmod>%s</lastmod>"
+                "  <url>\n    <loc>%s</loc>%s%s"
                 "\n    <changefreq>%s</changefreq>\n    <priority>%s</priority>\n  </url>"
-                % (lang.abs_u(ORIGIN, path), links, source_date(*srcs), cf, pr)
+                % (lang.abs_u(ORIGIN, path), links, lastmod, cf, pr)
             )
 
     write("sitemap.xml",
@@ -1110,6 +1172,13 @@ def build_sitemap():
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
           '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n%s\n</urlset>\n'
           % "\n".join(entries))
+
+    if undated:
+        graft = _boundary()[1]
+        print("! %d of %d sitemap URLs have no <lastmod>: shallow clone "
+              "grafted at %s, so when their sources really changed is not in "
+              "the history (run: git fetch --unshallow)"
+              % (len(undated), len(entries), graft))
 
     # The reader pages are what people pay for: unlisted, and kept that way.
     disallow = "\n".join("Disallow: %s" % m["readerPage"] for m in MOODS)
