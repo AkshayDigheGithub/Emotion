@@ -393,6 +393,7 @@ h3{font-size:1.05rem;margin:0 0 0.4rem 0;font-weight:700;}
   border-radius:var(--radius);padding:1.6rem 1.4rem;min-height:170px;
   display:flex;flex-direction:column;justify-content:space-between;
   border:1px solid rgba(255,255,255,0.08);
+  text-decoration:none;color:inherit;
 }
 .collection-card .name{display:block;font-family:var(--serif);font-weight:600;font-size:1.45rem;margin:0 0 0.35rem 0;line-height:1.15;}
 .collection-card .tag{display:block;font-size:0.9rem;margin:0;opacity:0.9;}

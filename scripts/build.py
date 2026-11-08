@@ -838,17 +838,23 @@ def build_shop():
 # /collections/
 # --------------------------------------------------------------------------
 
+def coll_path(c):
+    return "/collections/%s/" % c["slug"]
+
+
 def build_collections():
     path = "/collections/"
     meta = EN.page("collections")
-    cards = "\n".join("""    <li class="collection-card" style="background:{card};color:{ink};">
-      <span>
-        <span class="name">{name}</span>
-        <span class="tag">{tag}</span>
-      </span>
-      <p class="state">{state}</p>
-    </li>""".format(card=c["theme"]["card"], ink=c["theme"]["cardInk"], name=e(c["name"]),
-                    tag=e(c["tagline"]),
+    cards = "\n".join("""    <li>
+      <a class="collection-card" href="{href}" style="background:{card};color:{ink};">
+        <span>
+          <span class="name">{name}</span>
+          <span class="tag">{tag}</span>
+        </span>
+        <p class="state">{state}</p>
+      </a>
+    </li>""".format(href=e(coll_path(c)), card=c["theme"]["card"], ink=c["theme"]["cardInk"],
+                    name=e(c["name"]), tag=e(c["tagline"]),
                     state=e(EN.t("coll.soon")) if c["status"] == "coming-soon" else e(c["status"]))
                      for c in EN.collections())
 
@@ -888,6 +894,69 @@ def build_collections():
         og_title=meta["ogTitle"], og_desc=meta["ogDesc"],
         body=body, active="collections",
     ))
+
+
+def build_collection_pages():
+    """One page per collection.
+
+    None of them is written yet, so the page says so plainly — but it is
+    not a holding page. It names the feelings the set will gather and
+    links to each one, which are real pieces on sale today, so the page
+    is worth a reader's click and a crawler's time before the collection
+    itself exists.
+    """
+    for c in EN.collections():
+        path = coll_path(c)
+        picked = [m for m in MOODS if m["slug"] in c.get("moods", [])]
+        grid = '  <ul class="mood-grid reveal">\n%s\n  </ul>' % "\n".join(
+            mood_card(m, track_from="collection-%s" % c["slug"]) for m in picked)
+        body = """<main id="main">
+<header class="wrap" style="padding-top:clamp(2.5rem,8vw,4rem);">
+  <p class="eyebrow">{eyebrow}</p>
+  <h1>{name}</h1>
+  <p class="lede">{tagline}</p>
+  <p><span class="badge">{state}</span></p>
+</header>
+
+<section class="wrap">
+  <p class="lede">{soon_lede}</p>
+</section>
+
+<section class="wrap">
+  <h2>{in_h}</h2>
+  <p class="lede">{in_lede}</p>
+{grid}
+</section>
+
+<section class="wrap">
+{bundle}
+</section>
+
+<section class="wrap">
+  <p class="hint"><a href="/collections/">{back}</a></p>
+</section>
+</main>""".format(eyebrow=e(EN.t("collpage.eyebrow")), name=e(c["name"]),
+                  tagline=e(c["tagline"]), state=e(EN.t("coll.soon")),
+                  soon_lede=e(EN.t("collpage.lede")), in_h=e(EN.t("collpage.inH")),
+                  in_lede=e(EN.t("collpage.inLede")), grid=grid,
+                  bundle=bundle_block("collection-%s" % c["slug"]),
+                  back=e(EN.t("collpage.back")))
+
+        write("collections/%s/index.html" % c["slug"], page(
+            path,
+            title="%s — Moodshop" % c["name"],
+            description=EN.t("collpage.desc", tagline=c["tagline"]),
+            body=body, active="collections",
+            jsonld=({
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "name": c["name"],
+                "description": c["tagline"],
+                "url": ORIGIN + path,
+                "isPartOf": {"@type": "WebSite", "name": SITE["name"], "url": ORIGIN + "/"},
+                "about": [{"@type": "Thing", "name": EN.mood(m)["name"]} for m in picked],
+            },),
+        ))
 
 
 # --------------------------------------------------------------------------
@@ -1059,6 +1128,7 @@ def build_sitemap():
         ("/free/the-strong-one.html", "yearly", "0.7", ("free/the-strong-one.html",)),
     ]
     paths += [("/mood/%s/" % m["slug"], "monthly", "0.9", (SHELF,)) for m in MOODS]
+    paths += [(coll_path(c), "monthly", "0.5", (SHELF,)) for c in COLLECTIONS]
     paths += [("/tools/%s/" % t["slug"], "monthly", "0.8", TOOLS_SRC)
               for t in tools_pages.TOOLS]
 
@@ -1210,6 +1280,7 @@ def main():
     build_mood_pages()
     build_moods_index()
     build_collections()
+    build_collection_pages()
     build_static_pages()
     build_shop()
     build_tool_pages()

@@ -35,7 +35,9 @@
       ],
       "checkoutUrl": "https://cultagrix.gumroad.com/l/cnkwce",
       "seller": "Gumroad",
-      "moods": ["calm"],
+      "moods": [
+        "calm"
+      ],
       "featured": true
     }
   ],
@@ -305,7 +307,12 @@
       "theme": {
         "card": "linear-gradient(140deg,#6b1a24,#2a0a0d)",
         "cardInk": "#f4e0e2"
-      }
+      },
+      "moods": [
+        "hurt",
+        "grief",
+        "sorrow"
+      ]
     },
     {
       "slug": "2am",
@@ -315,7 +322,12 @@
       "theme": {
         "card": "linear-gradient(140deg,#1c2540,#0b0d16)",
         "cardInk": "#e3e6f2"
-      }
+      },
+      "moods": [
+        "sorrow",
+        "hope",
+        "calm"
+      ]
     },
     {
       "slug": "i-miss-you",
@@ -325,7 +337,12 @@
       "theme": {
         "card": "linear-gradient(140deg,#e0bd8f,#b67f54)",
         "cardInk": "#2e1c0f"
-      }
+      },
+      "moods": [
+        "nostalgia",
+        "grief",
+        "hurt"
+      ]
     },
     {
       "slug": "healing",
@@ -335,7 +352,12 @@
       "theme": {
         "card": "linear-gradient(140deg,#bfe3da,#69a194)",
         "cardInk": "#14312b"
-      }
+      },
+      "moods": [
+        "calm",
+        "hope",
+        "happiness"
+      ]
     },
     {
       "slug": "sunday-night",
@@ -345,7 +367,12 @@
       "theme": {
         "card": "linear-gradient(140deg,#565694,#211f3d)",
         "cardInk": "#f4ecdf"
-      }
+      },
+      "moods": [
+        "calm",
+        "hope",
+        "nostalgia"
+      ]
     }
   ],
   "finder": {
