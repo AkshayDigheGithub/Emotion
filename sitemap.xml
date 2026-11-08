@@ -121,6 +121,36 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.moodshop.lol/collections/heartbreak/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/collections/2am/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/collections/i-miss-you/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/collections/healing/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.moodshop.lol/collections/sunday-night/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.moodshop.lol/tools/mood-finder/</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>

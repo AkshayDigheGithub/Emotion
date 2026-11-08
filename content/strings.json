@@ -267,7 +267,13 @@
     "e404.h1": "Looks like this feeling got lost.",
     "e404.lede": "The page you were after isn’t here — moved, mistyped, or never existed. The eight that do exist are just below.",
     "e404.cta1": "Find another feeling →",
-    "e404.cta2": "Find my mood"
+    "e404.cta2": "Find my mood",
+    "collpage.eyebrow": "Collection",
+    "collpage.lede": "This set isn't written yet. When it is, it will gather a handful of pieces for one kind of night, and it will appear here first.",
+    "collpage.inH": "The feelings it will gather",
+    "collpage.inLede": "Each of these is already on the shelf, on its own.",
+    "collpage.back": "All collections",
+    "collpage.desc": "{tagline} A collection being written for one kind of night. The feelings it gathers are on the shelf now."
   },
   "js": {
     "today.read": "Read today’s mood — {name}",
